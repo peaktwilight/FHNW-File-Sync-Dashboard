@@ -3,9 +3,36 @@ import subprocess
 import time
 import logging
 import configparser
+import shutil
+
+def check_prerequisites():
+    """Checks if rsync and git are installed."""
+    if not shutil.which('rsync'):
+        logging.error("rsync is not installed. Please install it and try again.")
+        return False
+    if not shutil.which('git'):
+        logging.error("git is not installed. Please install it and try again.")
+        return False
+    return True
+
+
+def load_config():
+    """Loads the configuration from config.txt."""
+    config = configparser.ConfigParser()
+    if not os.path.exists('config.txt'):
+        logging.error("config.txt not found. Please create it and try again.")
+        return None
+    config.read('config.txt')
+    return config
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+def setup_logging(log_level):
+    """Sets up logging based on the config."""
+    numeric_level = getattr(logging, log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        logging.error(f"Invalid log level: {log_level}. Using INFO level instead.")
+        numeric_level = logging.INFO
+    logging.basicConfig(level=numeric_level, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def retry_rsync(source_path, target_dir, max_retries=3):
     """Retries rsync command if it fails with exit code 24."""
@@ -55,8 +82,15 @@ def execute_script(script_path):
 
 def main():
     """Main function to synchronize directories, perform git pull, and execute scripts."""
-    config = configparser.ConfigParser()
-    config.read('config.txt')
+    if not check_prerequisites():
+        return
+
+    config = load_config()
+    if not config:
+        return
+
+    log_level = config['DEFAULT'].get('log_level', 'INFO')
+    setup_logging(log_level)
 
     destination = config['DEFAULT']['destination']
     source_paths = [path.strip() for path in config['DEFAULT']['source_paths'].split(',')]
