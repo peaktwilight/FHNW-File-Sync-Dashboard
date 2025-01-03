@@ -1,0 +1,5 @@
+[DEFAULT]
+destination = /Users/peak/Documents/Study/FHNW
+source_paths = /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1iCbb/sweGL, /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1Ia/oopI2, /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1iCa/pmC, /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1iCbb/mgli
+oop_repo_path = /Users/peak/Documents/Study/FHNW/oopI2/oopI2-aufgaben_doruk.oeztuerk
+swegl_script_path = /Users/peak/Documents/Study/FHNW/sweGL/fhnw-swegl-aufgaben-24-hs/fetch_from_origin.sh
