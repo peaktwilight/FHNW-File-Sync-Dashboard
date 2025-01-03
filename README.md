@@ -23,7 +23,7 @@ The `sync_fhnw.py` script is used to synchronize the course materials from a mou
 
 ### Prerequisites
 
--   Python 3.6 or higher
+-   Python 3.6 or higher.
 -   The source directories are located on a mounted volume at `/Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/`.
 -   The destination directory is set in the `config.txt` file (default: `/Users/peak/Documents/Study/FHNW`).
 -   The `oopI2` repository is expected to be located at the path specified in `config.txt` (default: `/Users/peak/Documents/Study/FHNW/oopI2/oopI2-aufgaben_doruk.oeztuerk`).
@@ -31,6 +31,7 @@ The `sync_fhnw.py` script is used to synchronize the course materials from a mou
 -   `rsync` must be installed on your system.
 -   `git` must be installed on your system.
 
++    **Important:** The `data` share from `smb://fs.edu.ds.fhnw.ch/data` must be mounted on your system at `/Volumes/data` for the `rsync` command to work correctly.
 ### How to Use
 
 1.  Save the `sync_fhnw.py` script and `config.txt` to the root of the repository.
