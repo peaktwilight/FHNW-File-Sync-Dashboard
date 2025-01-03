@@ -6,9 +6,13 @@ This repository contains course materials from my studies at the FHNW (Universit
 
 The repository is organized into the following main directories:
 
--   `dtpC`: Contains materials for the "Desktop Publishing and Communication" module.
+-   `sweGL`: Contains materials for the "Software Engineering Grundlagen" module.
+-   `aua`: Contains materials for the "Argumentieren und Auftreten" module.
+-   `dtpC`: Contains materials for the "Design Theorie" module.
+-   `ecpe1`: Contains materials for the "English Cambridge Proficiency C2 Exam Prep Sem 1" module.
+-   `ipg`: Contains materials for the "Internet Plattform Grundlagen" module.
 -   `mgli`: Contains materials for the "Mathematics and Grundlagen der Informatik" module.
--   `oopI2`: Contains materials for the "Object-Oriented Programming I2" module.
+-   `oopI2`: Contains materials for the "Object-Oriented Programming 2" module.
 -   `pmC`: Contains materials for the "Project Management and Communication" module.
 
 Each of these directories may contain subdirectories for specific exercises, projects, or topics.
