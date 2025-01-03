@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>pmC Führungsstil Fragebogen</title>
+  </head>
+  <style>
+      body {
+          margin: 0;
+      }
+
+      .content {
+          width: 60%;
+          margin: 4rem auto 12rem;
+          font-family: sans-serif;
+      }
+
+      .page-title {
+          margin: 2rem 0 0;
+      }
+
+      .author-attr {
+          font-style: italic;
+      }
+
+      .section-title {
+          margin: 1em 0 0;
+      }
+
+      .section-list {
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+      }
+
+      .section-list__item {
+          cursor: move;
+          background-color: #eee;
+          border: 2px solid rgba(0 0 0 / 0);
+          border-radius: .25rem;
+          padding: .25rem;
+      }
+
+      .section-list__item--dragover {
+          border: 2px dashed #333;
+      }
+
+      .result-wrapper {
+          display: grid;
+          gap: 1rem;
+          grid-template-columns: auto repeat(5, 1fr);
+          margin: 4rem 0;
+      }
+
+      .result-row__item {
+          margin: 0;
+      }
+
+      .result-row__item--gray {
+          color: grey;
+      }
+
+      .result-row__item--blue {
+          color: blue;
+      }
+
+      .result-row__item--orange {
+          color: orange;
+      }
+
+      .result-row__item--red {
+          color: red;
+      }
+
+      .result-row__item--black {
+          color: black;
+      }
+  </style>
+  <body>
+    <main class="content" id="content">
+      <h1 class="page-title">Standortbestimmung zum Führungsstil nach Blake and Mouton</h1>
+
+      <p>Ordne die Aussagen neu an, sodass die Wahrheitsgetreuste zuoberst steht.</p>
+
+      <p class="author-attr">Durch Lani Wagner in ein interaktives Formular verwandelt.</p>
+
+      <section>
+        <h2 class="section-title">Entscheidungen</h2>
+        <ol class="section-list" id="a-items">
+          <li class="section-list__item" draggable="true">
+            Ich lege grossen Wert darauf, dass ich von den Mitarbeitenden akzeptiert werde und stimme deshalb meinen
+            Entscheid auf sie ab.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich lege grossen Wert darauf, dass meine Mitarbeitenden am Entscheidungsprozess teilhaben, was sowohl
+            Verständnis als auch Einverständnis herbeiführt.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich lege grossen Wert darauf, Entscheidungen zu treffen, die auch durchgesetzt werden.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich akzeptiere meistens Entscheidungen anderer und trete mit Vorgesetzten und Mitarbeitern in Kontakt, wenn
+            sie mich benötigen.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich such nach Entscheidungen, die durchführbar, wenn auch nicht immer perfekt sind. Wichtig ist, dass meine
+            Mitarbeiter das Gefühl haben, an der Entscheidung teilzunehmen.
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="section-title">Überzeugung</h2>
+        <ol class="section-list" id="b-items">
+          <li class="section-list__item" draggable="true">
+            Es gibt für mich keine idealen Lösungen. Man muss sich immer um einen Kompromiss bemühen und die Sache so
+            realistisch wie möglich sehen.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich habe meine festen Absichten und trete auch für sie ein, selbst wenn lange nicht alle mit mir einig gehen
+            können.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Meistens übernehme ich Ansichten und Verhaltensweisen anderer, besonders dann, wenn ich davon überzeugt bin,
+            dass meine Meinung zu einem Konflikt führt.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Selbst wenn ich ein klares Konzept habe, suche ich nach Ideen, die sich von meinen Unterscheiden und bin
+            bereit, auf gute Vorschläge hin meine Meinung zu ändern.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Gegenüber Meinungen, Verhaltensweisen und Vorstellungen anderer versuche ich nicht Partei zu ergreifen. Das
+            gibt am wenigsten Probleme.
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="section-title">Konflikt</h2>
+        <ol class="section-list" id="c-items">
+          <li class="section-list__item" draggable="true">
+            Im Falle eines Konfliktes versuche ich meinen Standpunkt durchzusetzen, wobei ich natürlich vorgängig
+            abkläre, wer im Unrecht ist.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Wenn Konflikte auftauchen, versuche ich, gerecht aber fest zu bleiben und befriedigende Lösungen
+            anzustreben. Richtlinie für mich ist, was andere in dieser Situation unternommen hätten.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ein freundliches Arbeitsklima ist mir sehr wichtig, weshalb ich die Entstehung von Konflikten zu verhindern
+            suche. Kommt es trotzdem einmal dazu, betrachte ich es als meine Aufgabe, die Wunden zu heilen, um ein gutes
+            Zusammenarbeiten sicherzustellen.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Im Konfliktfalle ist es das Beste, mit dem Handeln so lange zu warten, bis sich die Dinge etwas abgekühlt
+            haben. Meist wächst dann von selbst Gras darüber.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Wenn Konflikte auftauchen, versuche ich die Ursachen herauszufinden und bespreche mit den Beteiligten die
+            zur Beseitigung erforderlichen Massnahmen.
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="section-title">Emotionen</h2>
+        <ol class="section-list" id="d-items">
+          <li class="section-list__item" draggable="true">
+            Bei Spannungen beherrsche ich mich, neige aber zu Ungeduld, wenn die Dinge nicht von der Stelle gehen
+            wollen.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Unter Spannungen fühle ich mich unsicher, welche Richtung ich einschlagen soll, um weiteren Druck zu
+            vermeiden.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich rege mich selten auf, schliesslich lebt man nicht für die Unternehmung.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich weiss, dass Spannungen Störungen verursachen und versuche deshalb immer auf nette und freundliche Art,
+            die strittigen Punkte zu beseitigen.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Wenn die Dinge nicht richtig laufen, werde ich ungeduldig und kurz angebunden. Ich verteidige meinen
+            Standpunkt oder kontere mit Gegenargumenten.
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="section-title">Humor</h2>
+        <ol class="section-list" id="e-items">
+          <li class="section-list__item" draggable="true">
+            An und für sich vermeide ich den Humor. Mache ich trotzdem einmal davon Gebrauch, trifft es hart.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich habe Sinn für Humor, verwende ihn aber nur, wenn er mir oder meiner Stellung dient.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Mein Humor passt auf die Situation und ist richtungsweisend. Selbst unter Druck versuche ich, den Humor
+            nicht zu verlieren.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Mein Humor dient dazu, die Arbeit erträglich zu machen oder bei Konflikten die Situation zu entspannen.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Mit meinem Humor komme ich bei anderen nicht gut an.
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="section-title">Anstrengung</h2>
+        <ol class="section-list" id="f-items">
+          <li class="section-list__item" draggable="true">
+            Ich ermutige vielmehr zur Arbeit, als dass ich antreibe oder führe. Wo nötig, springe ich ein und helfe.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich treibe mich und meine Mitarbeiter zur Leistung an.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich strenge mich soweit als nötig an. Schliesslich habe ich ausser der Arbeit noch andere Interessen und
+            Pflichten.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich versuche ein gutes, gleichmässiges Arbeitstempo zu halten.
+          </li>
+          <li class="section-list__item" draggable="true">
+            Ich strenge mich kräftig an und meine Mitarbeiter folgen mir, weil wir auf einem Verhältnis des Vertrauens
+            und der gegenseitigen Unterstützung aufbauen.
+          </li>
+        </ol>
+      </section>
+
+      <div class="result-wrapper" id="result-wrapper">
+        <h3 class="result-row__item">Interpretation</h3>
+        <span class="result-row__item">So möchte ich sein</span>
+        <span class="result-row__item">So führe ich</span>
+        <span class="result-row__item">Ausweichstil</span>
+        <span class="result-row__item">So führe ich unter Druck</span>
+        <span class="result-row__item">Lehne ich vollständig ab</span>
+
+        <h3 class="result-row__item">Resultat</h3>
+        <span class="result-row__item result-row__item--gray" result></span>
+        <span class="result-row__item result-row__item--blue" result></span>
+        <span class="result-row__item result-row__item--orange" result></span>
+        <span class="result-row__item result-row__item--red" result></span>
+        <span class="result-row__item result-row__item--black" result></span>
+      </div>
+
+      <canvas id="canvas"></canvas>
+    </main>
+
+    <script>
+      const Section = {A: 'a', B: 'b', C: 'c', D: 'd', E: 'e', F: 'f'};
+      const sections = Object.values(Section)
+                             .map(section => [section, `${section}-items`])
+                             .map(([section, id]) => [section, document.getElementById(id)]);
+
+      const dragHoverClass = 'section-list__item--dragover';
+
+      const Statement = {
+        A1: 'a1', A2: 'a2', A3: 'a3', A4: 'a4', A5: 'a5', A6: 'a6',
+        B1: 'b1', B2: 'b2', B3: 'b3', B4: 'b4', B5: 'b5', B6: 'b6',
+        C1: 'c1', C2: 'c2', C3: 'c3', C4: 'c4', C5: 'c5', C6: 'c6',
+        D1: 'd1', D2: 'd2', D3: 'd3', D4: 'd4', D5: 'd5', D6: 'd6',
+        E1: 'e1', E2: 'e2', E3: 'e3', E4: 'e4', E5: 'e5', E6: 'e6',
+        F1: 'f1', F2: 'f2', F3: 'f3', F4: 'f4', F5: 'f5', F6: 'f6',
+      };
+      const pointMapping = [
+        [[Statement.A4, Statement.B5, Statement.C4, Statement.D3, Statement.E5, Statement.F3], [1, 1]],
+        [[Statement.A1, Statement.B3, Statement.C3, Statement.D4, Statement.E4, Statement.F1], [1, 9]],
+        [[Statement.A5, Statement.B1, Statement.C2, Statement.D2, Statement.E2, Statement.F4], [5, 5]],
+        [[Statement.A3, Statement.B2, Statement.C1, Statement.D5, Statement.E1, Statement.F2], [9, 1]],
+        [[Statement.A2, Statement.B4, Statement.C5, Statement.D1, Statement.E3, Statement.F5], [9, 9]],
+      ];
+      const model = new Map([
+                              [Section.A, [Statement.A1, Statement.A2, Statement.A3, Statement.A4, Statement.A5]],
+                              [Section.B, [Statement.B1, Statement.B2, Statement.B3, Statement.B4, Statement.B5]],
+                              [Section.C, [Statement.C1, Statement.C2, Statement.C3, Statement.C4, Statement.C5]],
+                              [Section.D, [Statement.D1, Statement.D2, Statement.D3, Statement.D4, Statement.D5]],
+                              [Section.E, [Statement.E1, Statement.E2, Statement.E3, Statement.E4, Statement.E5]],
+                              [Section.F, [Statement.F1, Statement.F2, Statement.F3, Statement.F4, Statement.F5]],
+                            ]);
+      const resultColors = ['gray', 'blue', 'orange', 'red', 'black'];
+
+      const main = document.getElementById('content');
+      const canvas = document.getElementById('canvas');
+      const drawGraph = results => {
+        const canvasWidth = main.offsetWidth;
+        const canvasHeight = canvasWidth * .56; // 16:9 ratio
+        canvas.setAttribute('width', String(canvasWidth));
+        canvas.setAttribute('height', String(canvasHeight));
+        const verticalAxisWidth = 70;
+        const horizontalAxisHeight = 50;
+        const maxValue = 9;
+        const minValue = 1;
+        const dataAreaWidth = canvasWidth - verticalAxisWidth;
+        const dataAreaHeight = canvasHeight - horizontalAxisHeight;
+        const coordinateMapFactory = (canvasWidth, canvasHeight, verticalAxisWidth, horizontalAxisHeight) => coords => {
+          let [x, y] = coords.map(coord => (coord - minValue) / (maxValue - minValue));
+          y = 1 - y;
+          return [
+            verticalAxisWidth + dataAreaWidth * .1 + x * (dataAreaWidth - .2 * dataAreaWidth),
+            dataAreaHeight * .1 + y * (dataAreaHeight - .2 * dataAreaHeight)
+          ];
+        };
+        const coordinateMap = coordinateMapFactory(canvasWidth, canvasHeight, verticalAxisWidth, horizontalAxisHeight);
+
+        const context = canvas.getContext('2d');
+
+        context.clearRect(0, 0, canvasWidth, canvasHeight);
+        const drawEllipse = (coords, color) => {
+          context.fillStyle = color;
+          context.beginPath();
+          const [x, y] = coordinateMap(coords);
+          context.ellipse(x, y, 5, 5, 0, 0, 2 * Math.PI);
+          context.fill();
+        };
+        const drawLine = ([startX, startY], [endX, endY], color) => {
+          context.beginPath();
+          context.lineWidth = 1;
+          context.strokeStyle = color;
+          context.moveTo(startX, startY);
+          context.lineTo(endX, endY);
+          context.stroke();
+        };
+        const drawText = ([x, y], text, color, vertical = false) => {
+          context.save();
+          context.beginPath();
+          context.strokeStyle = color;
+          context.textAlign = 'center';
+          if (vertical) {
+            context.translate(-.22 * dataAreaWidth, .5 * dataAreaHeight);
+            context.rotate(-Math.PI * .5);
+          }
+          context.font = 'bold 8pt sans-serif';
+          context.strokeText(text, x, y);
+          context.stroke();
+          context.restore();
+        };
+
+        results.forEach((coords, i) => {
+          drawEllipse(coords, resultColors[i]);
+        });
+
+        const tickLength = 10;
+        // Draw horizontal axis.
+        const y = canvasHeight - horizontalAxisHeight;
+        for (let i = 0; i < maxValue - minValue + 1; i++) {
+          const x = verticalAxisWidth + (i + 1) * dataAreaWidth * .1;
+          drawLine([x, y], [x, y + tickLength], 'black');
+          drawText([x, y + tickLength + 16], i + 1, 'gray');
+        }
+        drawText([verticalAxisWidth + dataAreaWidth * .5, dataAreaHeight + .8 * horizontalAxisHeight],
+                 'Aufgabenorientiertheit',
+                 'black');
+        // Draw vertical axis.
+        const x = verticalAxisWidth;
+        for (let i = 0; i < maxValue - minValue + 1; i++) {
+          const y = (i + 1) * dataAreaHeight * .1;
+          drawLine([x, y], [x - tickLength, y], 'black');
+          drawText([x - tickLength - 8, y + 4], maxValue - i, 'gray');
+        }
+        drawText([.2 * verticalAxisWidth, dataAreaHeight * .5], 'Beziehungsbezogenheit', 'black', true);
+      };
+      const resultRowCells = document.getElementById('result-wrapper').querySelectorAll('[result]');
+      const updateResult = model => {
+        const mapModelRow = row => row.map(statement => pointMapping.find(mapping => mapping[0].includes(statement))[1])
+                                      .reduce(([sumX, sumY], [x, y]) => [sumX + x, sumY + y], [0, 0])
+                                      .map(sumCoord => Math.round(sumCoord / 6));
+        const results = [...Array(5).keys()].map(i => Array.from(model.values()).map(row => row[i]))
+                                            .map(row => mapModelRow(row));
+        drawGraph(results);
+        const textResults = results.map(result => result.join(', '));
+        [...resultRowCells].forEach((cell, i) => cell.innerHTML = `• ${textResults[i]}`);
+      };
+
+      updateResult(model);
+      addEventListener('resize', _ => updateResult(model));
+      sections.forEach(([section, sectionNode]) => {
+        const items = Array.from(sectionNode.getElementsByTagName('li'));
+
+        let dragStartSrc = undefined;
+        items.forEach((li, i) => {
+          li.setAttribute('id', `item-a${i}`);
+          li.addEventListener('dragstart', e => {
+            li.style.opacity = String(.4);
+
+            dragStartSrc = li;
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/html', li.innerHTML);
+            e.dataTransfer.setData('text/id', li.getAttribute('id'));
+          });
+          li.addEventListener('dragover', e => {
+            if (!!dragStartSrc && items.includes(dragStartSrc)) {
+              // Only allow drop in same section.
+              e.preventDefault();
+              return false;
+            }
+          });
+          li.addEventListener('dragenter', _ => {
+            if (!!dragStartSrc && items.includes(dragStartSrc)) li.classList.add(dragHoverClass);
+          });
+          li.addEventListener('dragleave', _ => {
+            li.classList.remove(dragHoverClass);
+          });
+          li.addEventListener('dragend', _ => {
+            li.style.opacity = String(1);
+            items.forEach(item => item.classList.remove(dragHoverClass));
+          });
+          li.addEventListener('drop', e => {
+            if (!!dragStartSrc && items.includes(dragStartSrc)) {
+              // Only allow drop in same section.
+              e.stopPropagation();
+
+              if (dragStartSrc !== this) {
+                dragStartSrc.innerHTML = li.innerHTML;
+                dragStartSrc.setAttribute('id', li.getAttribute('id'));
+                li.innerHTML = e.dataTransfer.getData('text/html');
+                li.setAttribute('id', e.dataTransfer.getData('text/id'));
+
+                // Rearrange statements in model.
+                const dragStartIndex = items.indexOf(dragStartSrc);
+                const dragEndIndex = items.indexOf(li);
+                const sectionStatments = model.get(section);
+                const buff = sectionStatments[dragStartIndex];
+                sectionStatments[dragStartIndex] = sectionStatments[dragEndIndex];
+                sectionStatments[dragEndIndex] = buff;
+                model.set(section, sectionStatments);
+                updateResult(model);
+              }
+
+              return false;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

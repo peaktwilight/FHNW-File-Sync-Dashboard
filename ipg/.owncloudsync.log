@@ -1,0 +1,1050 @@
+Log for:/Users/peak/polybox/Study/FHNW/FHNW/ipg/
+# timestamp | duration | file | instruction | dir | modtime | etag | size | fileId | status | errorString | http result code | other size | other modtime | X-Request-ID
+#=#=#=# Syncrun started 2024-11-08T18:00:47Z
+#=#=#=#=# Propagation starts 2024-11-08T18:00:57Z (last step: 10133 msec , total: 10133 msec) 
+2024-11-08T18:00:57+00:00 | Assessment/mündliche Prüfung/IPG-Themenvorschläge mündliche Prüfung.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1723649778 | a0422b85334393128dd3f891c4b4219c | 48061 | 7787670196oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | bbad20da-a1ed-470b-897b-40107e2b2192 | 
+2024-11-08T18:00:57+00:00 | Lektionen/01. Einführung/Aufgaben/01 - Aufgaben - VirtualBox installieren-4.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1688388968 | d0462dd4ac328e9ae88de198e9fb8211 | 81242 | 7872441256oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 0215a188-b471-41ef-acb8-cbe6a39dded0 | 
+2024-11-08T18:00:57+00:00 | Assessment/schriftliche Prüfung/IPG_Prüfung_Fragenkatalog-2.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1649755949 | ea3116898465322a80f28cf87a0fdb66 | 491260 | 7880270511oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 4ccd7adb-900a-4f32-a011-9ebfb2842b30 | 
+2024-11-08T18:00:57+00:00 | Lektionen/01. Einführung/Aufgaben/02 - Aufgaben - Debian-mini installieren-4.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1688388759 | c93b93208bcf4a3a797ba5681edcf276 | 85177 | 7872480201oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ca059a4f-aaed-4534-8a37-c83e64fba682 | 
+2024-11-08T18:00:57+00:00 | Assessment/schriftliche Prüfung/IPG-Infos-schriftliche-Prüfung.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1656950876 | 3161431fa47468adc1503683603ca55d | 122416 | 7787671931oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 8e57f09e-ec3e-4195-97ad-d62c0c504fcb | 
+ | Assessment/schriftliche Prüfung | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726120192 | 66e281006c327 | 0 | 7787509031oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:00:57+00:00 | Assessment/mündliche Prüfung/IPG-mündliche Prüfung-Bewertungsschema.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1584622772 | a7c12675fb2b37047d8e354c1b56c6f8 | 25970 | 7787509691oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | e0142837-f437-4f5b-a5d2-7491a1e0045c | 
+2024-11-08T18:00:58+00:00 | Lektionen/01. Einführung/Aufgaben/02b - Aufgaben - Debian-mini installieren-unter UTM-1.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1694765331 | fdba31be997e448635476103f47eb19a | 73099 | 7872475461oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 1936949b-95df-4890-bf2a-6452e2fe5135 | 
+2024-11-08T18:00:58+00:00 | Lektionen/01. Einführung/Aufgaben/03 - Aufgaben - Debian - einfache Kommandos kennenlernen-4.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1690209680 | bc3135b8010735a9377515ea6f9054cd | 89777 | 7872444251oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | d7c73fd9-38b3-4024-bd5b-15782c5ef689 | 
+2024-11-08T18:00:58+00:00 | Lektionen/01. Einführung/Aufgaben/Mac-Tastatur-in-Dabian-konfigurieren-4.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1693916685 | 62928a18d1d904f0fdda6f7f5a840f61 | 67172 | 7872445801oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | db02e7b7-349e-4fda-90fa-c2093c78fba7 | 
+2024-11-08T18:00:58+00:00 | Lektionen/01. Einführung/Aufgaben/Direkt aus Windows ins BIOS.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1550667761 | 8ca5f8f5ce51570d09ab23b375b46295 | 354754 | 7875956031oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 0b68dfe4-1ac8-4478-ab5e-5d0c6b3cb5ef | 
+2024-11-08T18:00:57+00:00 | Assessment/mündliche Prüfung/IPG-Informationen-mündliche Prüfung.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1723648107 | 5b755dff3eb6491a3efd8dc4fe2f9d87 | 46068 | 7787541381oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 89d57ec8-ebe0-41dd-889e-1efc94d2776a | 
+ | Assessment/mündliche Prüfung | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1723649846 | 66bccf363e671 | 0 | 7787508326oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+ | Assessment | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1723649778 | 66e281006c327 | 0 | 7765038826oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:00:59+00:00 | Lektionen/01. Einführung/Videos/Ablage-sysad-2.0.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1675774155 | 5b0e5b59e11d227f59460acd67ff749e | 1402934 | 7872460521oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 63211237-7f1f-4820-a6ba-42bc141599d4 | 
+2024-11-08T18:00:58+00:00 | Lektionen/01. Einführung/Aufgaben/DebianMini-12-Installation-3.0.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1688386687 | e56cebdbc427caf9c99f229089baf5af | 9698778 | 7875961131oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | b909870a-6de6-4ba9-9975-ce1f61cea5b6 | 
+ | Lektionen/01. Einführung/Aufgaben | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726057022 | 66e18a3e55c7b | 0 | 7872441216oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:01:01+00:00 | Lektionen/01. Einführung/Videos/ersteschritte-Konsole-2.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1675942523 | 525f478976819034f8531205526eba67 | 709349 | 7872460911oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 9c1b0c51-81ea-4647-9605-3690bd5335db | 
+2024-11-08T18:00:59+00:00 | Lektionen/01. Einführung/Videos/DebianMini-12-Installation-3.0.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1688386687 | edc1440ab26fb951aaceb99e59559a5c | 9698778 | 7872462831oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 38e0a1f0-49da-4e8a-8680-9550e30e59ba | 
+2024-11-08T18:01:04+00:00 | Lektionen/01. Einführung/01 - IPG - Intro-5.3.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1725984347 | 3a5ab6a750be9f7f7f9a4d4becdf0137 | 15944239 | 7872356366oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | fba36dd1-9c3a-450f-94e6-fdbef76f07de | 
+2024-11-08T18:01:01+00:00 | Lektionen/01. Einführung/Videos/utm-debian.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1708260283 | 7b52cf8fb6f6fe43d3ec60690995f0e1 | 27251707 | 7872465531oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | a73d9cdd-0e41-4edf-85c2-1774524d86ca | 
+2024-11-08T18:01:14+00:00 | Lektionen/01. Einführung/02 - IPG - Betriebssystem-Rel.5.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1675937838 | 99cc27151d367094d3a700a5ec4e7ab1 | 8345084 | 7872382461oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 66a78a7e-1192-43be-b892-03da266b30b6 | 
+2024-11-08T18:01:11+00:00 | Lektionen/01. Einführung/02 - IPG - Betriebssystem-Rel.5.1.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1689945550 | c81eb087a2f39fbd4a52dbad40ebf8c7 | 35386463 | 7872384066oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 2ba5a46d-c0aa-4338-b7b8-25a9dea16b40 | 
+2024-11-08T18:01:30+00:00 | Lektionen/01. Einführung/03 - IPG - Linux-Kurzeinführung-5.3.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726055728 | df55b573b279c8c5d114eccad876ffa9 | 2287388 | 7875822581oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 488abac1-85f4-439c-96ac-879b91ea8902 | 
+2024-11-08T18:01:31+00:00 | Lektionen/01. Einführung/04 - IPG - VirtualBox-Tipps-4.1.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1675944566 | 78cd8c12478525c5f9757de0a314d4bc | 4359601 | 7875951921oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ed84c403-f7f4-4910-be46-ff35f985cd49 | 
+2024-11-08T18:01:34+00:00 | Lektionen/01. Einführung/04 - IPG - VirtualBox-Tipps-4.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1675944447 | 46828bafc0a0d255e7c54d2067ee99da | 1586789 | 7875951881oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | c0c9b67d-350c-4e31-9f74-4f45df18ddd6 | 
+2024-11-08T18:01:35+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Aufgaben/01 - Aufgabe - Klone-erstellen-2.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1645098048 | 1429aadab4e1faf2ff33cd9f2141c4b9 | 50377 | 7906341316oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 9deff509-db31-4505-9c1c-75c358e4dfaf | 
+2024-11-08T18:01:35+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Aufgaben/02 - Aufgabe - Snapshot-3.3.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1645098227 | 1b710a4cd1e4ff6219c855a36f00af07 | 70217 | 7906341321oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 531a0e0e-771e-41f9-96d1-ee9a62e9c468 | 
+2024-11-08T18:01:35+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Aufgaben/03 - Aufgabe - Repository konfigurieren-3.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1688390208 | 9968f9f155f97338f3f9b3c5dcde5103 | 76302 | 7906341361oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | f6666d41-dd83-492b-81e2-9061010c461f | 
+2024-11-08T18:01:36+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Aufgaben/04 - Aufgabe - sudo-einrichten-3.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1688391581 | 3d494b2b24e9a5976a6378a7bd4909fe | 91706 | 7906341356oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 93f6759e-7707-4fb5-8844-1c6a4582f79e | 
+2024-11-08T18:01:36+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Aufgaben/05 - Aufgabe - VIM-kennenlernen-1.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1645101587 | 74c3fd310a4fe7e0a7a952d038142928 | 203061 | 7906341336oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | fe4558d8-e4a7-49f3-8770-ed337aab4f56 | 
+ | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Aufgaben | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726819305 | 66ed2be95450d | 0 | 7906341226oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:01:37+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Videos/Debian-Repository konfigurieren.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1614602359 | 4b7f3b5544b065440533fb59d2247837 | 652780 | 7906341816oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | fc4fe2bc-d193-44f5-9bb2-dbe2182ae9cb | 
+2024-11-08T18:01:38+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Videos/VE-Klon-erstellen-VB.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1677154277 | f868bb1e341dbd038c294b01deac9094 | 668111 | 7906341916oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 1cf12654-6a13-4ff9-84ef-8e98aeb77935 | 
+2024-11-08T18:01:19+00:00 | Lektionen/01. Einführung/03 - IPG - Linux-Kurzeinführung-5.3.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726057253 | d13c0cd7e09ed5b342daaeec533f0a31 | 44769036 | 7875997506oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3581f46b-f400-489e-9962-2bfddceacd26 | 
+2024-11-08T18:01:41+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Videos/cat-beispiel.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1569147773 | 5ce2cd65942f9480caeb2abf878b13c7 | 51887 | 7906342261oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 8edc8863-85f7-4fa8-9f2d-2a123c5a3832 | 
+2024-11-08T18:01:41+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Videos/less-beispiel.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1569150048 | 1ade1c0449d3016de40d5245e12d0dfb | 280042 | 7906342236oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | d670eacc-204e-4943-b41f-1ed77edd8ef1 | 
+2024-11-08T18:01:39+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Videos/apt-update-upgrade.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1568990724 | f2a6c5024e184e98b11bc5baa189c8af | 4262271 | 7906342186oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 48bffd6e-463e-4ff8-9ad0-81b75d781d20 | 
+ | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Videos | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726819334 | 66ed2c06454c0 | 0 | 7906341571oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:01:42+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/01 - IPG - Virtualisierung-Einführung-5.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1693482941 | 8f2d62bfacaa09dc96ac0272bcad1047 | 5395796 | 7906341741oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 891fe9c4-384f-4c77-98dd-bbd9cbf408f2 | 
+2024-11-08T18:01:00+00:00 | Lektionen/01. Einführung/Videos/Erstmal aufschrauben.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1551188105 | 7693727796f530d8f4fde6e65865052c | 99953765 | 7872469776oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 800a2e30-f9aa-4314-801b-c7c2008c88ce | 
+ | Lektionen/01. Einführung/Videos | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1725986029 | 66e074ed9d8be | 0 | 7872459936oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+ | Lektionen/01. Einführung | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726057388 | 66e18bac22acf | 0 | 7872354316oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:01:45+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/02 - IPG - VirtualBox-Basics-5.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1677154508 | 0681d7e2d9f28d8617a0d61faead561c | 2116667 | 7906342466oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 335bbfb1-7841-464e-93fc-7c7ce3bb3c61 | 
+2024-11-08T18:01:42+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/01 - IPG - Virtualisierung-Einführung-5.1.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1693483565 | 9fb8a49c6e698caaa54332cc6833b5d4 | 24823282 | 7906343711oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | be79c9d7-fa2e-4c79-a2a7-7ba9c349ed91 | 
+2024-11-08T18:01:45+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/02 - IPG - VirtualBox-Basics-5.0.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1677154988 | 7ec8fe75cbb33c230ff3bc9711b7642a | 18585247 | 7906343061oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | fa26ec9c-a465-4b1e-9b24-9db7e0e1d109 | 
+2024-11-08T18:02:01+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/03 - IPG - Bash-Einführung-5.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1709054224 | ae3d0632e5b3c47fa93023a19fa29c35 | 2718994 | 7906343406oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | c095885f-19e0-463d-9d38-f7fdc289274f | 
+2024-11-08T18:02:04+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/04 - IPG - SW-Verwaltung-4.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1663921356 | c69296dd800e398ff139a3cc45341834 | 1033563 | 7906343921oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 0d30faa3-664b-40aa-87de-501de8cf9bf6 | 
+2024-11-08T18:02:06+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/Erläuterungen zu Cloud Computing-EDÖB.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1680427635 | 6eb4283bf2daf039c4e8eb82b39e7984 | 120264 | 7906343966oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 16d455b0-2678-49f8-bb5e-03e9da5193e0 | 
+2024-11-08T18:02:06+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Aufgaben/Aufgabe - Filesystem-prüfen-1.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1646672609 | 90b7e399d218bc4a17e673516ce6e21c | 42729 | 7929254751oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 5835b3f6-a522-4bc1-8604-02cbf9bc7f30 | 
+2024-11-08T18:02:06+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Aufgaben/Aufgabe - Festplatten-Partitionen-Auslastung-2.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1615109780 | 6272155ae6950dc83eff51fcef4efc11 | 75748 | 7929254771oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | aa1f7a62-f1de-4e6e-83fa-6486b229d645 | 
+2024-11-08T18:02:07+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Aufgaben/Aufgabe - Umleiten und Piping-1.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1691678026 | a1ec8d2d7792710787dcbdd6dfaf6503 | 45690 | 7929254801oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | db814e64-f68a-492b-967b-d392bb61e888 | 
+2024-11-08T18:02:07+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Aufgaben/Aufgabe - Mounting-1.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1647960117 | 75f2e00562b9b961a176d6c881522f64 | 66853 | 7929254796oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 49dc056a-444d-4d36-ae44-8f9599d29899 | 
+2024-11-08T18:02:08+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Aufgaben/Aufgabe - ssh-einrichten-2.6.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1691678336 | af9b62117afb4a13a8e8ec8d6b37817f | 149632 | 7929254826oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 52351f42-9433-4441-96ee-530edfc814ed | 
+2024-11-08T18:02:09+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/Linux-EinlesenAusDaten.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1677408276 | 9c321c2cb0752e32913f66cb728ba287 | 263429 | 7929254861oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 35a4e259-ac91-4b87-ac4c-66f4919b8d0c | 
+2024-11-08T18:02:09+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Aufgaben/Erklärung-Loop device.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1648903381 | 3e983a0d63fe173ac32660503d7c4eee | 46268 | 7929254856oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 30e0eb9a-135e-4617-8c2f-45b333281614 | 
+ | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Aufgaben | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1727455595 | 66f6e16b0b0bf | 0 | 7929254651oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:02:10+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/Linux-Umleitung.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1677401675 | bf3a647f5b10057435d746f6f1dc6667 | 2043032 | 7929254991oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 5f352e36-3686-4ac7-935c-bf864baa288a | 
+2024-11-08T18:02:19+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/cat-beispiel.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1569147773 | d076460b80bfab28e03df9a8031491be | 51887 | 7929255016oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 7c35972e-9f09-4f33-9e78-2219189353f2 | 
+2024-11-08T18:02:19+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/du.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1569490877 | a5e02d2f7040236c7d86ece9134f055c | 1192715 | 7929255126oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 05469fb9-b331-48d5-ac69-261689132c92 | 
+2024-11-08T18:02:22+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/less-beispiel.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1569150048 | ea0e9cdc306a00f786eb8a3320de3e52 | 280042 | 7929255156oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 08a7157d-4c7f-4c6c-8390-427820d58175 | 
+2024-11-08T18:02:26+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/mehrere-Terminal.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1601038244 | dad4d9fe2d1439fb3c003b2877de9e59 | 530152 | 7929255216oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ae0521fc-8b63-4bb1-97bf-16114a51e8d2 | 
+2024-11-08T18:02:27+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/ncdu.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1569495341 | d16b9ad8d94e3d8811b5ca62a6ffb321 | 1186809 | 7929255321oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | aadd2b4e-e5cb-4a5a-b37a-f0c9981e54ae | 
+2024-11-08T18:02:28+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/scp-Beispiel-unter-VirtualBox.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1601902693 | 6d2abbd66ad2dc873d20677645c52d42 | 400521 | 7929255386oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | f73bdd1b-68b0-4d13-a2ab-8435ab036fa0 | 
+2024-11-08T18:02:28+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/scp-filezilla.mov | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1543924002 | 37eb8939d796f7748daae7e43502327d | 9635172 | 7929255921oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ef8f115d-e4b6-4ac7-b9b2-0da175a7b596 | 
+2024-11-08T18:02:38+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/scp.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1600926520 | e576bad4b75d8705c9181216b85765ae | 890782 | 7929256026oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 2d8caf19-6fe9-4971-bbba-39ae5b6d1327 | 
+2024-11-08T18:02:39+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/ssh-copy-paste.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1615300248 | c2cb81a18501c37c087eceef32864e43 | 980598 | 7929256151oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | a7c78bc3-1d71-428f-8b0b-c6ae896c6e91 | 
+2024-11-08T18:02:40+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/ssh.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1614704994 | a37a356e9e018b8614c25e81651cd8cc | 779182 | 7929256206oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 2bbbd262-f175-4489-8ddf-986bedb66dbe | 
+2024-11-08T18:02:41+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos/virtuelleKonsolen.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1677419890 | 355ab5c4120aabee24696c0015c09c54 | 111751 | 7929256216oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 00331006-09f1-4b53-bd2e-13aa79d916d8 | 
+ | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/Videos | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1727455646 | 66f6e19e63a69 | 0 | 7929254656oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:01:48+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/03 - IPG - Bash-Einführung-5.1.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1709055189 | 6f6058817d6f97c0ba5a36c941e12ab5 | 44897360 | 7906346091oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | f272fadc-ecac-4220-acba-e45a077db10c | 
+2024-11-08T18:02:49+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/01 - IPG - Bash-Vertiefung-6.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1709643899 | 0a4986c3eabd3f85eac32f73622d29b5 | 1709222 | 7929254726oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | a31c331f-7143-49a7-bd9c-fbafd720beea | 
+2024-11-08T18:02:02+00:00 | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung/04 - IPG - SW-Verwaltung-4.2.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1663922105 | 4e8ebf3fc454a3914dee5615463565af | 62156317 | 7906347381oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3f717f61-ef25-4ce1-9790-073804664db1 | 
+ | Lektionen/02. Virtualisierung, Bash, SW-Verwaltung | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726819453 | 66ed2c7e0dd35 | 0 | 7875973651oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:03:25+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/02 - IPG - SSH-6.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1709056980 | b0b7b6907d3028ad9dd74d121a697103 | 4125633 | 7929256396oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | f22d59bf-edab-4a3b-868e-6aa660c0ec45 | 
+2024-11-08T18:02:52+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/02 - IPG - SSH-6.0.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1709058013 | 557ef99d8a1f3438e94230a09661b82a | 49868701 | 7929258431oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 0ddc71ca-0247-4b33-a044-b1300ecfb5d3 | 
+2024-11-08T18:03:51+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/03 - IPG - Storage-6.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1710256180 | 4e1739389f266aeeee5ec062c03e99d8 | 6348211 | 7929258661oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 9cce048d-4488-439f-b6eb-66bfc9ddd506 | 
+2024-11-08T18:02:41+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/01 - IPG - Bash-Vertiefung-6.1.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1696504845 | d2bd9d9c17b9200bb8a2c5f4702aa58e | 69303135 | 7929259446oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | fa1eb1f1-331e-4c11-8e06-7370d5a3c8e0 | 
+2024-11-08T18:03:57+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/04 - IPG - Filesystems-6.3.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1710490839 | 07a9599ed23ac37b45a4a8c8236612e3 | 3228384 | 7929259701oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | d250f901-4172-407f-8a95-f57d2f19da39 | 
+2024-11-08T18:03:59+00:00 | Lektionen/04. und 05 Netzwerke/Aufgaben/Aufgabe-DefaultGateway-1.4.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1632921600 | fc7470df1c25fa8fc92bcc58b83c326d | 70974 | 7955489741oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | d4bc689f-d15f-42a8-b4cf-c76c0432ec77 | 
+2024-11-08T18:03:59+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/RAID5-XOR.xlsx | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1632585650 | c53e8711b61d72e1a22c82fdf127ff20 | 10583 | 7929259746oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 231caf19-71a7-4dfb-8fcb-da734d2ee293 | 
+2024-11-08T18:03:59+00:00 | Lektionen/04. und 05 Netzwerke/Aufgaben/Aufgabe-IP-Adresse-3.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1691575329 | 2712d57c795eb6e06034743d8e8f648f | 128103 | 7955489781oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | df591c65-909a-4414-88a4-2131a518ddfd | 
+2024-11-08T18:04:00+00:00 | Lektionen/04. und 05 Netzwerke/Aufgaben/Aufgabe-tcpdump-1.5.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1650446012 | 4e12e90d7fbab36873537118543498a7 | 119508 | 7955489976oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 5e791f9c-5e85-497d-98b8-6f989efbfa85 | 
+2024-11-08T18:04:00+00:00 | Lektionen/04. und 05 Netzwerke/Aufgaben/Aufgabe_Lighttpd-2.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1632920264 | a372b812f7c51bdba02966f44aa05be6 | 192611 | 7955490161oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 1ac1e1e7-c3fb-4c15-b677-66339de92c0f | 
+2024-11-08T18:04:01+00:00 | Lektionen/04. und 05 Netzwerke/Aufgaben/Aufgaben-Namensaufloesung-1.5.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728047953 | 42db829fc0485d465dd827570cad7a2f | 76826 | 7955516956oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 0bda853c-4f05-4945-be07-8c85d73ebe64 | 
+ | Lektionen/04. und 05 Netzwerke/Aufgaben | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728048117 | 66ffebf54d07e | 0 | 7955487341oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:03:31+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/03 - IPG - Storage-6.0.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1677764270 | ac4b5c981fa874d5c00230440527c005 | 62464209 | 7929260591oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ff7b65e0-b3eb-4a04-8809-d9c7f732faf0 | 
+2024-11-08T18:04:01+00:00 | Lektionen/04. und 05 Netzwerke/Videos/goodwarriors-tcp_ip deutsch.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1633965609 | 360c072d5c3383f474b197d5ad33e6e1 | 37874188 | 7955500941oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 2e9515c6-f783-4d50-86d5-83882318a1fc | 
+2024-11-08T18:04:35+00:00 | Lektionen/04. und 05 Netzwerke/Videos/tcpdump.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1570642296 | b4bcd7ec13454a3041955b1faee02873 | 2100765 | 7955501581oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 41da29e8-d7dc-4a39-8ac1-c8cee26a725b | 
+2024-11-08T18:04:38+00:00 | Lektionen/04. und 05 Netzwerke/Videos/traceroot-9.9.9.9.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1570639244 | dcc0e6452c5a9af33a19fc6a6e9c3db4 | 174924 | 7955501811oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | fd5c1ddb-f0ed-48f3-a66d-9ace693f096c | 
+2024-11-08T18:04:38+00:00 | Lektionen/04. und 05 Netzwerke/Videos/tracerouteWwwGoogleCom.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1678270580 | 5979430ae3e52158950a28d2f60695c2 | 102448 | 7955502036oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 33d66a68-f943-433e-b9d9-b75d84ebd338 | 
+2024-11-08T18:04:12+00:00 | Lektionen/04. und 05 Netzwerke/Videos/goodwarriors-tcp_ip-english.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1601275024 | 6e086718233f2cbe4f39cb253524744e | 42628175 | 7955510046oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | c8f642b3-ecb8-40ca-918f-e9b3e657450e | 
+ | Lektionen/04. und 05 Netzwerke/Videos | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728048053 | 66ffebb5aa794 | 0 | 7955487411oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:04:46+00:00 | Lektionen/04. und 05 Netzwerke/01 - IPG - Netzwerk-Grundlagen-4.7.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728901404 | e2c62d1be808a30e0d23adf8125edaf3 | 9307609 | 7982627941oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | a41ae7e4-049b-4284-bb57-1a9338e33dbc | 
+2024-11-08T18:03:57+00:00 | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH/04 - IPG - Filesystems-6.3.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1710497019 | 15f701dafa198b992e729123b636f39e | 77904171 | 7929261291oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3d631a9c-f860-4525-8d76-a3e772ee9f1e | 
+ | Lektionen/03. Bash-Vertiefung, Storage, Filesysteme, SSH | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1727455831 | 66f6e258073f9 | 0 | 7929254616oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:04:56+00:00 | Lektionen/04. und 05 Netzwerke/02 - IPG - Netzwerk-Namensauflösung-4.4.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1678707356 | 51882eb38092609f6fb2dea218840e89 | 1442091 | 7955502541oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 8a768690-4ba0-41da-9b4b-d025b167bb89 | 
+2024-11-08T18:04:57+00:00 | Lektionen/04. und 05 Netzwerke/03 - IPG - Netzwerk-Praxis-4.4.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1678271531 | aa391960be3f49cbfa352f5ebe808c5b | 25151634 | 7955511426oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 1e523f67-02df-4417-b346-c1112c66ff17 | 
+2024-11-08T18:04:53+00:00 | Lektionen/04. und 05 Netzwerke/02 - IPG - Netzwerk-Namensauflösung-4.4.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1678713962 | e57e2897556e4fb12ba9628afc1ee495 | 38179389 | 7955499191oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 83bd9f9d-091a-4578-a39d-f67e96b3e197 | 
+2024-11-08T18:05:14+00:00 | Lektionen/04. und 05 Netzwerke/03 - IPG - Netzwerk-Praxis-4.4.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1678271025 | bdccf090c38d2f420ddf4ce8fff18bf4 | 1770686 | 7955510666oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 0261709b-a74b-46e2-9152-b378ea030a71 | 
+2024-11-08T18:05:15+00:00 | Lektionen/06. Firewall, Usermanagement/Aufgaben/Aufgabe-Linuxrechte.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1585227324 | 2a7c06d0be2eedf0132882a3951bbf10 | 61431 | 7977756496oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 18773fb2-68eb-4e55-bbc6-77a9aacc9a57 | 
+2024-11-08T18:05:15+00:00 | Lektionen/06. Firewall, Usermanagement/Aufgaben/Aufgabe-Useradministation.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1585212377 | dd8f11806fd04ef5951d3ba5863d6047 | 62916 | 7977756516oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ce32cd04-bae2-4f37-907e-3a3b48d2fa94 | 
+2024-11-08T18:05:15+00:00 | Lektionen/06. Firewall, Usermanagement/Aufgaben/Aufgabe_UFW-einrichten-1.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1711359739 | f0b9c9c76f2299055e713e4c784b3f32 | 89169 | 7977756641oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 9f3dae02-dc5d-4094-86f1-8262e6177616 | 
+2024-11-08T18:05:15+00:00 | Lektionen/06. Firewall, Usermanagement/Aufgaben/Aufgaben Zugriffsrechte 1-Lösungsblatt.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1634834226 | 43bd0bc9768d53445043d7541d1532a5 | 244396 | 7977756606oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | eae6e294-9010-4107-b567-56d99ceb1e1a | 
+2024-11-08T18:05:16+00:00 | Lektionen/06. Firewall, Usermanagement/Aufgaben/Aufgaben Zugriffsrechte 2-Lösungsblatt.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1634826282 | 6e9466c45bfdf842f251bf1ee0adfb52 | 130512 | 7977756531oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | d9036c6d-adb2-4083-9c4e-329d53697344 | 
+2024-11-08T18:05:16+00:00 | Lektionen/06. Firewall, Usermanagement/Aufgaben/Aufgaben Zugriffsrechte 2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1602150163 | fd7fde85aa78ec8189f697b8e874a3e4 | 66623 | 7977756736oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | aac7560d-9ee4-4235-842c-0e31a4f52bd4 | 
+2024-11-08T18:05:16+00:00 | Lektionen/06. Firewall, Usermanagement/Videos/Demo_setuid.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1571394505 | 55e1e1fb09b851e40b8102bb0f2a6d4e | 412964 | 7977757516oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | e6a8ea73-578b-4277-9d9c-a6309c80d360 | 
+2024-11-08T18:05:16+00:00 | Lektionen/06. Firewall, Usermanagement/Aufgaben/Aufgaben Zugriffsrechte 1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1602150112 | 8d2054309a5a7479ec59970cc8a3d479 | 77781 | 7977756621oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | cb1f0b86-68b9-414a-bee9-b2ceefd16f58 | 
+ | Lektionen/06. Firewall, Usermanagement/Aufgaben | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728638727 | 6708ef079e631 | 0 | 7977755396oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:05:17+00:00 | Lektionen/06. Firewall, Usermanagement/Videos/useraccount-anlegen.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1585135091 | ce66632c4c3a540fd408aeb8d627c9f5 | 280116 | 7977757481oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | b3bb75a0-0a9f-49d9-9ce6-47c6b2923afe | 
+2024-11-08T18:05:17+00:00 | Lektionen/06. Firewall, Usermanagement/Videos/Pizzabestellung.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1203425523 | f249abff03e2b4d52a7ee40ffdaf097e | 4969436 | 7977757816oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 2ed4be65-42f4-440e-afa8-a595e9c725d5 | 
+ | Lektionen/06. Firewall, Usermanagement/Videos | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728638739 | 6708ef1316fde | 0 | 7977756806oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:05:20+00:00 | Lektionen/06. Firewall, Usermanagement/01 - IPG - Firewall-6.0-light.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1711361057 | 256352a22f61c9644ca5031b02a3ed18 | 2228425 | 7977758306oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 12812afe-c41e-4595-8dd4-47e9162c8c0d | 
+2024-11-08T18:05:18+00:00 | Lektionen/06. Firewall, Usermanagement/01 - IPG - Firewall-6.0-light.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1711441982 | 8dcfaddfce2527993cadd37b39781c85 | 35946716 | 7977767436oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 0989813d-41fb-49d3-8b07-695b3b90eb0a | 
+2024-11-08T18:05:53+00:00 | Lektionen/06. Firewall, Usermanagement/02 - IPG - User account administration-5.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1711529566 | 74be41cd5fd7bc7ee86ee3da6992fe8b | 1665774 | 7977758686oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 4b4c0b9c-04f1-4594-a288-9b256d94709f | 
+2024-11-08T18:04:39+00:00 | Lektionen/04. und 05 Netzwerke/01 - IPG - Netzwerk-Grundlagen-4.7.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728904142 | aa792f54b56fc2196b64362c4b538ab4 | 106107838 | 7983053301oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 22bddb1d-a971-4fd5-93a0-bf86d6ab681a | 
+ | Lektionen/04. und 05 Netzwerke | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728906771 | 670d06136471f | 0 | 7955487121oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:05:57+00:00 | Lektionen/06. Firewall, Usermanagement/03 - IPG - Linux-Rechte-5.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1711449240 | d86c338320e05c72d72ea9d537bad9d4 | 1021491 | 7977766481oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | f74a2d8a-d275-49da-91af-5dd2f0a3387d | 
+2024-11-08T18:05:22+00:00 | Lektionen/06. Firewall, Usermanagement/02 - IPG - User account administration-5.1.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1711536028 | 8808288d638f8056ebbc9458e56279a0 | 47215414 | 7977769266oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 756bba75-28c3-48ff-bb53-9d1066b2a85f | 
+2024-11-08T18:05:58+00:00 | Lektionen/06. Firewall, Usermanagement/IPG-optional-Datenschutz-4.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1647878775 | 91aeace3f7fe7740b7d9adea8958da7d | 1965109 | 7977768076oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 50cab9ae-b1b7-420e-bdbb-cdf0aa0da2dc | 
+2024-11-08T18:06:00+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Aufgaben/Aufgaben_BackupAndRestore Lösungen.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1649148905 | 68ee5f077f4a41d59fd82d89f9d3c986 | 75750 | 8019452256oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 1f2de4af-36fb-45fe-a26c-3a8ac122e66c | 
+2024-11-08T18:06:00+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Aufgaben/Aufgaben_BackupAndRestore.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1603471205 | c122a6ed715e568402bbc30bb9f16800 | 66568 | 8019452261oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 487b3a5a-efd8-4146-b0d5-d23b67fea767 | 
+ | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Aufgaben | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1730014529 | 671ded41b38f3 | 0 | 8019452226oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:06:01+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Videos/EineLokaleDateiMitSCPaufEntferntenRechnerArchivieren.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1635593186 | 3d17431245785d2c5ad14e614361540a | 435507 | 8019452836oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 34af9621-a218-48f2-9a34-de933b868e7a | 
+2024-11-08T18:06:03+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Videos/Institute for Backup Trauma-kurz.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1571748346 | aa7ea87d9c2c84c41cff22198b4e63e5 | 10390622 | 8019453651oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 390fb452-dba3-4277-8380-23435ec15382 | 
+2024-11-08T18:06:12+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Videos/passwdMit_cp_ -a_InHomeverzeichnissArchivieren.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1635593296 | ce32ed3cc837fc61c3af0a78fa7eac9b | 237496 | 8019452816oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3957f855-1b9b-4815-95fc-52b76551be95 | 
+2024-11-08T18:06:14+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Videos/rsync-lokal.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1635602349 | e788871df46ec15106f97683047435a3 | 1106346 | 8019453036oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3fae1dea-c9fb-42d7-99bc-50298055010a | 
+2024-11-08T18:05:55+00:00 | Lektionen/06. Firewall, Usermanagement/03 - IPG - Linux-Rechte-5.2.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1711449860 | 1729c115ac52ca16b1df01f14535020b | 31566740 | 7977766026oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | df51fa73-dfa2-4daf-9822-0591b0f9088e | 
+2024-11-08T18:06:16+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Videos/scp-Beispiel.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1635593438 | 7d24a7afeb8b488a91607a990f1a3f8e | 681439 | 8019453146oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 6945f49c-55ca-4c17-9249-ece1de9fbff0 | 
+2024-11-08T18:06:18+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Videos/tar-etc sichern.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1635593044 | a676f2e1007506dd7b09d340857428f7 | 156149 | 8019453121oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 35e7d150-3acb-4b1c-94ba-75d519fcc8cc | 
+ | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/Videos | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1730014561 | 671ded61589f7 | 0 | 8019452786oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:06:20+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/01 - IPG - Passworte-5.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1712300921 | 41667441391f7f2c71f3e60dca454e4a | 816270 | 8016063001oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 55cd934f-39f0-4e7f-9847-343b898366c1 | 
+2024-11-08T18:05:58+00:00 | Lektionen/06. Firewall, Usermanagement/IPG-optional-Datenschutz-4.2.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1648028840 | 9c8f2f6b984e4a6f47123ded0c6e8c0d | 45361899 | 7977771801oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ffcc8f2b-d397-416d-a714-41b79fc7c36a | 
+ | Lektionen/06. Firewall, Usermanagement | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728638882 | 6708efa25536c | 0 | 7977740881oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:06:18+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/01 - IPG - Passworte-5.1.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1712301482 | df50cfa4263bde733b57d1785a296c72 | 31941308 | 8016065236oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3ab48f1f-0925-4b52-a237-b28022907e37 | 
+2024-11-08T18:06:35+00:00 | Lektionen/08. Systemüberwachung und Logging/Aufgaben/Aufgaben_CommandLineMonitoring-6.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1712915908 | 2ce824e802ed903398e521bc223feaa4 | 175602 | 8036559696oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 28712eda-f787-400c-9a3a-f897c7b08d4f | 
+2024-11-08T18:06:42+00:00 | Lektionen/08. Systemüberwachung und Logging/Aufgaben/Lösungen Systemüberwachung und Logging-2.0.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1649927659 | b15271c799175c28e27f3f98b58b60b0 | 87767 | 8036559806oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | c6b5af45-30f3-48ec-8975-2bbe56a6235b | 
+2024-11-08T18:06:42+00:00 | Lektionen/08. Systemüberwachung und Logging/Aufgaben/Optional-How to Install Glances System Monitor on Debian 11 - LinuxCapable.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1649683707 | e378a892316c620753797797c18aeb89 | 847692 | 8036560106oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 6c091d6d-4359-4f26-8f53-9ee2045a7f06 | 
+ | Lektionen/08. Systemüberwachung und Logging/Aufgaben | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1730455071 | 6724a61fbc39f | 0 | 8036558746oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:06:34+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/02 - IPG - Datensicherung-4.4.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1730014366 | 8dc17cd70db8401699030a4a380c0556 | 7174777 | 8019471771oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | eb929fe7-ff69-48f7-8846-f5ebc9ed5da3 | 
+2024-11-08T18:06:43+00:00 | Lektionen/08. Systemüberwachung und Logging/Videos/Glances-Beispiel.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1649688068 | 727be8dfb2b82e7a3946c423c4f45f30 | 901217 | 8036560301oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 6c03a424-96ba-4f8f-9a77-66dd944a01ad | 
+ | Lektionen/08. Systemüberwachung und Logging/Videos | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1730455075 | 6724a62351fbd | 0 | 8036558731oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:06:45+00:00 | Lektionen/08. Systemüberwachung und Logging/01 - IPG-Zeitserver und NTP-5.1.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1712915019 | 548eaeb3dfa20043a81b9850f9dfa21f | 5498554 | 8036559551oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | efa473fc-3998-4287-8183-65a6fd50cc63 | 
+2024-11-08T18:06:44+00:00 | Lektionen/08. Systemüberwachung und Logging/01 - IPG-Zeitserver und NTP-5.1.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1712915776 | d93c7a924578f2357569783313be5c27 | 31853207 | 8036565031oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 5d90b2b2-f68f-4d76-9f6f-e2ba0ea2b78e | 
+2024-11-08T18:07:05+00:00 | Lektionen/08. Systemüberwachung und Logging/02 - IPG-Monitoring-6.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1713260209 | 3725c468cebf93453b40d5d33966e9d3 | 5580889 | 8036564406oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ff223d32-75c3-4c34-bbf5-6d0282cd3b17 | 
+2024-11-08T18:06:49+00:00 | Lektionen/08. Systemüberwachung und Logging/02 - IPG-Monitoring-6.2.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1713261280 | 0edb0c452dc0296949b01c797c624031 | 53409676 | 8036565226oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 21ab450a-12a6-48a7-8d9d-1aaa6fb959d0 | 
+ | Lektionen/08. Systemüberwachung und Logging | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1730649223 | 67279c87af99a | 0 | 8036546221oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:07:15+00:00 | Lektionen/09. Docker/IPG - Docker Intro - 5.6.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1731057292 | feb8238a18be9c58198310864b34d173 | 4110719 | 8055974421oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3f45784c-7898-4235-85e0-6d14b6561452 | 
+2024-11-08T18:06:22+00:00 | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore/02 - IPG - Datensicherung-4.4.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1730016054 | 5bd7bfd507fe10c7c2a2d17ecbffbf74 | 118174407 | 8019473551oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | edb08af0-8775-45d1-ab46-9cbb260a4e82 | 
+ | Lektionen/07. Passworte, Backup, Desasterrecovery, Restore | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1730016466 | 671df4d2512a3 | 0 | 8016060261oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:07:14+00:00 | Lektionen/09. Docker/IPG - Docker Intro - 5.6.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1731058788 | f32e8642b14187f33141f2ea598562ce | 56251126 | 8056135711oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 98958b6d-873c-4605-a08c-a76d702fa805 | 
+2024-11-08T18:07:18+00:00 | Lektionen/09. Docker/ct-dockereinführung-1920-1080.mp4 | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1728648542 | 7970eeb85969ff2bbe2b942e3a38228b | 214704262 | 8036575681oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 9318f97f-c517-4187-b7f6-67d970f4587e | 
+ | Lektionen/09. Docker | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1731059826 | 672de072b3e3e | 0 | 8036546696oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+ | Lektionen | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1731059826 | 672de072b3e3e | 0 | 7765038161oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:09:59+00:00 | Lernmaterial/Debian/Debian GNU:Linux – Installationsanleitung.webloc | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1706203695 | 5d70396be5f1c95f764b42f2f8429279 | 268 | 7765207831oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3f9a6659-3048-4aee-a1fd-f29b474e1446 | 
+2024-11-08T18:09:58+00:00 | Lernmaterial/Debian/3-Vi Reference Card.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1248076472 | bfffe175e084dec032f9afb0ef3d915a | 57544 | 7765207796oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 92814f53-8a0c-4c9d-a83a-90199f55f6a1 | 
+2024-11-08T18:10:00+00:00 | Lernmaterial/Debian/Debian – Its Linux FOSS.webloc | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1706203608 | 77e3b400b362defe530c9f05d888f213 | 264 | 7765207906oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3169ed26-282e-49e0-b54b-e6f6e0c7dbb0 | 
+2024-11-08T18:10:00+00:00 | Lernmaterial/Debian/Nano-Useful-Shortcuts.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1550414897 | 93bc8654de0bc51ee1b4cdd6343adb5b | 33163 | 7765208236oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 50a9ba6b-4416-4b02-a4e0-2942b5070e0c | 
+2024-11-08T18:10:01+00:00 | Lernmaterial/Debian/debian-reference.de.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1675095291 | 555eb44ac0f2a34e5bd0afa6a144f03c | 1388459 | 7765208316oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | f671c9eb-ce93-4001-b189-2fa933c79012 | 
+2024-11-08T18:10:02+00:00 | Lernmaterial/Debian/debian-reference.en.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1706203349 | 11e66a05a2c3160de388a4dc67299240 | 1323476 | 7765208376oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 39b831d2-df06-4a5f-acd6-ca3fdf63daaf | 
+2024-11-08T18:10:04+00:00 | Lernmaterial/Debian/nano-quickhelp.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1568994326 | 99bd9d760f4c9684e51adf6c7cbea775 | 89400 | 7765208441oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 7fdc699f-381f-4550-97d6-1c312037f29d | 
+2024-11-08T18:10:04+00:00 | Lernmaterial/Debian/refcard.de.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1706203291 | 9062c132a163001ff8fbbd4d00678de0 | 69392 | 7765208536oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | c441f4f6-5499-4d7a-a2d4-dee86fc8ca9f | 
+2024-11-08T18:10:05+00:00 | Lernmaterial/MacOS/How to Fix VirtualBox’s “Kernel Driver Not Installed (rc=-1908)” Error on a Mac.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1614096451 | 2ec790d18d9f9d9507e7bb434f95046c | 428612 | 7765207936oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | d61eebaf-9743-418b-9e4e-9d8ebbef5d3e | 
+2024-11-08T18:10:06+00:00 | Lernmaterial/MacOS/OS X Tastaturkürzel-CheatSheet.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1398447530 | c6a1507b6d579ec44a057fea44aa87a1 | 392239 | 7765208071oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 2bbee965-f2cb-43f7-af9a-98a5bcac8785 | 
+2024-11-08T18:10:07+00:00 | Lernmaterial/MacOS/VirtualBox Installation macOS Mojave schlägt fehl.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1614332522 | 221622ae4532945ebe01484d30fae5ca | 406321 | 7765208121oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | d445be64-1f13-47da-8258-f4bd27db34a6 | 
+2024-11-08T18:10:09+00:00 | Lernmaterial/MacOS/shortcuts.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1544644850 | db80e958689833fc8459351d3d40487a | 223868 | 7765208256oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | adfbab42-f15e-46cd-b70b-57658af9efed | 
+ | Lernmaterial/MacOS | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1722949869 | 66b220ed8dc15 | 0 | 7765207746oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:10:11+00:00 | Lernmaterial/UTM/UTM.dmg | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1722948561 | f8db56a569e580de33087c686d65c6f6 | 240229103 | 7765246531oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | b71592a9-af82-48e8-93df-1f345679983e | 
+ | Lernmaterial/UTM | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1722950471 | 66b22347832d0 | 0 | 7765043191oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:11:59+00:00 | Lernmaterial/VirtualBox/UserManual.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1720623802 | 13890268ac34f00b3c05bfb5720bbb28 | 4600713 | 7876028661oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | bf3a68c3-5d18-4a91-b8e1-c34b7e236bb8 | 
+2024-11-08T18:12:01+00:00 | Lernmaterial/VirtualBox/VirtualBox-7.0.20-163906-OSX.dmg | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1722948370 | 1360d3082feea64170bc5f3e1b333890 | 133404213 | 7765087761oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | fdca3106-2613-4314-ae94-854abf3b2897 | 
+2024-11-08T18:12:59+00:00 | Lernmaterial/VirtualBox/VirtualBox-7.0.20-163906-Win.exe | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1722948009 | 0e89adad6732df5aed94ef2ac609ccbb | 110252592 | 7765063501oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 3b2a9d99-d635-475c-8d0e-249378c80241 | 
+ | Lernmaterial/VirtualBox | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1726057651 | 66e18cb3db12e | 0 | 7765042226oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+ | Drehbuch IPG HS24-3iCbb.pdf | CSyncEnums::CSYNC_INSTRUCTION_ERROR | OCC::SyncFileItem::Up | | 1723645167 |  | 261196 |  | OCC::SyncFileItem::NormalError | Not allowed because you don't have permission to add files in that folder | 0 | 0 | 0 |  | 
+2024-11-08T18:13:47+00:00 | IPG-Semesterplan-HS24-1.2.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1731072209 | 5eba033f9f984accfc0edb67cba250e6 | 84504 | 8055853311oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | ef4ac4b6-9bbf-4ee5-82e8-1fc163a8b5bc | 
+2024-11-08T18:13:47+00:00 | Wichtige Informationen zum Urheberrecht.pdf | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1588080345 | 59bc3be3a78db4f79f18950ac784daa3 | 59540 | 7765207786oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 0e9fa947-f328-470b-8bd3-b11b3dd68163 | 
+2024-11-08T18:08:03+00:00 | Lernmaterial/Debian/neue Mac/debian-12.7.0-arm64-DVD-1.iso | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1725898885 | a3700b5920c9005cd953b757d6b6828a | 3993284608 | 7869651936oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 87db4ae9-0641-496b-8d9c-0cda64462a24 | 
+ | Lernmaterial/Debian/neue Mac | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1725966380 | 66e0282cd5e00 | 0 | 7765051561oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+2024-11-08T18:07:22+00:00 | Lernmaterial/Debian/Intel-kompatibel/debian-12.7.0-amd64-DVD-1.iso | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1725898911 | 6ad246dc30554976220b5d5aac7a048b | 3994091520 | 7869653021oc641cdd42e0 | OCC::SyncFileItem::Success |  | 200 | 0 | 0 | 60f39d1b-a3a3-4641-b76a-0a228e655a64 | 
+ | Lernmaterial/Debian/Intel-kompatibel | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1725954033 | 66dff7f1e0e04 | 0 | 7765051546oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+ | Lernmaterial/Debian | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1725966380 | 66e0282cd5e00 | 0 | 7765040401oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+ | Lernmaterial | CSyncEnums::CSYNC_INSTRUCTION_NEW | OCC::SyncFileItem::Down | | 1725966380 | 66e18cb3db12e | 0 | 7765038206oc641cdd42e0 | OCC::SyncFileItem::Success |  | 0 | 0 | 0 |  | 
+#=#=#=# Syncrun finished 2024-11-08T18:44:22Z (last step: 2604938 msec , total: 2615072 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:44:22Z
+#=#=#=#=# Propagation starts 2024-11-08T18:44:22Z (last step: 306 msec , total: 306 msec) 
+ | Drehbuch IPG HS24-3iCbb.pdf | CSyncEnums::CSYNC_INSTRUCTION_ERROR | OCC::SyncFileItem::Up | | 1723645167 |  | 261196 |  | OCC::SyncFileItem::BlacklistedError | Not allowed because you don't have permission to add files in that folder | 0 | 0 | 0 |  | 
+#=#=#=# Syncrun finished 2024-11-08T18:44:22Z (last step: 11 msec , total: 317 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:44:24Z
+#=#=#=#=# Propagation starts 2024-11-08T18:44:24Z (last step: 482 msec , total: 482 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:44:24Z (last step: 19 msec , total: 501 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:47:20Z
+#=#=#=#=# Propagation starts 2024-11-08T18:47:20Z (last step: 476 msec , total: 476 msec) 
+ | Drehbuch IPG HS24-3iCbb.pdf | CSyncEnums::CSYNC_INSTRUCTION_ERROR | OCC::SyncFileItem::Up | | 1723645167 |  | 261196 |  | OCC::SyncFileItem::BlacklistedError | Not allowed because you don't have permission to add files in that folder | 0 | 0 | 0 |  | 
+#=#=#=# Syncrun finished 2024-11-08T18:47:20Z (last step: 20 msec , total: 497 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:48:22Z
+#=#=#=#=# Propagation starts 2024-11-08T18:48:22Z (last step: 548 msec , total: 548 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:48:22Z (last step: 21 msec , total: 570 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:49:24Z
+#=#=#=#=# Propagation starts 2024-11-08T18:49:24Z (last step: 496 msec , total: 496 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:49:24Z (last step: 4 msec , total: 501 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:50:26Z
+#=#=#=#=# Propagation starts 2024-11-08T18:50:26Z (last step: 668 msec , total: 668 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:50:26Z (last step: 10 msec , total: 678 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:51:27Z
+#=#=#=#=# Propagation starts 2024-11-08T18:51:28Z (last step: 503 msec , total: 503 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:51:28Z (last step: 11 msec , total: 515 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:52:30Z
+#=#=#=#=# Propagation starts 2024-11-08T18:52:30Z (last step: 476 msec , total: 476 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:52:30Z (last step: 9 msec , total: 485 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:53:32Z
+#=#=#=#=# Propagation starts 2024-11-08T18:53:32Z (last step: 470 msec , total: 470 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:53:32Z (last step: 7 msec , total: 477 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:54:34Z
+#=#=#=#=# Propagation starts 2024-11-08T18:54:34Z (last step: 520 msec , total: 520 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:54:34Z (last step: 12 msec , total: 532 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:55:36Z
+#=#=#=#=# Propagation starts 2024-11-08T18:55:36Z (last step: 510 msec , total: 510 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:55:36Z (last step: 11 msec , total: 522 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:56:38Z
+#=#=#=#=# Propagation starts 2024-11-08T18:56:39Z (last step: 739 msec , total: 739 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:56:39Z (last step: 17 msec , total: 757 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:57:39Z
+#=#=#=#=# Propagation starts 2024-11-08T18:57:40Z (last step: 505 msec , total: 505 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:57:40Z (last step: 9 msec , total: 515 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:58:42Z
+#=#=#=#=# Propagation starts 2024-11-08T18:58:42Z (last step: 530 msec , total: 530 msec) 
+ | Drehbuch IPG HS24-3iCbb.pdf | CSyncEnums::CSYNC_INSTRUCTION_ERROR | OCC::SyncFileItem::Up | | 1723645167 |  | 261196 |  | OCC::SyncFileItem::BlacklistedError | Not allowed because you don't have permission to add files in that folder | 0 | 0 | 0 |  | 
+#=#=#=# Syncrun finished 2024-11-08T18:58:42Z (last step: 7 msec , total: 538 msec) 
+#=#=#=# Syncrun started 2024-11-08T18:59:44Z
+#=#=#=#=# Propagation starts 2024-11-08T18:59:45Z (last step: 477 msec , total: 477 msec) 
+#=#=#=# Syncrun finished 2024-11-08T18:59:45Z (last step: 3 msec , total: 481 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:00:21Z
+#=#=#=#=# Propagation starts 2024-11-08T19:00:21Z (last step: 633 msec , total: 633 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:00:21Z (last step: 12 msec , total: 645 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:00:45Z
+#=#=#=#=# Propagation starts 2024-11-08T19:00:46Z (last step: 514 msec , total: 514 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:00:46Z (last step: 5 msec , total: 519 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:01:46Z
+#=#=#=#=# Propagation starts 2024-11-08T19:01:47Z (last step: 618 msec , total: 618 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:01:47Z (last step: 4 msec , total: 623 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:01:48Z
+#=#=#=#=# Propagation starts 2024-11-08T19:01:49Z (last step: 1116 msec , total: 1116 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:01:49Z (last step: 6 msec , total: 1123 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:18:22Z
+#=#=#=#=# Propagation starts 2024-11-08T19:18:23Z (last step: 904 msec , total: 904 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:18:23Z (last step: 8 msec , total: 912 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:19:32Z
+#=#=#=#=# Propagation starts 2024-11-08T19:19:33Z (last step: 1203 msec , total: 1203 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:19:33Z (last step: 5 msec , total: 1209 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:20:24Z
+#=#=#=#=# Propagation starts 2024-11-08T19:20:25Z (last step: 974 msec , total: 974 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:20:25Z (last step: 11 msec , total: 986 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:21:26Z
+#=#=#=#=# Propagation starts 2024-11-08T19:21:27Z (last step: 735 msec , total: 735 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:21:27Z (last step: 3 msec , total: 738 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:22:29Z
+#=#=#=#=# Propagation starts 2024-11-08T19:22:30Z (last step: 867 msec , total: 867 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:22:30Z (last step: 7 msec , total: 874 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:23:30Z
+#=#=#=#=# Propagation starts 2024-11-08T19:23:31Z (last step: 515 msec , total: 515 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:23:31Z (last step: 2 msec , total: 518 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:24:32Z
+#=#=#=#=# Propagation starts 2024-11-08T19:24:32Z (last step: 486 msec , total: 486 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:24:32Z (last step: 9 msec , total: 495 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:25:34Z
+#=#=#=#=# Propagation starts 2024-11-08T19:25:34Z (last step: 421 msec , total: 421 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:25:34Z (last step: 5 msec , total: 426 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:26:36Z
+#=#=#=#=# Propagation starts 2024-11-08T19:26:36Z (last step: 540 msec , total: 540 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:26:36Z (last step: 12 msec , total: 552 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:27:38Z
+#=#=#=#=# Propagation starts 2024-11-08T19:27:38Z (last step: 504 msec , total: 504 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:27:38Z (last step: 11 msec , total: 516 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:28:40Z
+#=#=#=#=# Propagation starts 2024-11-08T19:28:40Z (last step: 484 msec , total: 484 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:28:40Z (last step: 6 msec , total: 491 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:29:42Z
+#=#=#=#=# Propagation starts 2024-11-08T19:29:44Z (last step: 2330 msec , total: 2330 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:29:44Z (last step: 11 msec , total: 2342 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:30:44Z
+#=#=#=#=# Propagation starts 2024-11-08T19:30:45Z (last step: 491 msec , total: 491 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:30:45Z (last step: 5 msec , total: 497 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:31:46Z
+#=#=#=#=# Propagation starts 2024-11-08T19:31:47Z (last step: 445 msec , total: 445 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:31:47Z (last step: 5 msec , total: 450 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:32:48Z
+#=#=#=#=# Propagation starts 2024-11-08T19:32:48Z (last step: 487 msec , total: 487 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:32:48Z (last step: 2 msec , total: 490 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:49:21Z
+#=#=#=#=# Propagation starts 2024-11-08T19:49:21Z (last step: 580 msec , total: 580 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:49:21Z (last step: 9 msec , total: 590 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:50:22Z
+#=#=#=#=# Propagation starts 2024-11-08T19:50:22Z (last step: 616 msec , total: 616 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:50:22Z (last step: 6 msec , total: 623 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:51:24Z
+#=#=#=#=# Propagation starts 2024-11-08T19:51:25Z (last step: 505 msec , total: 505 msec) 
+ | Drehbuch IPG HS24-3iCbb.pdf | CSyncEnums::CSYNC_INSTRUCTION_ERROR | OCC::SyncFileItem::Up | | 1723645167 |  | 261196 |  | OCC::SyncFileItem::BlacklistedError | Not allowed because you don't have permission to add files in that folder | 0 | 0 | 0 |  | 
+#=#=#=# Syncrun finished 2024-11-08T19:51:25Z (last step: 9 msec , total: 515 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:52:27Z
+#=#=#=#=# Propagation starts 2024-11-08T19:52:27Z (last step: 559 msec , total: 559 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:52:27Z (last step: 4 msec , total: 564 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:53:28Z
+#=#=#=#=# Propagation starts 2024-11-08T19:53:29Z (last step: 732 msec , total: 732 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:53:29Z (last step: 6 msec , total: 739 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:54:30Z
+#=#=#=#=# Propagation starts 2024-11-08T19:54:30Z (last step: 509 msec , total: 509 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:54:30Z (last step: 3 msec , total: 513 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:55:32Z
+#=#=#=#=# Propagation starts 2024-11-08T19:55:32Z (last step: 478 msec , total: 478 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:55:32Z (last step: 6 msec , total: 485 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:56:33Z
+#=#=#=#=# Propagation starts 2024-11-08T19:56:34Z (last step: 500 msec , total: 500 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:56:34Z (last step: 5 msec , total: 506 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:57:35Z
+#=#=#=#=# Propagation starts 2024-11-08T19:57:36Z (last step: 496 msec , total: 496 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:57:36Z (last step: 3 msec , total: 499 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:58:38Z
+#=#=#=#=# Propagation starts 2024-11-08T19:58:38Z (last step: 496 msec , total: 496 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:58:38Z (last step: 3 msec , total: 499 msec) 
+#=#=#=# Syncrun started 2024-11-08T19:59:40Z
+#=#=#=#=# Propagation starts 2024-11-08T19:59:40Z (last step: 548 msec , total: 548 msec) 
+#=#=#=# Syncrun finished 2024-11-08T19:59:40Z (last step: 6 msec , total: 555 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:00:41Z
+#=#=#=#=# Propagation starts 2024-11-08T20:00:42Z (last step: 715 msec , total: 715 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:00:42Z (last step: 2 msec , total: 718 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:01:43Z
+#=#=#=#=# Propagation starts 2024-11-08T20:01:44Z (last step: 451 msec , total: 451 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:01:44Z (last step: 7 msec , total: 459 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:02:45Z
+#=#=#=#=# Propagation starts 2024-11-08T20:02:46Z (last step: 540 msec , total: 540 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:02:46Z (last step: 6 msec , total: 546 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:03:46Z
+#=#=#=#=# Propagation starts 2024-11-08T20:03:46Z (last step: 556 msec , total: 556 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:03:46Z (last step: 8 msec , total: 565 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:03:48Z
+#=#=#=#=# Propagation starts 2024-11-08T20:03:48Z (last step: 532 msec , total: 532 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:03:48Z (last step: 12 msec , total: 545 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:20:21Z
+#=#=#=#=# Propagation starts 2024-11-08T20:20:22Z (last step: 630 msec , total: 630 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:20:22Z (last step: 5 msec , total: 636 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:21:24Z
+#=#=#=#=# Propagation starts 2024-11-08T20:21:24Z (last step: 768 msec , total: 768 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:21:24Z (last step: 8 msec , total: 777 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:22:23Z
+#=#=#=#=# Propagation starts 2024-11-08T20:22:24Z (last step: 463 msec , total: 463 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:22:24Z (last step: 9 msec , total: 473 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:23:25Z
+#=#=#=#=# Propagation starts 2024-11-08T20:23:26Z (last step: 737 msec , total: 737 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:23:26Z (last step: 7 msec , total: 744 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:24:27Z
+#=#=#=#=# Propagation starts 2024-11-08T20:24:28Z (last step: 659 msec , total: 659 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:24:28Z (last step: 6 msec , total: 666 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:25:29Z
+#=#=#=#=# Propagation starts 2024-11-08T20:25:30Z (last step: 475 msec , total: 475 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:25:30Z (last step: 7 msec , total: 483 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:26:31Z
+#=#=#=#=# Propagation starts 2024-11-08T20:26:32Z (last step: 850 msec , total: 850 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:26:32Z (last step: 2 msec , total: 853 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:27:33Z
+#=#=#=#=# Propagation starts 2024-11-08T20:27:34Z (last step: 506 msec , total: 506 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:27:34Z (last step: 3 msec , total: 509 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:28:35Z
+#=#=#=#=# Propagation starts 2024-11-08T20:28:36Z (last step: 677 msec , total: 677 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:28:36Z (last step: 5 msec , total: 683 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:29:37Z
+#=#=#=#=# Propagation starts 2024-11-08T20:29:38Z (last step: 698 msec , total: 698 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:29:38Z (last step: 6 msec , total: 705 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:30:41Z
+#=#=#=#=# Propagation starts 2024-11-08T20:30:42Z (last step: 498 msec , total: 498 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:30:42Z (last step: 2 msec , total: 501 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:31:41Z
+#=#=#=#=# Propagation starts 2024-11-08T20:31:42Z (last step: 713 msec , total: 713 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:31:42Z (last step: 2 msec , total: 716 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:32:43Z
+#=#=#=#=# Propagation starts 2024-11-08T20:32:44Z (last step: 698 msec , total: 698 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:32:44Z (last step: 7 msec , total: 705 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:33:45Z
+#=#=#=#=# Propagation starts 2024-11-08T20:33:46Z (last step: 538 msec , total: 538 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:33:46Z (last step: 9 msec , total: 548 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:34:48Z
+#=#=#=#=# Propagation starts 2024-11-08T20:34:48Z (last step: 566 msec , total: 566 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:34:48Z (last step: 5 msec , total: 572 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:51:20Z
+#=#=#=#=# Propagation starts 2024-11-08T20:51:21Z (last step: 455 msec , total: 455 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:51:21Z (last step: 6 msec , total: 461 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:52:22Z
+#=#=#=#=# Propagation starts 2024-11-08T20:52:22Z (last step: 425 msec , total: 425 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:52:22Z (last step: 2 msec , total: 427 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:53:24Z
+#=#=#=#=# Propagation starts 2024-11-08T20:53:25Z (last step: 933 msec , total: 933 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:53:25Z (last step: 2 msec , total: 935 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:54:28Z
+#=#=#=#=# Propagation starts 2024-11-08T20:54:29Z (last step: 693 msec , total: 693 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:54:29Z (last step: 11 msec , total: 705 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:55:28Z
+#=#=#=#=# Propagation starts 2024-11-08T20:55:29Z (last step: 821 msec , total: 821 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:55:29Z (last step: 6 msec , total: 828 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:56:31Z
+#=#=#=#=# Propagation starts 2024-11-08T20:56:32Z (last step: 481 msec , total: 481 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:56:32Z (last step: 3 msec , total: 484 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:57:32Z
+#=#=#=#=# Propagation starts 2024-11-08T20:57:33Z (last step: 778 msec , total: 778 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:57:33Z (last step: 2 msec , total: 781 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:58:34Z
+#=#=#=#=# Propagation starts 2024-11-08T20:58:35Z (last step: 425 msec , total: 425 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:58:35Z (last step: 2 msec , total: 428 msec) 
+#=#=#=# Syncrun started 2024-11-08T20:59:38Z
+#=#=#=#=# Propagation starts 2024-11-08T20:59:39Z (last step: 869 msec , total: 869 msec) 
+#=#=#=# Syncrun finished 2024-11-08T20:59:39Z (last step: 7 msec , total: 876 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:00:41Z
+#=#=#=#=# Propagation starts 2024-11-08T21:00:41Z (last step: 681 msec , total: 681 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:00:41Z (last step: 6 msec , total: 688 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:00:43Z
+#=#=#=#=# Propagation starts 2024-11-08T21:00:44Z (last step: 660 msec , total: 660 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:00:44Z (last step: 7 msec , total: 668 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:01:40Z
+#=#=#=#=# Propagation starts 2024-11-08T21:01:40Z (last step: 719 msec , total: 719 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:01:40Z (last step: 2 msec , total: 722 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:02:41Z
+#=#=#=#=# Propagation starts 2024-11-08T21:02:42Z (last step: 424 msec , total: 424 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:02:42Z (last step: 4 msec , total: 429 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:03:44Z
+#=#=#=#=# Propagation starts 2024-11-08T21:03:44Z (last step: 471 msec , total: 471 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:03:44Z (last step: 8 msec , total: 480 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:04:46Z
+#=#=#=#=# Propagation starts 2024-11-08T21:04:46Z (last step: 420 msec , total: 420 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:04:46Z (last step: 6 msec , total: 426 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:05:46Z
+#=#=#=#=# Propagation starts 2024-11-08T21:05:46Z (last step: 469 msec , total: 469 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:05:46Z (last step: 7 msec , total: 477 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:05:48Z
+#=#=#=#=# Propagation starts 2024-11-08T21:05:48Z (last step: 487 msec , total: 487 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:05:48Z (last step: 4 msec , total: 491 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:22:20Z
+#=#=#=#=# Propagation starts 2024-11-08T21:22:21Z (last step: 486 msec , total: 486 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:22:21Z (last step: 5 msec , total: 492 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:23:22Z
+#=#=#=#=# Propagation starts 2024-11-08T21:23:23Z (last step: 673 msec , total: 673 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:23:23Z (last step: 6 msec , total: 679 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:24:23Z
+#=#=#=#=# Propagation starts 2024-11-08T21:24:24Z (last step: 749 msec , total: 749 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:24:24Z (last step: 2 msec , total: 751 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:25:26Z
+#=#=#=#=# Propagation starts 2024-11-08T21:25:27Z (last step: 560 msec , total: 560 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:25:27Z (last step: 3 msec , total: 563 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:26:28Z
+#=#=#=#=# Propagation starts 2024-11-08T21:26:29Z (last step: 875 msec , total: 875 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:26:29Z (last step: 11 msec , total: 886 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:27:30Z
+#=#=#=#=# Propagation starts 2024-11-08T21:27:31Z (last step: 948 msec , total: 948 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:27:32Z (last step: 66 msec , total: 1014 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:28:31Z
+#=#=#=#=# Propagation starts 2024-11-08T21:28:32Z (last step: 690 msec , total: 690 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:28:32Z (last step: 17 msec , total: 708 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:29:33Z
+#=#=#=#=# Propagation starts 2024-11-08T21:29:34Z (last step: 485 msec , total: 485 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:29:34Z (last step: 49 msec , total: 535 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:30:35Z
+#=#=#=#=# Propagation starts 2024-11-08T21:30:36Z (last step: 630 msec , total: 630 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:30:36Z (last step: 12 msec , total: 642 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:31:37Z
+#=#=#=#=# Propagation starts 2024-11-08T21:31:38Z (last step: 506 msec , total: 506 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:31:38Z (last step: 17 msec , total: 524 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:32:39Z
+#=#=#=#=# Propagation starts 2024-11-08T21:32:40Z (last step: 493 msec , total: 493 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:32:40Z (last step: 23 msec , total: 516 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:33:42Z
+#=#=#=#=# Propagation starts 2024-11-08T21:33:43Z (last step: 901 msec , total: 901 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:33:43Z (last step: 12 msec , total: 913 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:34:43Z
+#=#=#=#=# Propagation starts 2024-11-08T21:34:44Z (last step: 460 msec , total: 460 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:34:44Z (last step: 26 msec , total: 486 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:35:45Z
+#=#=#=#=# Propagation starts 2024-11-08T21:35:46Z (last step: 474 msec , total: 474 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:35:46Z (last step: 29 msec , total: 504 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:36:48Z
+#=#=#=#=# Propagation starts 2024-11-08T21:36:48Z (last step: 534 msec , total: 534 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:36:48Z (last step: 33 msec , total: 568 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:53:20Z
+#=#=#=#=# Propagation starts 2024-11-08T21:53:21Z (last step: 582 msec , total: 582 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:53:21Z (last step: 19 msec , total: 601 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:54:21Z
+#=#=#=#=# Propagation starts 2024-11-08T21:54:22Z (last step: 611 msec , total: 611 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:54:22Z (last step: 11 msec , total: 623 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:55:24Z
+#=#=#=#=# Propagation starts 2024-11-08T21:55:24Z (last step: 618 msec , total: 618 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:55:24Z (last step: 48 msec , total: 667 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:56:27Z
+#=#=#=#=# Propagation starts 2024-11-08T21:56:28Z (last step: 619 msec , total: 619 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:56:28Z (last step: 25 msec , total: 645 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:57:27Z
+#=#=#=#=# Propagation starts 2024-11-08T21:57:28Z (last step: 459 msec , total: 459 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:57:28Z (last step: 31 msec , total: 491 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:58:30Z
+#=#=#=#=# Propagation starts 2024-11-08T21:58:31Z (last step: 548 msec , total: 548 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:58:31Z (last step: 29 msec , total: 578 msec) 
+#=#=#=# Syncrun started 2024-11-08T21:59:31Z
+#=#=#=#=# Propagation starts 2024-11-08T21:59:32Z (last step: 480 msec , total: 480 msec) 
+#=#=#=# Syncrun finished 2024-11-08T21:59:32Z (last step: 22 msec , total: 503 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:00:34Z
+#=#=#=#=# Propagation starts 2024-11-08T22:00:34Z (last step: 498 msec , total: 498 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:00:34Z (last step: 32 msec , total: 531 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:00:49Z
+#=#=#=#=# Propagation starts 2024-11-08T22:00:50Z (last step: 503 msec , total: 503 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:00:50Z (last step: 15 msec , total: 518 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:01:35Z
+#=#=#=#=# Propagation starts 2024-11-08T22:01:36Z (last step: 746 msec , total: 746 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:01:36Z (last step: 36 msec , total: 783 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:02:38Z
+#=#=#=#=# Propagation starts 2024-11-08T22:02:38Z (last step: 584 msec , total: 584 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:02:38Z (last step: 26 msec , total: 610 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:03:40Z
+#=#=#=#=# Propagation starts 2024-11-08T22:03:40Z (last step: 560 msec , total: 560 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:03:40Z (last step: 34 msec , total: 595 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:04:42Z
+#=#=#=#=# Propagation starts 2024-11-08T22:04:42Z (last step: 783 msec , total: 783 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:04:42Z (last step: 22 msec , total: 806 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:05:44Z
+#=#=#=#=# Propagation starts 2024-11-08T22:05:44Z (last step: 505 msec , total: 505 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:05:44Z (last step: 33 msec , total: 538 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:06:46Z
+#=#=#=#=# Propagation starts 2024-11-08T22:06:46Z (last step: 569 msec , total: 569 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:06:46Z (last step: 38 msec , total: 608 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:07:46Z
+#=#=#=#=# Propagation starts 2024-11-08T22:07:46Z (last step: 548 msec , total: 548 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:07:46Z (last step: 32 msec , total: 580 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:07:48Z
+#=#=#=#=# Propagation starts 2024-11-08T22:07:49Z (last step: 789 msec , total: 790 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:07:49Z (last step: 21 msec , total: 811 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:38:04Z
+#=#=#=#=# Propagation starts 2024-11-08T22:38:05Z (last step: 795 msec , total: 795 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:38:05Z (last step: 23 msec , total: 819 msec) 
+#=#=#=# Syncrun started 2024-11-08T22:39:06Z
+#=#=#=#=# Propagation starts 2024-11-08T22:39:06Z (last step: 492 msec , total: 492 msec) 
+#=#=#=# Syncrun finished 2024-11-08T22:39:06Z (last step: 15 msec , total: 508 msec) 
+#=#=#=# Syncrun started 2024-11-08T23:29:52Z
+#=#=#=#=# Propagation starts 2024-11-08T23:29:53Z (last step: 946 msec , total: 946 msec) 
+#=#=#=# Syncrun finished 2024-11-08T23:29:53Z (last step: 9 msec , total: 956 msec) 
+#=#=#=# Syncrun started 2024-11-08T23:32:15Z
+#=#=#=#=# Propagation starts 2024-11-08T23:32:16Z (last step: 520 msec , total: 520 msec) 
+#=#=#=# Syncrun finished 2024-11-08T23:32:16Z (last step: 19 msec , total: 539 msec) 
+#=#=#=# Syncrun started 2024-11-08T23:49:43Z
+#=#=#=#=# Propagation starts 2024-11-08T23:49:44Z (last step: 535 msec , total: 535 msec) 
+#=#=#=# Syncrun finished 2024-11-08T23:49:44Z (last step: 18 msec , total: 554 msec) 
+#=#=#=# Syncrun started 2024-11-08T23:59:13Z
+#=#=#=#=# Propagation starts 2024-11-08T23:59:13Z (last step: 751 msec , total: 751 msec) 
+#=#=#=# Syncrun finished 2024-11-08T23:59:13Z (last step: 21 msec , total: 773 msec) 
+#=#=#=# Syncrun started 2024-11-09T00:22:15Z
+#=#=#=#=# Propagation starts 2024-11-09T00:22:16Z (last step: 471 msec , total: 471 msec) 
+ | Drehbuch IPG HS24-3iCbb.pdf | CSyncEnums::CSYNC_INSTRUCTION_ERROR | OCC::SyncFileItem::Up | | 1723645167 |  | 261196 |  | OCC::SyncFileItem::BlacklistedError | Not allowed because you don't have permission to add files in that folder | 0 | 0 | 0 |  | 
+#=#=#=# Syncrun finished 2024-11-09T00:22:16Z (last step: 21 msec , total: 492 msec) 
+#=#=#=# Syncrun started 2024-11-09T00:23:06Z
+#=#=#=#=# Propagation starts 2024-11-09T00:23:06Z (last step: 494 msec , total: 494 msec) 
+#=#=#=# Syncrun finished 2024-11-09T00:23:06Z (last step: 16 msec , total: 511 msec) 
+#=#=#=# Syncrun started 2024-11-09T01:00:54Z
+#=#=#=#=# Propagation starts 2024-11-09T01:00:55Z (last step: 450 msec , total: 450 msec) 
+#=#=#=# Syncrun finished 2024-11-09T01:00:55Z (last step: 14 msec , total: 464 msec) 
+#=#=#=# Syncrun started 2024-11-09T01:01:55Z
+#=#=#=#=# Propagation starts 2024-11-09T01:01:56Z (last step: 599 msec , total: 599 msec) 
+#=#=#=# Syncrun finished 2024-11-09T01:01:56Z (last step: 31 msec , total: 630 msec) 
+#=#=#=# Syncrun started 2024-11-09T01:05:35Z
+#=#=#=#=# Propagation starts 2024-11-09T01:05:36Z (last step: 485 msec , total: 485 msec) 
+#=#=#=# Syncrun finished 2024-11-09T01:05:36Z (last step: 22 msec , total: 508 msec) 
+#=#=#=# Syncrun started 2024-11-09T01:21:53Z
+#=#=#=#=# Propagation starts 2024-11-09T01:21:54Z (last step: 435 msec , total: 435 msec) 
+#=#=#=# Syncrun finished 2024-11-09T01:21:54Z (last step: 16 msec , total: 451 msec) 
+#=#=#=# Syncrun started 2024-11-09T02:14:28Z
+#=#=#=#=# Propagation starts 2024-11-09T02:14:29Z (last step: 462 msec , total: 462 msec) 
+#=#=#=# Syncrun finished 2024-11-09T02:14:29Z (last step: 14 msec , total: 476 msec) 
+#=#=#=# Syncrun started 2024-11-09T03:05:52Z
+#=#=#=#=# Propagation starts 2024-11-09T03:23:08Z (last step: 1064 msec , total: 1064 msec) 
+#=#=#=# Syncrun finished 2024-11-09T03:23:08Z (last step: 3 msec , total: 1067 msec) 
+#=#=#=# Syncrun started 2024-11-09T03:23:56Z
+#=#=#=#=# Propagation starts 2024-11-09T03:23:57Z (last step: 708 msec , total: 708 msec) 
+#=#=#=# Syncrun finished 2024-11-09T03:23:57Z (last step: 16 msec , total: 725 msec) 
+#=#=#=# Syncrun started 2024-11-09T04:15:53Z
+#=#=#=#=# Propagation starts 2024-11-09T04:15:54Z (last step: 703 msec , total: 703 msec) 
+#=#=#=# Syncrun finished 2024-11-09T04:15:54Z (last step: 18 msec , total: 722 msec) 
+#=#=#=# Syncrun started 2024-11-09T04:32:08Z
+#=#=#=#=# Propagation starts 2024-11-09T04:32:08Z (last step: 476 msec , total: 476 msec) 
+#=#=#=# Syncrun finished 2024-11-09T04:32:08Z (last step: 15 msec , total: 491 msec) 
+#=#=#=# Syncrun started 2024-11-09T04:33:02Z
+#=#=#=#=# Propagation starts 2024-11-09T04:33:03Z (last step: 706 msec , total: 706 msec) 
+#=#=#=# Syncrun finished 2024-11-09T04:33:03Z (last step: 15 msec , total: 722 msec) 
+#=#=#=# Syncrun started 2024-11-09T05:37:33Z
+#=#=#=#=# Propagation starts 2024-11-09T05:37:34Z (last step: 1018 msec , total: 1018 msec) 
+#=#=#=# Syncrun finished 2024-11-09T05:37:34Z (last step: 23 msec , total: 1041 msec) 
+#=#=#=# Syncrun started 2024-11-09T07:18:08Z
+#=#=#=#=# Propagation starts 2024-11-09T07:18:08Z (last step: 350 msec , total: 350 msec) 
+#=#=#=# Syncrun finished 2024-11-09T07:18:08Z (last step: 14 msec , total: 365 msec) 
+#=#=#=# Syncrun started 2024-11-09T08:18:10Z
+#=#=#=#=# Propagation starts 2024-11-09T08:18:11Z (last step: 848 msec , total: 848 msec) 
+#=#=#=# Syncrun finished 2024-11-09T08:18:11Z (last step: 19 msec , total: 867 msec) 
+#=#=#=# Syncrun started 2024-11-09T08:51:53Z
+#=#=#=#=# Propagation starts 2024-11-09T08:51:53Z (last step: 635 msec , total: 635 msec) 
+#=#=#=# Syncrun finished 2024-11-09T08:51:53Z (last step: 19 msec , total: 654 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:00:42Z
+#=#=#=#=# Propagation starts 2024-11-09T09:00:43Z (last step: 488 msec , total: 488 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:00:43Z (last step: 28 msec , total: 517 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:14:02Z
+#=#=#=#=# Propagation starts 2024-11-09T09:14:02Z (last step: 292 msec , total: 292 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:14:02Z (last step: 6 msec , total: 298 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:15:05Z
+#=#=#=#=# Propagation starts 2024-11-09T09:15:06Z (last step: 485 msec , total: 485 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:15:06Z (last step: 3 msec , total: 489 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:16:07Z
+#=#=#=#=# Propagation starts 2024-11-09T09:16:07Z (last step: 437 msec , total: 437 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:16:07Z (last step: 6 msec , total: 444 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:17:11Z
+#=#=#=#=# Propagation starts 2024-11-09T09:17:12Z (last step: 463 msec , total: 463 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:17:12Z (last step: 6 msec , total: 469 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:18:12Z
+#=#=#=#=# Propagation starts 2024-11-09T09:18:13Z (last step: 455 msec , total: 455 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:18:13Z (last step: 7 msec , total: 463 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:19:13Z
+#=#=#=#=# Propagation starts 2024-11-09T09:19:14Z (last step: 511 msec , total: 511 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:19:14Z (last step: 2 msec , total: 514 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:20:16Z
+#=#=#=#=# Propagation starts 2024-11-09T09:20:16Z (last step: 458 msec , total: 458 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:20:16Z (last step: 9 msec , total: 468 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:21:17Z
+#=#=#=#=# Propagation starts 2024-11-09T09:21:18Z (last step: 650 msec , total: 650 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:21:18Z (last step: 7 msec , total: 657 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:22:19Z
+#=#=#=#=# Propagation starts 2024-11-09T09:22:20Z (last step: 656 msec , total: 656 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:22:20Z (last step: 2 msec , total: 659 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:23:22Z
+#=#=#=#=# Propagation starts 2024-11-09T09:23:22Z (last step: 509 msec , total: 509 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:23:22Z (last step: 7 msec , total: 516 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:24:24Z
+#=#=#=#=# Propagation starts 2024-11-09T09:24:24Z (last step: 464 msec , total: 464 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:24:24Z (last step: 6 msec , total: 471 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:25:25Z
+#=#=#=#=# Propagation starts 2024-11-09T09:25:26Z (last step: 442 msec , total: 442 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:25:26Z (last step: 3 msec , total: 446 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:26:27Z
+#=#=#=#=# Propagation starts 2024-11-09T09:26:28Z (last step: 479 msec , total: 479 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:26:28Z (last step: 2 msec , total: 481 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:27:29Z
+#=#=#=#=# Propagation starts 2024-11-09T09:27:30Z (last step: 463 msec , total: 463 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:27:30Z (last step: 6 msec , total: 470 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:28:31Z
+#=#=#=#=# Propagation starts 2024-11-09T09:28:31Z (last step: 444 msec , total: 444 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:28:31Z (last step: 2 msec , total: 447 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:29:33Z
+#=#=#=#=# Propagation starts 2024-11-09T09:29:34Z (last step: 462 msec , total: 462 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:29:34Z (last step: 7 msec , total: 469 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:46:05Z
+#=#=#=#=# Propagation starts 2024-11-09T09:46:06Z (last step: 781 msec , total: 781 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:46:06Z (last step: 5 msec , total: 786 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:47:08Z
+#=#=#=#=# Propagation starts 2024-11-09T09:47:09Z (last step: 1324 msec , total: 1324 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:47:09Z (last step: 5 msec , total: 1329 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:48:09Z
+#=#=#=#=# Propagation starts 2024-11-09T09:48:10Z (last step: 472 msec , total: 472 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:48:10Z (last step: 2 msec , total: 475 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:49:11Z
+#=#=#=#=# Propagation starts 2024-11-09T09:49:12Z (last step: 519 msec , total: 519 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:49:12Z (last step: 2 msec , total: 521 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:50:14Z
+#=#=#=#=# Propagation starts 2024-11-09T09:50:14Z (last step: 453 msec , total: 453 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:50:14Z (last step: 7 msec , total: 461 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:51:15Z
+#=#=#=#=# Propagation starts 2024-11-09T09:51:16Z (last step: 468 msec , total: 468 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:51:16Z (last step: 9 msec , total: 478 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:52:17Z
+#=#=#=#=# Propagation starts 2024-11-09T09:52:18Z (last step: 481 msec , total: 481 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:52:18Z (last step: 4 msec , total: 486 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:53:19Z
+#=#=#=#=# Propagation starts 2024-11-09T09:53:20Z (last step: 504 msec , total: 504 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:53:20Z (last step: 7 msec , total: 512 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:54:21Z
+#=#=#=#=# Propagation starts 2024-11-09T09:54:22Z (last step: 441 msec , total: 441 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:54:22Z (last step: 6 msec , total: 447 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:55:23Z
+#=#=#=#=# Propagation starts 2024-11-09T09:55:24Z (last step: 427 msec , total: 427 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:55:24Z (last step: 5 msec , total: 432 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:56:25Z
+#=#=#=#=# Propagation starts 2024-11-09T09:56:25Z (last step: 453 msec , total: 453 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:56:25Z (last step: 8 msec , total: 461 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:57:27Z
+#=#=#=#=# Propagation starts 2024-11-09T09:57:28Z (last step: 415 msec , total: 415 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:57:28Z (last step: 2 msec , total: 417 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:58:29Z
+#=#=#=#=# Propagation starts 2024-11-09T09:58:31Z (last step: 1170 msec , total: 1170 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:58:31Z (last step: 8 msec , total: 1178 msec) 
+#=#=#=# Syncrun started 2024-11-09T09:59:31Z
+#=#=#=#=# Propagation starts 2024-11-09T09:59:32Z (last step: 691 msec , total: 691 msec) 
+#=#=#=# Syncrun finished 2024-11-09T09:59:32Z (last step: 8 msec , total: 700 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:00:33Z
+#=#=#=#=# Propagation starts 2024-11-09T10:00:34Z (last step: 486 msec , total: 486 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:00:34Z (last step: 7 msec , total: 493 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:16:02Z
+#=#=#=#=# Propagation starts 2024-11-09T10:16:02Z (last step: 271 msec , total: 271 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:16:02Z (last step: 6 msec , total: 277 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:17:06Z
+#=#=#=#=# Propagation starts 2024-11-09T10:17:06Z (last step: 783 msec , total: 783 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:17:06Z (last step: 2 msec , total: 785 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:18:09Z
+#=#=#=#=# Propagation starts 2024-11-09T10:18:09Z (last step: 581 msec , total: 581 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:18:09Z (last step: 7 msec , total: 588 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:18:20Z
+#=#=#=#=# Propagation starts 2024-11-09T10:18:21Z (last step: 736 msec , total: 736 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:18:21Z (last step: 7 msec , total: 743 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:19:09Z
+#=#=#=#=# Propagation starts 2024-11-09T10:19:10Z (last step: 517 msec , total: 517 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:19:10Z (last step: 2 msec , total: 520 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:20:12Z
+#=#=#=#=# Propagation starts 2024-11-09T10:20:12Z (last step: 578 msec , total: 578 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:20:12Z (last step: 6 msec , total: 584 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:21:14Z
+#=#=#=#=# Propagation starts 2024-11-09T10:21:14Z (last step: 454 msec , total: 454 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:21:14Z (last step: 6 msec , total: 461 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:22:16Z
+#=#=#=#=# Propagation starts 2024-11-09T10:22:16Z (last step: 561 msec , total: 561 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:22:16Z (last step: 3 msec , total: 564 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:23:17Z
+#=#=#=#=# Propagation starts 2024-11-09T10:23:18Z (last step: 665 msec , total: 665 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:23:18Z (last step: 4 msec , total: 670 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:24:20Z
+#=#=#=#=# Propagation starts 2024-11-09T10:24:21Z (last step: 894 msec , total: 894 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:24:21Z (last step: 3 msec , total: 897 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:25:21Z
+#=#=#=#=# Propagation starts 2024-11-09T10:25:22Z (last step: 433 msec , total: 433 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:25:22Z (last step: 7 msec , total: 441 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:26:23Z
+#=#=#=#=# Propagation starts 2024-11-09T10:26:24Z (last step: 531 msec , total: 531 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:26:24Z (last step: 2 msec , total: 533 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:27:25Z
+#=#=#=#=# Propagation starts 2024-11-09T10:27:26Z (last step: 765 msec , total: 765 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:27:26Z (last step: 6 msec , total: 771 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:28:27Z
+#=#=#=#=# Propagation starts 2024-11-09T10:28:28Z (last step: 462 msec , total: 462 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:28:28Z (last step: 6 msec , total: 469 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:29:30Z
+#=#=#=#=# Propagation starts 2024-11-09T10:29:31Z (last step: 455 msec , total: 455 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:29:31Z (last step: 40 msec , total: 495 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:30:31Z
+#=#=#=#=# Propagation starts 2024-11-09T10:30:32Z (last step: 832 msec , total: 832 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:30:32Z (last step: 32 msec , total: 865 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:31:33Z
+#=#=#=#=# Propagation starts 2024-11-09T10:31:34Z (last step: 455 msec , total: 455 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:31:34Z (last step: 31 msec , total: 487 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:48:06Z
+#=#=#=#=# Propagation starts 2024-11-09T10:48:07Z (last step: 1336 msec , total: 1336 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:48:07Z (last step: 38 msec , total: 1374 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:49:07Z
+#=#=#=#=# Propagation starts 2024-11-09T10:49:08Z (last step: 523 msec , total: 523 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:49:08Z (last step: 21 msec , total: 545 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:50:09Z
+#=#=#=#=# Propagation starts 2024-11-09T10:50:10Z (last step: 471 msec , total: 471 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:50:10Z (last step: 44 msec , total: 515 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:51:11Z
+#=#=#=#=# Propagation starts 2024-11-09T10:51:12Z (last step: 538 msec , total: 538 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:51:12Z (last step: 26 msec , total: 564 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:52:14Z
+#=#=#=#=# Propagation starts 2024-11-09T10:52:14Z (last step: 511 msec , total: 511 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:52:14Z (last step: 33 msec , total: 545 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:53:15Z
+#=#=#=#=# Propagation starts 2024-11-09T10:53:16Z (last step: 537 msec , total: 537 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:53:16Z (last step: 13 msec , total: 551 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:54:17Z
+#=#=#=#=# Propagation starts 2024-11-09T10:54:18Z (last step: 490 msec , total: 490 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:54:18Z (last step: 63 msec , total: 554 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:55:19Z
+#=#=#=#=# Propagation starts 2024-11-09T10:55:20Z (last step: 770 msec , total: 770 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:55:20Z (last step: 34 msec , total: 805 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:56:22Z
+#=#=#=#=# Propagation starts 2024-11-09T10:56:23Z (last step: 712 msec , total: 712 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:56:23Z (last step: 15 msec , total: 727 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:57:24Z
+#=#=#=#=# Propagation starts 2024-11-09T10:57:25Z (last step: 754 msec , total: 754 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:57:25Z (last step: 24 msec , total: 778 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:58:25Z
+#=#=#=#=# Propagation starts 2024-11-09T10:58:26Z (last step: 595 msec , total: 595 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:58:26Z (last step: 27 msec , total: 623 msec) 
+#=#=#=# Syncrun started 2024-11-09T10:59:27Z
+#=#=#=#=# Propagation starts 2024-11-09T10:59:28Z (last step: 848 msec , total: 848 msec) 
+#=#=#=# Syncrun finished 2024-11-09T10:59:28Z (last step: 35 msec , total: 883 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:00:30Z
+#=#=#=#=# Propagation starts 2024-11-09T11:00:30Z (last step: 589 msec , total: 589 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:00:30Z (last step: 15 msec , total: 605 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:01:31Z
+#=#=#=#=# Propagation starts 2024-11-09T11:01:32Z (last step: 497 msec , total: 497 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:01:32Z (last step: 31 msec , total: 528 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:02:34Z
+#=#=#=#=# Propagation starts 2024-11-09T11:02:34Z (last step: 551 msec , total: 551 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:02:34Z (last step: 47 msec , total: 599 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:18:02Z
+#=#=#=#=# Propagation starts 2024-11-09T11:18:02Z (last step: 380 msec , total: 380 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:18:02Z (last step: 40 msec , total: 421 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:18:23Z
+#=#=#=#=# Propagation starts 2024-11-09T11:18:23Z (last step: 498 msec , total: 498 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:18:23Z (last step: 20 msec , total: 518 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:19:05Z
+#=#=#=#=# Propagation starts 2024-11-09T11:19:06Z (last step: 559 msec , total: 559 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:19:06Z (last step: 26 msec , total: 585 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:20:09Z
+#=#=#=#=# Propagation starts 2024-11-09T11:20:10Z (last step: 851 msec , total: 851 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:20:10Z (last step: 15 msec , total: 867 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:21:09Z
+#=#=#=#=# Propagation starts 2024-11-09T11:21:10Z (last step: 753 msec , total: 753 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:21:10Z (last step: 21 msec , total: 774 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:22:11Z
+#=#=#=#=# Propagation starts 2024-11-09T11:22:12Z (last step: 772 msec , total: 772 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:22:12Z (last step: 37 msec , total: 809 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:23:13Z
+#=#=#=#=# Propagation starts 2024-11-09T11:23:14Z (last step: 747 msec , total: 747 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:23:14Z (last step: 20 msec , total: 767 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:24:15Z
+#=#=#=#=# Propagation starts 2024-11-09T11:24:16Z (last step: 508 msec , total: 508 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:24:16Z (last step: 36 msec , total: 545 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:25:17Z
+#=#=#=#=# Propagation starts 2024-11-09T11:25:18Z (last step: 488 msec , total: 488 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:25:18Z (last step: 34 msec , total: 523 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:26:20Z
+#=#=#=#=# Propagation starts 2024-11-09T11:26:21Z (last step: 753 msec , total: 753 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:26:21Z (last step: 42 msec , total: 795 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:27:21Z
+#=#=#=#=# Propagation starts 2024-11-09T11:27:22Z (last step: 639 msec , total: 639 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:27:22Z (last step: 43 msec , total: 683 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:28:23Z
+#=#=#=#=# Propagation starts 2024-11-09T11:28:24Z (last step: 669 msec , total: 669 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:28:24Z (last step: 43 msec , total: 712 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:29:26Z
+#=#=#=#=# Propagation starts 2024-11-09T11:29:26Z (last step: 505 msec , total: 505 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:29:26Z (last step: 45 msec , total: 550 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:30:27Z
+#=#=#=#=# Propagation starts 2024-11-09T11:30:28Z (last step: 1169 msec , total: 1169 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:30:28Z (last step: 42 msec , total: 1212 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:31:30Z
+#=#=#=#=# Propagation starts 2024-11-09T11:31:31Z (last step: 782 msec , total: 782 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:31:31Z (last step: 59 msec , total: 841 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:32:31Z
+#=#=#=#=# Propagation starts 2024-11-09T11:32:32Z (last step: 548 msec , total: 548 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:32:32Z (last step: 48 msec , total: 597 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:33:34Z
+#=#=#=#=# Propagation starts 2024-11-09T11:33:34Z (last step: 569 msec , total: 569 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:33:35Z (last step: 45 msec , total: 615 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:50:05Z
+#=#=#=#=# Propagation starts 2024-11-09T11:50:06Z (last step: 576 msec , total: 576 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:50:06Z (last step: 18 msec , total: 594 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:51:07Z
+#=#=#=#=# Propagation starts 2024-11-09T11:51:08Z (last step: 780 msec , total: 780 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:51:08Z (last step: 29 msec , total: 810 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:52:09Z
+#=#=#=#=# Propagation starts 2024-11-09T11:52:10Z (last step: 481 msec , total: 481 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:52:10Z (last step: 24 msec , total: 506 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:53:11Z
+#=#=#=#=# Propagation starts 2024-11-09T11:53:12Z (last step: 464 msec , total: 464 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:53:12Z (last step: 35 msec , total: 499 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:54:13Z
+#=#=#=#=# Propagation starts 2024-11-09T11:54:14Z (last step: 553 msec , total: 553 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:54:14Z (last step: 43 msec , total: 596 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:55:16Z
+#=#=#=#=# Propagation starts 2024-11-09T11:55:16Z (last step: 505 msec , total: 505 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:55:16Z (last step: 47 msec , total: 553 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:56:18Z
+#=#=#=#=# Propagation starts 2024-11-09T11:56:18Z (last step: 598 msec , total: 598 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:56:18Z (last step: 43 msec , total: 641 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:57:19Z
+#=#=#=#=# Propagation starts 2024-11-09T11:57:20Z (last step: 422 msec , total: 422 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:57:20Z (last step: 37 msec , total: 459 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:58:21Z
+#=#=#=#=# Propagation starts 2024-11-09T11:58:22Z (last step: 578 msec , total: 578 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:58:22Z (last step: 27 msec , total: 605 msec) 
+#=#=#=# Syncrun started 2024-11-09T11:59:23Z
+#=#=#=#=# Propagation starts 2024-11-09T11:59:24Z (last step: 482 msec , total: 482 msec) 
+#=#=#=# Syncrun finished 2024-11-09T11:59:24Z (last step: 22 msec , total: 505 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:00:26Z
+#=#=#=#=# Propagation starts 2024-11-09T12:00:27Z (last step: 821 msec , total: 821 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:00:27Z (last step: 45 msec , total: 867 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:01:27Z
+#=#=#=#=# Propagation starts 2024-11-09T12:01:28Z (last step: 671 msec , total: 671 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:01:28Z (last step: 44 msec , total: 715 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:02:29Z
+#=#=#=#=# Propagation starts 2024-11-09T12:02:30Z (last step: 547 msec , total: 547 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:02:30Z (last step: 19 msec , total: 567 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:03:31Z
+#=#=#=#=# Propagation starts 2024-11-09T12:03:32Z (last step: 500 msec , total: 500 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:03:32Z (last step: 18 msec , total: 518 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:04:33Z
+#=#=#=#=# Propagation starts 2024-11-09T12:04:34Z (last step: 472 msec , total: 472 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:04:34Z (last step: 35 msec , total: 508 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:18:29Z
+#=#=#=#=# Propagation starts 2024-11-09T12:18:30Z (last step: 703 msec , total: 703 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:18:30Z (last step: 86 msec , total: 789 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:20:02Z
+#=#=#=#=# Propagation starts 2024-11-09T12:20:02Z (last step: 332 msec , total: 332 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:20:02Z (last step: 40 msec , total: 372 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:21:05Z
+#=#=#=#=# Propagation starts 2024-11-09T12:21:06Z (last step: 510 msec , total: 510 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:21:06Z (last step: 45 msec , total: 556 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:22:07Z
+#=#=#=#=# Propagation starts 2024-11-09T12:22:08Z (last step: 446 msec , total: 446 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:22:08Z (last step: 18 msec , total: 464 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:23:10Z
+#=#=#=#=# Propagation starts 2024-11-09T12:23:10Z (last step: 502 msec , total: 502 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:23:10Z (last step: 35 msec , total: 538 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:24:12Z
+#=#=#=#=# Propagation starts 2024-11-09T12:24:13Z (last step: 498 msec , total: 498 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:24:13Z (last step: 49 msec , total: 548 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:25:14Z
+#=#=#=#=# Propagation starts 2024-11-09T12:25:14Z (last step: 577 msec , total: 577 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:25:14Z (last step: 20 msec , total: 598 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:26:15Z
+#=#=#=#=# Propagation starts 2024-11-09T12:26:16Z (last step: 524 msec , total: 524 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:26:16Z (last step: 27 msec , total: 552 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:27:17Z
+#=#=#=#=# Propagation starts 2024-11-09T12:27:18Z (last step: 504 msec , total: 504 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:27:18Z (last step: 53 msec , total: 557 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:28:19Z
+#=#=#=#=# Propagation starts 2024-11-09T12:28:20Z (last step: 468 msec , total: 468 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:28:20Z (last step: 43 msec , total: 512 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:29:21Z
+#=#=#=#=# Propagation starts 2024-11-09T12:29:22Z (last step: 937 msec , total: 937 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:29:22Z (last step: 47 msec , total: 985 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:30:23Z
+#=#=#=#=# Propagation starts 2024-11-09T12:30:24Z (last step: 772 msec , total: 772 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:30:24Z (last step: 36 msec , total: 809 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:31:26Z
+#=#=#=#=# Propagation starts 2024-11-09T12:31:26Z (last step: 505 msec , total: 505 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:31:26Z (last step: 36 msec , total: 541 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:32:28Z
+#=#=#=#=# Propagation starts 2024-11-09T12:32:28Z (last step: 468 msec , total: 468 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:32:28Z (last step: 69 msec , total: 537 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:33:30Z
+#=#=#=#=# Propagation starts 2024-11-09T12:33:30Z (last step: 788 msec , total: 788 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:33:30Z (last step: 42 msec , total: 830 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:34:31Z
+#=#=#=#=# Propagation starts 2024-11-09T12:34:32Z (last step: 449 msec , total: 449 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:34:32Z (last step: 53 msec , total: 502 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:35:33Z
+#=#=#=#=# Propagation starts 2024-11-09T12:35:34Z (last step: 702 msec , total: 702 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:35:34Z (last step: 67 msec , total: 770 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:52:05Z
+#=#=#=#=# Propagation starts 2024-11-09T12:52:06Z (last step: 651 msec , total: 651 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:52:06Z (last step: 43 msec , total: 695 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:53:07Z
+#=#=#=#=# Propagation starts 2024-11-09T12:53:08Z (last step: 446 msec , total: 446 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:53:08Z (last step: 41 msec , total: 488 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:54:10Z
+#=#=#=#=# Propagation starts 2024-11-09T12:54:10Z (last step: 531 msec , total: 531 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:54:10Z (last step: 50 msec , total: 582 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:55:11Z
+#=#=#=#=# Propagation starts 2024-11-09T12:55:12Z (last step: 551 msec , total: 551 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:55:12Z (last step: 39 msec , total: 591 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:56:13Z
+#=#=#=#=# Propagation starts 2024-11-09T12:56:14Z (last step: 545 msec , total: 545 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:56:14Z (last step: 22 msec , total: 568 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:57:15Z
+#=#=#=#=# Propagation starts 2024-11-09T12:57:16Z (last step: 489 msec , total: 489 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:57:16Z (last step: 40 msec , total: 529 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:58:18Z
+#=#=#=#=# Propagation starts 2024-11-09T12:58:18Z (last step: 493 msec , total: 493 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:58:18Z (last step: 41 msec , total: 534 msec) 
+#=#=#=# Syncrun started 2024-11-09T12:59:19Z
+#=#=#=#=# Propagation starts 2024-11-09T12:59:20Z (last step: 501 msec , total: 501 msec) 
+#=#=#=# Syncrun finished 2024-11-09T12:59:20Z (last step: 40 msec , total: 542 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:00:21Z
+#=#=#=#=# Propagation starts 2024-11-09T13:00:22Z (last step: 565 msec , total: 565 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:00:22Z (last step: 60 msec , total: 625 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:01:23Z
+#=#=#=#=# Propagation starts 2024-11-09T13:01:24Z (last step: 475 msec , total: 475 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:01:24Z (last step: 15 msec , total: 491 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:02:25Z
+#=#=#=#=# Propagation starts 2024-11-09T13:02:26Z (last step: 444 msec , total: 444 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:02:26Z (last step: 73 msec , total: 517 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:03:27Z
+#=#=#=#=# Propagation starts 2024-11-09T13:03:28Z (last step: 527 msec , total: 527 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:03:28Z (last step: 38 msec , total: 566 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:04:29Z
+#=#=#=#=# Propagation starts 2024-11-09T13:04:30Z (last step: 538 msec , total: 538 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:04:30Z (last step: 50 msec , total: 588 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:05:31Z
+#=#=#=#=# Propagation starts 2024-11-09T13:05:32Z (last step: 489 msec , total: 489 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:05:32Z (last step: 43 msec , total: 532 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:06:33Z
+#=#=#=#=# Propagation starts 2024-11-09T13:06:34Z (last step: 597 msec , total: 597 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:06:34Z (last step: 49 msec , total: 646 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:18:35Z
+#=#=#=#=# Propagation starts 2024-11-09T13:18:35Z (last step: 564 msec , total: 564 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:18:35Z (last step: 50 msec , total: 615 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:37:04Z
+#=#=#=#=# Propagation starts 2024-11-09T13:37:05Z (last step: 471 msec , total: 471 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:37:05Z (last step: 14 msec , total: 486 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:38:04Z
+#=#=#=#=# Propagation starts 2024-11-09T13:38:05Z (last step: 464 msec , total: 464 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:38:05Z (last step: 14 msec , total: 479 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:38:06Z
+#=#=#=#=# Propagation starts 2024-11-09T13:38:07Z (last step: 449 msec , total: 449 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:38:07Z (last step: 15 msec , total: 464 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:54:38Z
+#=#=#=#=# Propagation starts 2024-11-09T13:54:38Z (last step: 533 msec , total: 533 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:54:38Z (last step: 17 msec , total: 550 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:55:40Z
+#=#=#=#=# Propagation starts 2024-11-09T13:55:41Z (last step: 691 msec , total: 691 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:55:41Z (last step: 13 msec , total: 705 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:56:42Z
+#=#=#=#=# Propagation starts 2024-11-09T13:56:43Z (last step: 482 msec , total: 482 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:56:43Z (last step: 18 msec , total: 500 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:57:44Z
+#=#=#=#=# Propagation starts 2024-11-09T13:57:45Z (last step: 977 msec , total: 977 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:57:45Z (last step: 14 msec , total: 991 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:58:46Z
+#=#=#=#=# Propagation starts 2024-11-09T13:58:47Z (last step: 483 msec , total: 483 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:58:47Z (last step: 16 msec , total: 500 msec) 
+#=#=#=# Syncrun started 2024-11-09T13:59:48Z
+#=#=#=#=# Propagation starts 2024-11-09T13:59:49Z (last step: 487 msec , total: 487 msec) 
+#=#=#=# Syncrun finished 2024-11-09T13:59:49Z (last step: 14 msec , total: 501 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:00:50Z
+#=#=#=#=# Propagation starts 2024-11-09T14:00:51Z (last step: 706 msec , total: 706 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:00:51Z (last step: 16 msec , total: 722 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:01:52Z
+#=#=#=#=# Propagation starts 2024-11-09T14:01:53Z (last step: 511 msec , total: 511 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:01:53Z (last step: 13 msec , total: 524 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:02:54Z
+#=#=#=#=# Propagation starts 2024-11-09T14:02:55Z (last step: 504 msec , total: 504 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:02:55Z (last step: 15 msec , total: 519 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:03:56Z
+#=#=#=#=# Propagation starts 2024-11-09T14:03:56Z (last step: 431 msec , total: 431 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:03:56Z (last step: 14 msec , total: 445 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:04:58Z
+#=#=#=#=# Propagation starts 2024-11-09T14:04:59Z (last step: 529 msec , total: 529 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:04:59Z (last step: 14 msec , total: 544 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:06:00Z
+#=#=#=#=# Propagation starts 2024-11-09T14:06:01Z (last step: 530 msec , total: 530 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:06:01Z (last step: 15 msec , total: 545 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:07:02Z
+#=#=#=#=# Propagation starts 2024-11-09T14:07:03Z (last step: 454 msec , total: 454 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:07:03Z (last step: 13 msec , total: 467 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:08:04Z
+#=#=#=#=# Propagation starts 2024-11-09T14:08:05Z (last step: 512 msec , total: 512 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:08:05Z (last step: 27 msec , total: 540 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:09:06Z
+#=#=#=#=# Propagation starts 2024-11-09T14:09:07Z (last step: 476 msec , total: 476 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:09:07Z (last step: 30 msec , total: 506 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:18:38Z
+#=#=#=#=# Propagation starts 2024-11-09T14:18:39Z (last step: 690 msec , total: 690 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:18:39Z (last step: 12 msec , total: 702 msec) 
+#=#=#=# Syncrun started 2024-11-09T14:25:38Z
+#=#=#=#=# Propagation starts 2024-11-09T14:25:39Z (last step: 489 msec , total: 489 msec) 
+#=#=#=# Syncrun finished 2024-11-09T14:25:39Z (last step: 15 msec , total: 504 msec) 
+#=#=#=# Syncrun started 2024-11-09T16:49:08Z
+#=#=#=#=# Propagation starts 2024-11-09T16:49:08Z (last step: 438 msec , total: 438 msec) 
+#=#=#=# Syncrun finished 2024-11-09T16:49:08Z (last step: 6 msec , total: 445 msec) 
