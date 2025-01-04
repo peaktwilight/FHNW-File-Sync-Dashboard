@@ -1,18 +1,25 @@
 [DEFAULT]
 # The destination directory where the files will be copied.
-destination = /Users/peak/Documents/Study/FHNW
+destination = /path/to/your/destination/directory
 # A comma-separated list of source directories to be copied.
-source_paths = /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1iCbb/sweGL, /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1Ia/oopI2, /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1iCa/pmC, /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1iCbb/mgli
+source_paths = /path/to/your/source/directory1, /path/to/your/source/directory2, /path/to/your/source/directory3
 # The path to the oopI2 git repository.
-oop_repo_path = /Users/peak/Documents/Study/FHNW/oopI2/oopI2-aufgaben_doruk.oeztuerk
+oop_repo_path = /path/to/your/destination/directory/oopI2/oopI2-aufgaben_doruk.oeztuerk
 # The path to the fetch_from_origin.sh script for sweGL.
-swegl_script_path = /Users/peak/Documents/Study/FHNW/sweGL/fhnw-swegl-aufgaben-24-hs/fetch_from_origin.sh
-# Enable git pull for the oopI2 repository (True or False)
-enable_git_pull = True
-# Enable execution of the SWEGL script (True or False)
-enable_swegl_script = True
+swegl_script_path = /path/to/your/destination/directory/sweGL/fhnw-swegl-aufgaben-24-hs/fetch_from_origin.sh
 # The log level for the script (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 log_level = INFO
 # The maximum number of retries for rsync
 max_rsync_retries = 3
-addPreferredMimeTypes:
+
+[REPOS]
+# Add any additional git repos here, one per line
+# Example:
+# repo1_path = /path/to/your/repo1
+# repo2_path = /path/to/your/repo2
+
+[SCRIPTS]
+# Add any additional scripts to execute here, one per line
+# Example:
+# script1_path = /path/to/your/script1.sh
+# script2_path = /path/to/your/script2.py
