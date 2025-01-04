@@ -16,6 +16,6 @@ mgli/
 oopl2/
 
 # Exclude the script and related files
-!script.py
-!config.txt
-!requirements.txt
+script.py
+config.txt
+requirements.txt

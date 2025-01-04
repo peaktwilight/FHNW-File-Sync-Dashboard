@@ -30,8 +30,8 @@ max_rsync_retries = 3
 - `source_paths`: A comma-separated list of network paths to the course materials.
 - `oop_repo_path`: The local path to the `oopI2` Git repository. If provided, the script will perform a `git pull`.
 - `swegl_script_path`: The local path to the `fetch_from_origin.sh` script for SWEGL. If provided, the script will execute it.
-- `enable_git_pull`: Set to `True` to enable automatic `git pull` for the `oop_repo_path`, `False` to disable.
-- `enable_swegl_script`: Set to `True` to enable execution of the SWEGL script, `False` to disable.
+- `enable_git_pull`: Set to `True` to enable or disable automatic `git pull` for the `oop_repo_path`. Defaults to `True`.
+- `enable_swegl_script`: Set to `True` to enable or disable the execution of the SWEGL script. Defaults to `True`.
 - `log_level`: Defines the verbosity of the logs (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`).
 - `max_rsync_retries`: The number of times `rsync` will retry on failure (specifically exit code 24).
 
@@ -48,13 +48,13 @@ Both scripts provide:
    - Preserves file attributes
 
 2. **Git Integration**
-   - Automatic `git pull` for specified repositories
+   - Automatic `git pull` for specified repositories (configurable in Python version)
    - Handles repository state verification
    - Error handling for git operations
 
 3. **Error Handling**
    - Comprehensive error checking
-   - Detailed logging
+   - Detailed logging (configurable in Python version)
    - Prerequisites verification
    - Path existence validation
 
@@ -72,6 +72,7 @@ The script reads the configuration from `config.txt`. Ensure this file is correc
 
 The Python version offers:
 - Configurable logging levels via `config.txt`.
+- Ability to enable/disable git pull and script execution via `config.txt`.
 - External configuration file for all settings.
 - More detailed error reporting.
 - Modular and maintainable code structure.

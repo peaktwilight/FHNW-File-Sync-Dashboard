@@ -15,7 +15,6 @@ def check_prerequisites():
         return False
     return True
 
-
 def load_config():
     """Loads the configuration from config.txt."""
     config = configparser.ConfigParser()
@@ -99,7 +98,6 @@ def main():
     max_rsync_retries = int(config['DEFAULT'].get('max_rsync_retries', 3))
     enable_git_pull = config['DEFAULT'].getboolean('enable_git_pull', True)
     enable_swegl_script = config['DEFAULT'].getboolean('enable_swegl_script', True)
-
 
     logging.info(f"Script started, destination: {destination}")
 
