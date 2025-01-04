@@ -13,7 +13,7 @@ import configparser
 import os
 
 # --- Constants ---
-WINDOW_TITLE = "FHNW File Sync Dashboard BETA v0.2"
+WINDOW_TITLE = "FHNW File Sync Dashboard BETA v0.5"
 SYNC_BUTTON_TEXT = "Sync Now"
 CLEAR_BUTTON_TEXT = "Clear Output"
 SPINNER_CHARS = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
