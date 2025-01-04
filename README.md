@@ -30,9 +30,9 @@ A modern GUI application for syncing course materials from FHNW (Fachhochschule 
 ## Prerequisites
 
 - Python 3.x
-- `rsync` installed
+- `rsync` installed (should be on your mac by default)
 - `git` installed
-- Network drive mounted at `/Volumes/data` (SMB share: `smb://fs.edu.ds.fhnw.ch/data`)
+- Network drive mounted at `/Volumes/data` (SMB share: `smb://fs.edu.ds.fhnw.ch/data` once you're connected to cisco vpn at vpn.fhnw.ch)
 - Python packages:
   - `tkinter` (usually comes with Python)
   - `sv_ttk` (Sun Valley theme - included in repo)
