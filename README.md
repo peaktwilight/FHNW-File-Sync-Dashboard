@@ -1,61 +1,121 @@
-# FHNW Course Material Repository
+# FHNW (Fachhochschule Nordwestschweiz) Course Material Sync Script
 
-This repository contains course materials from my studies at the FHNW (University of Applied Sciences and Arts Northwestern Switzerland). It includes assignments, notes, and other resources for various modules.
+A comprehensive solution for syncing course materials from FHNW (Fachhochschule Nordwestschweiz - University of Applied Sciences and Arts Northwestern Switzerland) network drive to your local machine. This tool is specifically designed for FHNW students to efficiently manage their course materials. The repository includes both Python (`sync_fhnw.py`) and Bash (`sync_fhnw.sh`) implementations.
 
-## Repository Structure
+## Prerequisites
 
-The repository is organized into the following main directories:
+- Python 3.x (for Python version)
+- Bash shell (for Shell version)
+- `rsync` installed
+- `git` installed
+- Network drive mounted at `/Volumes/data` (SMB share: `smb://fs.edu.ds.fhnw.ch/data`)
 
--   `sweGL`: Contains materials for the "Software Engineering Grundlagen" module.
--   `aua`: Contains materials for the "Argumentieren und Auftreten" module.
--   `dtpC`: Contains materials for the "Design Theorie" module.
--   `ecpe1`: Contains materials for the "English Cambridge Proficiency C2 Exam Prep Sem 1" module.
--   `ipg`: Contains materials for the "Internet Plattform Grundlagen" module.
--   `mgli`: Contains materials for the "Mathematics and Grundlagen der Informatik" module.
--   `oopI2`: Contains materials for the "Object-Oriented Programming 2" module.
--   `pmC`: Contains materials for the "Project Management and Communication" module.
+## Configuration
 
-Each of these directories may contain subdirectories for specific exercises, projects, or topics.
+### Python Version (`sync_fhnw.py`)
 
-## Synchronization Script
+Configuration is managed through `config.txt`:
 
-The `sync_fhnw.py` script is used to synchronize the course materials from a mounted volume to a local directory. It also performs a `git pull` for the `oopI2` repository and triggers a script for the `sweGL` repository.
+```ini
+[DEFAULT]
+destination = /Users/your/local/path
+source_paths = /path/to/source1, /path/to/source2
+oop_repo_path = /path/to/oopI2/repo
+swegl_script_path = /path/to/swegl/script
+log_level = INFO
+```
 
-### Prerequisites
+### Shell Version (`sync_fhnw.sh`)
 
--   Python 3.6 or higher.
--   The source directories are located on a mounted volume at `/Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/`.
--   The destination directory is set in the `config.txt` file (default: `/Users/peak/Documents/Study/FHNW`).
--   The `oopI2` repository is expected to be located at the path specified in `config.txt` (default: `/Users/peak/Documents/Study/FHNW/oopI2/oopI2-aufgaben_doruk.oeztuerk`).
--   The `fetch_from_origin.sh` script for `sweGL` is expected to be located at the path specified in `config.txt` (default: `/Users/peak/Documents/Study/FHNW/sweGL/fhnw-swegl-aufgaben-24-hs/fetch_from_origin.sh`).
--   `rsync` must be installed on your system.
--   `git` must be installed on your system.
+Configuration is directly in the script:
 
-+    **Important:** The `data` share from `smb://fs.edu.ds.fhnw.ch/data` must be mounted on your system at `/Volumes/data` for the `rsync` command to work correctly.
-### How to Use
+```bash
+DESTINATION="/Users/your/local/path"
+SOURCE_PATHS=(
+    "/Volumes/data/path/to/sweGL"
+    "/Volumes/data/path/to/oopI2"
+    # Add more paths as needed
+)
+```
 
-1.  Save the `sync_fhnw.py` script and `config.txt` to the root of the repository.
-2.  Install the required Python packages: `pip install configparser`
-3.  Run the script: `python sync_fhnw.py`.
+## Features
 
-### Configuration
+Both scripts provide:
 
-The `config.txt` file contains the following configuration options:
+1. **Robust Syncing**
+   - Uses `rsync` for efficient file transfer
+   - Implements retry mechanism (up to 3 attempts)
+   - Handles vanishing files gracefully
+   - Preserves file attributes
 
--   **`destination`**: The destination directory where the files will be copied.
--   **`source_paths`**: A comma-separated list of source directories to be copied.
--   **`oop_repo_path`**: The path to the `oopI2` git repository.
--   **`swegl_script_path`**: The path to the `fetch_from_origin.sh` script for `sweGL`.
+2. **Git Integration**
+   - Automatic `git pull` for specified repositories
+   - Handles repository state verification
+   - Error handling for git operations
 
-You can modify these variables in the `config.txt` file.
+3. **Error Handling**
+   - Comprehensive error checking
+   - Detailed logging
+   - Prerequisites verification
+   - Path existence validation
 
-### Error Handling
+## Usage
 
--   The script uses `try-except` blocks to catch errors.
--   The script retries `rsync` up to 3 times if some files vanish during the copy process.
--   The script checks if the directories exist before performing `git pull` and if the `fetch_from_origin.sh` script exists and is executable before running it.
--   The script logs errors to the console.
+### Python Version
+```bash
+python sync_fhnw.py
+```
 
-### Logging
+The Python version offers:
+- Configurable logging levels
+- External configuration file
+- More detailed error reporting
+- Modular code structure
 
-The script outputs timestamps and messages to the console to indicate what it is doing.
+### Shell Version
+```bash
+./sync_fhnw.sh
+```
+
+The Shell version provides:
+- Faster execution
+- No Python dependency
+- Built-in timestamp logging
+- Simplified configuration
+
+## Implementation Details
+
+### Python Version (`sync_fhnw.py`)
+
+Key functions:
+
+- `check_prerequisites()`: Verifies required tools
+- `load_config()`: Loads configuration from file
+- `retry_rsync()`: Handles file synchronization with retries
+- `git_pull()`: Manages Git repository updates
+- `execute_script()`: Runs additional scripts (e.g., for sweGL)
+- `setup_logging()`: Configures logging system
+
+### Shell Version (`sync_fhnw.sh`)
+
+Key components:
+
+- Strict mode with `set -euo pipefail`
+- Retry mechanism for rsync operations
+- Git repository handling
+- Timestamp-based logging
+- Array-based source path configuration
+
+## Error Handling
+
+Both versions handle common scenarios:
+- Missing prerequisites
+- Network drive not mounted
+- File permission issues
+- Git repository errors
+- Vanishing files during sync
+- Script execution failures
+
+## Note
+
+Course material folders are ignored in Git tracking - this repository only contains the sync scripts and their configuration. Choose the version (Python or Shell) that best fits your needs and system setup.

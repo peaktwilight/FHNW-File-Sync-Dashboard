@@ -1,0 +1,21 @@
+# Existing entries
+.aider*
+.env
+.DS_Store
+
+# Lecture folders
+SWEGL/
+oopI2/
+ipg/
+pmC/
+aua/
+dtpC/
+ecpe1/
+jpg/
+mgli/
+oopl2/
+
+# Exclude the script and related files
+!script.py
+!config.txt
+!requirements.txt
