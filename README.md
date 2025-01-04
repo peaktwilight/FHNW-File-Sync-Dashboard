@@ -16,10 +16,11 @@ A GUI application for automating the annoying task of syncing course materials f
 
 2. **Sync Capabilities**
    - One-click sync operation
-   - Uses `rsync` for efficient file transfer
+   - Uses `rsync` (macOS/Linux) or `robocopy` (Windows) for efficient file transfer
    - Implements retry mechanism
    - Handles vanishing files gracefully
    - Preserves file attributes
+   - Cross-platform support with automatic tool selection
 
 3. **Git Integration**
    - Automatic `git pull` for specified repositories
@@ -133,6 +134,3 @@ The application consists of three main components:
 ## Note
 
 Course material folders are ignored in Git tracking - this repository only contains the application code and configuration files.
-
-
-

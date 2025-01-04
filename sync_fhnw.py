@@ -5,12 +5,19 @@ import logging
 import configparser
 import shutil
 import sys
+import platform
 
 def check_prerequisites():
-    """Checks if rsync and git are installed."""
-    if not shutil.which('rsync'):
-        logging.error("rsync is not installed. Please install it and try again.")
-        return False
+    """Checks if required tools are installed."""
+    if platform.system() == "Windows":
+        if not shutil.which('robocopy'):
+            logging.error("robocopy is not installed. Please install it and try again.")
+            return False
+    else:
+        if not shutil.which('rsync'):
+            logging.error("rsync is not installed. Please install it and try again.")
+            return False
+            
     if not shutil.which('git'):
         logging.error("git is not installed. Please install it and try again.")
         return False
@@ -43,19 +50,31 @@ def setup_logging(log_level):
     sys.stdout.reconfigure(line_buffering=True)
 
 def retry_rsync(source_path, target_dir, max_retries):
-    """Retries rsync command if it fails with exit code 24."""
+    """Retries sync command with platform-specific tools."""
     for attempt in range(1, max_retries + 1):
         logging.info(f"Attempting to copy from {source_path} to {target_dir} (Try #{attempt})")
         try:
-            process = subprocess.Popen(
-                ['rsync', '-avh', '--progress', '--ignore-existing', '--update', 
-                 f"{source_path}/", f"{target_dir}/"],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True,
-                bufsize=1,  # Line buffered
-                universal_newlines=True
-            )
+            if platform.system() == "Windows":
+                # Use robocopy on Windows
+                process = subprocess.Popen(
+                    ['robocopy', source_path, target_dir, '/E', '/XO', '/NP', '/MT:8'],
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    bufsize=1,
+                    universal_newlines=True
+                )
+            else:
+                # Use rsync on macOS/Linux
+                process = subprocess.Popen(
+                    ['rsync', '-avh', '--progress', '--ignore-existing', '--update', 
+                     f"{source_path}/", f"{target_dir}/"],
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    bufsize=1,
+                    universal_newlines=True
+                )
             
             # Real-time output processing
             while True:
@@ -63,7 +82,7 @@ def retry_rsync(source_path, target_dir, max_retries):
                 if output == '' and process.poll() is not None:
                     break
                 if output:
-                    print(output.strip(), flush=True)  # Print directly with flush
+                    print(output.strip(), flush=True)
                     logging.info(output.strip())
             
             stderr = process.stderr.read()
@@ -71,16 +90,24 @@ def retry_rsync(source_path, target_dir, max_retries):
                 print(f"Error: {stderr}", flush=True)
                 logging.error(stderr)
 
-            # Check for errors
-            if process.returncode == 0:
-                return True
-            elif process.returncode == 24:
-                logging.warning(f"Some files vanished, retrying... (Attempt {attempt}/{max_retries})")
-                time.sleep(1)
+            # Check for errors - handle platform-specific return codes
+            if platform.system() == "Windows":
+                # Robocopy success codes are 0-7
+                if process.returncode <= 7:
+                    return True
+                else:
+                    logging.error(f"robocopy failed with exit code {process.returncode}")
+                    return False
             else:
-                stderr = process.stderr.read()
-                logging.error(f"rsync failed with exit code {process.returncode}: {stderr}")
-                return False
+                # rsync success code is 0, partial success is 24
+                if process.returncode == 0:
+                    return True
+                elif process.returncode == 24:
+                    logging.warning(f"Some files vanished, retrying... (Attempt {attempt}/{max_retries})")
+                    time.sleep(1)
+                else:
+                    logging.error(f"rsync failed with exit code {process.returncode}")
+                    return False
                 
         except Exception as e:
             logging.error(f"Error during rsync: {str(e)}")

@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 import subprocess
+import platform
 import threading
 import queue
 import sv_ttk
@@ -99,13 +100,30 @@ class ConfigDialog(tk.Toplevel):
         self.settings = {}
         row = 0
         
+        # Section header style
+        def create_section_header(text):
+            header = ttk.Label(scrollable_frame, text=text, 
+                             font=("Helvetica", 12, "bold"),
+                             foreground="#4a90e2")
+            header.grid(row=row, column=0, sticky="w", pady=(15, 10))
+            return header
+            
         # Helper function for consistent label styling
         def create_label(text):
-            return ttk.Label(scrollable_frame, text=text, font=("Helvetica", 11))
+            return ttk.Label(scrollable_frame, text=text, 
+                           font=("Helvetica", 11),
+                           padding=(10, 0, 0, 0))
         
         # Helper function for consistent entry styling
         def create_entry():
-            return ttk.Entry(scrollable_frame, width=80, font=("Courier", 10))
+            entry = ttk.Entry(scrollable_frame, width=60, 
+                            font=("Helvetica", 10))
+            entry.configure(style='Custom.TEntry')
+            return entry
+            
+        # Create section headers
+        create_section_header("File Sync Settings")
+        row += 1
         
         # Destination directory
         create_label("Destination Directory:").grid(row=row, column=0, sticky="w", pady=(0, 5))
@@ -119,13 +137,23 @@ class ConfigDialog(tk.Toplevel):
         # Source paths - Format with one path per line
         create_label("Source Paths:").grid(row=row, column=0, sticky="w", pady=(0, 5))
         row += 1
-        self.settings['source_paths'] = tk.Text(scrollable_frame, height=6, width=80, font=("Courier", 10))
+        self.settings['source_paths'] = tk.Text(scrollable_frame, height=6, width=60, font=("Helvetica", 10))
         source_paths = self.config['DEFAULT'].get('source_paths', '')
         # Format paths one per line
         formatted_paths = '\n'.join(path.strip() for path in source_paths.split(','))
         self.settings['source_paths'].insert('1.0', formatted_paths)
-        self.settings['source_paths'].grid(row=row, column=0, columnspan=2, sticky="ew", pady=(0, 15))
         
+        # Add scrollbar to source paths text area
+        source_scroll = ttk.Scrollbar(scrollable_frame, orient="vertical", command=self.settings['source_paths'].yview)
+        self.settings['source_paths'].configure(yscrollcommand=source_scroll.set)
+        
+        self.settings['source_paths'].grid(row=row, column=0, columnspan=2, sticky="ew", pady=(0, 15))
+        source_scroll.grid(row=row, column=2, sticky="ns")
+        
+        row += 1
+        
+        # Create section header for Git/SWEGL settings
+        create_section_header("Repository & Script Settings")
         row += 1
         
         # OOP repo path
@@ -146,9 +174,13 @@ class ConfigDialog(tk.Toplevel):
         
         row += 1
         
-        # Create a frame for checkboxes
+        # Create section header for Advanced Settings
+        create_section_header("Advanced Settings")
+        row += 1
+        
+        # Create a frame for checkboxes with better spacing
         checkbox_frame = ttk.Frame(scrollable_frame)
-        checkbox_frame.grid(row=row, column=0, columnspan=2, sticky="ew", pady=(0, 15))
+        checkbox_frame.grid(row=row, column=0, columnspan=2, sticky="ew", pady=(10, 15))
         
         # Enable git pull
         self.settings['enable_git_pull'] = tk.BooleanVar(value=self.config['DEFAULT'].getboolean('enable_git_pull', True))
@@ -242,36 +274,39 @@ class MainWindow:
         self.window.protocol("WM_DELETE_WINDOW", self.on_closing)
     
     def setup_gui(self):
+        # Create main container frame
+        main_frame = ttk.Frame(self.window)
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+
         # Title label
         self.title_label = ttk.Label(
-            self.window, text=WINDOW_TITLE, font=("Helvetica", 16, "bold")
+            main_frame, text=WINDOW_TITLE, font=("Helvetica", 16, "bold")
         )
-        self.title_label.grid(row=0, column=0, columnspan=2, pady=(15, 5), padx=10, sticky="w")
+        self.title_label.pack(pady=(0, 10), anchor="w")
 
         # Status label for spinner
         self.status_label = ttk.Label(
-            self.window, text="", font=("Helvetica", 10)
+            main_frame, text="", font=("Helvetica", 10)
         )
-        self.status_label.grid(row=0, column=1, pady=(15, 5), padx=10, sticky="e")
+        self.status_label.pack(pady=(0, 10), anchor="e")
 
         # Output frame
-        output_frame = ttk.Frame(self.window, padding=(10, 5))
-        output_frame.grid(row=1, column=0, columnspan=2, pady=5, padx=10, sticky="nsew")
+        output_frame = ttk.Frame(main_frame)
+        output_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
 
         # Output text
         self.output_text = tk.Text(
             output_frame,
             wrap=tk.WORD,
             state=tk.DISABLED,
-            height=10,
             font=("Courier New", 10),
             borderwidth=0,
         )
-        self.output_text.pack(expand=True, fill="both")
+        self.output_text.pack(fill=tk.BOTH, expand=True)
 
-        # Buttons frame
-        button_frame = ttk.Frame(self.window)
-        button_frame.grid(row=2, column=0, columnspan=3, pady=5, padx=10, sticky="ew")
+        # Buttons frame at bottom
+        button_frame = ttk.Frame(main_frame)
+        button_frame.pack(fill=tk.X, pady=(10, 0))
 
         # Sync button
         self.sync_button = ttk.Button(
@@ -296,11 +331,6 @@ class MainWindow:
             command=self.open_settings
         )
         self.settings_button.pack(side=tk.LEFT, padx=5, expand=True)
-
-        # Configure grid weights
-        self.window.columnconfigure(0, weight=1)
-        self.window.columnconfigure(1, weight=1)
-        self.window.rowconfigure(1, weight=1)
 
     def run_sync_script(self):
         # Disable both buttons immediately
@@ -345,8 +375,10 @@ class MainWindow:
 
         def start_process(output_queue):
             try:
+                # Use platform-appropriate Python interpreter
+                python_cmd = "python3" if platform.system() != "Windows" else "python"
                 process = subprocess.Popen(
-                    ["python3", "sync_fhnw.py"],
+                    [python_cmd, "sync_fhnw.py"],
                     stdout=subprocess.PIPE,
                     stderr=subprocess.PIPE,
                     text=True,
