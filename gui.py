@@ -18,15 +18,60 @@ SYNC_BUTTON_TEXT = "Sync Now"
 CLEAR_BUTTON_TEXT = "Clear Output"
 SPINNER_CHARS = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
 CONFIG_FILE = "config.txt"
+CONFIG_VERSION = "1.0"
+REQUIRED_FIELDS = ['destination', 'source_paths']
 
 def load_config():
-    """Loads the configuration from config.txt."""
+    """Loads and validates the configuration from config.txt."""
     config = configparser.ConfigParser()
+    
+    # Create default config if it doesn't exist
     if not os.path.exists(CONFIG_FILE):
-        messagebox.error("Error", "config.txt not found. Please create it and try again.")
+        config['DEFAULT'] = {
+            'VERSION': CONFIG_VERSION,
+            'destination': '',
+            'source_paths': '',
+            'log_level': 'INFO',
+            'max_rsync_retries': '3',
+            'enable_git_pull': 'True',
+            'enable_swegl_script': 'True'
+        }
+        try:
+            with open(CONFIG_FILE, 'w') as configfile:
+                config.write(configfile)
+            messagebox.showinfo("Config Created", 
+                "A new config.txt file has been created with default values.\n"
+                "Please edit it to set your sync paths and settings.")
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to create config: {str(e)}")
+            return None
+    
+    try:
+        config.read(CONFIG_FILE)
+        
+        # Check config version
+        if 'VERSION' not in config['DEFAULT']:
+            config['DEFAULT']['VERSION'] = CONFIG_VERSION
+            with open(CONFIG_FILE, 'w') as configfile:
+                config.write(configfile)
+        
+        # Validate required fields
+        missing_fields = [field for field in REQUIRED_FIELDS if field not in config['DEFAULT']]
+        if missing_fields:
+            messagebox.error("Error", 
+                f"Config file is missing required fields: {', '.join(missing_fields)}")
+            return None
+            
+        # Validate source paths
+        source_paths = config['DEFAULT']['source_paths'].split(',')
+        if not any(source_paths):
+            messagebox.error("Error", "At least one source path must be specified")
+            return None
+            
+        return config
+    except Exception as e:
+        messagebox.error("Error", f"Failed to load config: {str(e)}")
         return None
-    config.read(CONFIG_FILE)
-    return config
 
 class SpinnerThread(threading.Thread):
     def __init__(self, label):
@@ -257,10 +302,29 @@ class MainWindow:
     def __init__(self):
         self.window = tk.Tk()
         self.window.title(WINDOW_TITLE)
-        self.window.geometry("500x400")
+        self.window.geometry("600x500")
+        self.window.minsize(500, 400)
         
-        # Set the Sun Valley Theme
-        sv_ttk.set_theme("dark")
+        # Initialize theme
+        self.current_theme = "dark"
+        sv_ttk.set_theme(self.current_theme)
+        
+        # System tray icon
+        self.tray_icon = None
+        if platform.system() != "Linux":  # Linux has limited system tray support
+            try:
+                import pystray
+                from PIL import Image
+                self.tray_icon = pystray.Icon(
+                    "FHNW Sync",
+                    Image.open("icon.png"),
+                    menu=pystray.Menu(
+                        pystray.MenuItem("Show", self.show_window),
+                        pystray.MenuItem("Exit", self.on_closing)
+                    )
+                )
+            except ImportError:
+                pass
         
         self.config = load_config()
         self.output_queue = queue.Queue()
@@ -284,6 +348,28 @@ class MainWindow:
         )
         self.title_label.pack(pady=(0, 10), anchor="w")
 
+        # Progress frame
+        progress_frame = ttk.Frame(main_frame)
+        progress_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        # Progress bar
+        self.progress = ttk.Progressbar(
+            progress_frame,
+            orient="horizontal",
+            length=400,
+            mode="determinate"
+        )
+        self.progress.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 10))
+        
+        # Progress percentage label
+        self.progress_label = ttk.Label(
+            progress_frame,
+            text="0%",
+            font=("Helvetica", 10),
+            width=4
+        )
+        self.progress_label.pack(side=tk.RIGHT)
+        
         # Status label for spinner
         self.status_label = ttk.Label(
             main_frame, text="", font=("Helvetica", 10)
@@ -323,6 +409,15 @@ class MainWindow:
             command=self.clear_output
         )
         self.clear_button.pack(side=tk.LEFT, padx=5, expand=True)
+
+        # Theme toggle button
+        self.theme_button = ttk.Button(
+            button_frame,
+            text="🌙",  # Moon emoji for dark theme
+            command=self.toggle_theme,
+            width=3
+        )
+        self.theme_button.pack(side=tk.LEFT, padx=5)
 
         # Settings button
         self.settings_button = ttk.Button(
@@ -407,7 +502,21 @@ class MainWindow:
                             self.spinner_thread.stop()
                         self.sync_button.config(state=tk.NORMAL)
                         self.clear_button.config(state=tk.NORMAL)
+                        self.reset_progress()
                         return
+                        
+                    # Handle progress updates
+                    if line.startswith("PROGRESS:"):
+                        try:
+                            progress = int(line.split(":")[1].strip())
+                            if 0 <= progress <= 100:
+                                self.update_progress(progress)
+                            continue
+                        except (IndexError, ValueError) as e:
+                            logging.warning(f"Invalid progress update: {line}")
+                            continue
+                            
+                    # Handle regular output
                     self.output_text.config(state=tk.NORMAL)
                     self.output_text.insert(tk.END, line)
                     self.output_text.see(tk.END)
@@ -433,7 +542,36 @@ class MainWindow:
             self.spinner_thread.stop()
         self.window.destroy()
 
+    def toggle_theme(self):
+        """Toggle between dark and light themes"""
+        self.current_theme = "light" if self.current_theme == "dark" else "dark"
+        sv_ttk.set_theme(self.current_theme)
+        # Update theme button icon
+        self.theme_button.config(text="☀️" if self.current_theme == "light" else "🌙")
+        # Save theme preference
+        if self.config:
+            self.config['DEFAULT']['theme'] = self.current_theme
+            with open(CONFIG_FILE, 'w') as configfile:
+                self.config.write(configfile)
+
+    def update_progress(self, value):
+        """Update the progress bar value"""
+        self.progress['value'] = value
+        self.progress_label.config(text=f"{value}%")
+        self.window.update_idletasks()
+
+    def reset_progress(self):
+        """Reset the progress bar"""
+        self.progress['value'] = 0
+        self.progress_label.config(text="0%")
+        self.window.update_idletasks()
+
     def run(self):
+        # Load saved theme if exists
+        if self.config and 'theme' in self.config['DEFAULT']:
+            self.current_theme = self.config['DEFAULT']['theme']
+            sv_ttk.set_theme(self.current_theme)
+            self.theme_button.config(text="☀️" if self.current_theme == "light" else "🌙")
         self.window.mainloop()
 
 if __name__ == "__main__":

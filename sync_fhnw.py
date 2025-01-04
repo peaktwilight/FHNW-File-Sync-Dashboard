@@ -76,7 +76,9 @@ def retry_rsync(source_path, target_dir, max_retries):
                     universal_newlines=True
                 )
             
-            # Real-time output processing
+            # Real-time output processing with progress updates
+            total_files = 0
+            files_copied = 0
             while True:
                 output = process.stdout.readline()
                 if output == '' and process.poll() is not None:
@@ -84,6 +86,33 @@ def retry_rsync(source_path, target_dir, max_retries):
                 if output:
                     print(output.strip(), flush=True)
                     logging.info(output.strip())
+                    
+                    # Parse rsync progress output
+                    if platform.system() != "Windows":
+                        try:
+                            # Handle file count updates
+                            if output.startswith('Number of files:'):
+                                total_files = int(output.split(':')[1].strip())
+                                continue
+                                
+                            # Handle files transferred updates
+                            if output.startswith('Number of files transferred:'):
+                                files_copied = int(output.split(':')[1].strip())
+                                if total_files > 0:
+                                    progress = min(100, int((files_copied / total_files) * 100))
+                                    print(f"PROGRESS:{progress}", flush=True)
+                                    continue
+                                    
+                            # Handle percentage progress directly
+                            if '%' in output:
+                                try:
+                                    progress = int(output.split('%')[0].strip())
+                                    print(f"PROGRESS:{progress}", flush=True)
+                                    continue
+                                except ValueError:
+                                    pass
+                        except Exception as e:
+                            logging.warning(f"Error parsing progress: {str(e)}")
             
             stderr = process.stderr.read()
             if stderr:
@@ -161,34 +190,61 @@ def main():
     enable_swegl_script = config['DEFAULT'].getboolean('enable_swegl_script', True)
 
     logging.info(f"Script started, destination: {destination}")
+    
+    # Calculate total number of tasks (sync operations + git pull + script execution)
+    total_tasks = len(source_paths)
+    if enable_git_pull and oop_repo_path:
+        total_tasks += 1
+    if enable_swegl_script and swegl_script_path:
+        total_tasks += 1
+        
+    completed_tasks = 0
 
+    # Sync each source path
     for source_path in source_paths:
         if not os.path.exists(source_path):
             logging.warning(f"Source path {source_path} does not exist, skipping.")
             continue
+            
         folder_name = os.path.basename(source_path)
         target_dir = os.path.join(destination, folder_name)
         logging.info(f"Creating directory: {target_dir}")
         os.makedirs(target_dir, exist_ok=True)
+        
         if retry_rsync(source_path, target_dir, max_rsync_retries):
             logging.info(f"Successfully synced {source_path} to {target_dir}")
         else:
             logging.error(f"Failed to sync {source_path} to {target_dir}")
+            
+        # Update progress
+        completed_tasks += 1
+        progress = int((completed_tasks / total_tasks) * 100)
+        print(f"PROGRESS:{progress}", flush=True)
 
+    # Git pull operation
     if enable_git_pull and oop_repo_path:
         git_pull(oop_repo_path)
+        completed_tasks += 1
+        progress = int((completed_tasks / total_tasks) * 100)
+        print(f"PROGRESS:{progress}", flush=True)
     elif not oop_repo_path:
         logging.warning("oop_repo_path not defined in config.txt, skipping git pull.")
     else:
         logging.info("Git pull disabled in config.txt.")
 
+    # Script execution
     if enable_swegl_script and swegl_script_path:
         execute_script(swegl_script_path)
+        completed_tasks += 1
+        progress = int((completed_tasks / total_tasks) * 100)
+        print(f"PROGRESS:{progress}", flush=True)
     elif not swegl_script_path:
         logging.warning("swegl_script_path not defined in config.txt, skipping script execution.")
     else:
         logging.info("SWEGL script execution disabled in config.txt.")
 
+    # Ensure progress reaches 100%
+    print("PROGRESS:100", flush=True)
     logging.info("All tasks completed!")
 
 if __name__ == "__main__":
