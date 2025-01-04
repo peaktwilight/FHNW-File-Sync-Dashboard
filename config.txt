@@ -7,7 +7,12 @@ source_paths = /Volumes/data/HT/E1811_Unterrichte_Bachelor/E1811_Unterrichte_I/1
 oop_repo_path = /Users/peak/Documents/Study/FHNW/oopI2/oopI2-aufgaben_doruk.oeztuerk
 # The path to the fetch_from_origin.sh script for sweGL.
 swegl_script_path = /Users/peak/Documents/Study/FHNW/sweGL/fhnw-swegl-aufgaben-24-hs/fetch_from_origin.sh
+# Enable git pull for the oopI2 repository (True or False)
+enable_git_pull = True
+# Enable execution of the SWEGL script (True or False)
+enable_swegl_script = True
 # The log level for the script (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 log_level = INFO
 # The maximum number of retries for rsync
 max_rsync_retries = 3
+addPreferredMimeTypes:

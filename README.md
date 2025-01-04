@@ -1,6 +1,6 @@
 # FHNW (Fachhochschule Nordwestschweiz) Course Material Sync Script
 
-A comprehensive solution for syncing course materials from FHNW (Fachhochschule Nordwestschweiz - University of Applied Sciences and Arts Northwestern Switzerland) network drive to your local machine. This tool is specifically designed for FHNW students to efficiently manage their course materials. The repository includes both Python (`sync_fhnw.py`) and Bash (`sync_fhnw.sh`) implementations.
+A comprehensive solution for syncing course materials from FHNW (Fachhochschule Nordwestschweiz - University of Applied Sciences and Arts Northwestern Switzerland) network drive to your local machine. This tool is specifically designed for FHNW students to efficiently manage their course materials. The primary script is written in Python (`sync_fhnw.py`). The Bash script (`sync_fhnw.sh`) is still available but may be deprecated in the future in favor of the more flexible Python version.
 
 ## Prerequisites
 
@@ -12,9 +12,7 @@ A comprehensive solution for syncing course materials from FHNW (Fachhochschule 
 
 ## Configuration
 
-### Python Version (`sync_fhnw.py`)
-
-Configuration is managed through `config.txt`:
+The script's behavior is configured through the `config.txt` file.
 
 ```ini
 [DEFAULT]
@@ -22,21 +20,22 @@ destination = /Users/your/local/path
 source_paths = /path/to/source1, /path/to/source2
 oop_repo_path = /path/to/oopI2/repo
 swegl_script_path = /path/to/swegl/script
+enable_git_pull = True
+enable_swegl_script = True
 log_level = INFO
+max_rsync_retries = 3
 ```
 
-### Shell Version (`sync_fhnw.sh`)
+- `destination`: The local directory where the course materials will be synced.
+- `source_paths`: A comma-separated list of network paths to the course materials.
+- `oop_repo_path`: The local path to the `oopI2` Git repository. If provided, the script will perform a `git pull`.
+- `swegl_script_path`: The local path to the `fetch_from_origin.sh` script for SWEGL. If provided, the script will execute it.
+- `enable_git_pull`: Set to `True` to enable automatic `git pull` for the `oop_repo_path`, `False` to disable.
+- `enable_swegl_script`: Set to `True` to enable execution of the SWEGL script, `False` to disable.
+- `log_level`: Defines the verbosity of the logs (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`).
+- `max_rsync_retries`: The number of times `rsync` will retry on failure (specifically exit code 24).
 
-Configuration is directly in the script:
-
-```bash
-DESTINATION="/Users/your/local/path"
-SOURCE_PATHS=(
-    "/Volumes/data/path/to/sweGL"
-    "/Volumes/data/path/to/oopI2"
-    # Add more paths as needed
-)
-```
+It is recommended to use the `sync_fhnw.py` script as it offers more flexibility through this configuration file.
 
 ## Features
 
@@ -61,27 +60,23 @@ Both scripts provide:
 
 ## Usage
 
-### Python Version
+## Usage
+
+To run the Python script:
+
 ```bash
 python sync_fhnw.py
 ```
 
+The script reads the configuration from `config.txt`. Ensure this file is correctly configured before running the script.
+
 The Python version offers:
-- Configurable logging levels
-- External configuration file
-- More detailed error reporting
-- Modular code structure
+- Configurable logging levels via `config.txt`.
+- External configuration file for all settings.
+- More detailed error reporting.
+- Modular and maintainable code structure.
 
-### Shell Version
-```bash
-./sync_fhnw.sh
-```
-
-The Shell version provides:
-- Faster execution
-- No Python dependency
-- Built-in timestamp logging
-- Simplified configuration
+The shell script (`sync_fhnw.sh`) is still available for basic syncing but its configuration is embedded within the script and it lacks the flexibility of the Python version.
 
 ## Implementation Details
 

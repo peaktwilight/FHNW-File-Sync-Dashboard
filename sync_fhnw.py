@@ -94,9 +94,11 @@ def main():
 
     destination = config['DEFAULT']['destination']
     source_paths = [path.strip() for path in config['DEFAULT']['source_paths'].split(',')]
-    oop_repo_path = config['DEFAULT']['oop_repo_path']
-    swegl_script_path = config['DEFAULT']['swegl_script_path']
+    oop_repo_path = config['DEFAULT'].get('oop_repo_path')
+    swegl_script_path = config['DEFAULT'].get('swegl_script_path')
     max_rsync_retries = int(config['DEFAULT'].get('max_rsync_retries', 3))
+    enable_git_pull = config['DEFAULT'].getboolean('enable_git_pull', True)
+    enable_swegl_script = config['DEFAULT'].getboolean('enable_swegl_script', True)
 
 
     logging.info(f"Script started, destination: {destination}")
@@ -114,8 +116,19 @@ def main():
         else:
             logging.error(f"Failed to sync {source_path} to {target_dir}")
 
-    git_pull(oop_repo_path)
-    execute_script(swegl_script_path)
+    if enable_git_pull and oop_repo_path:
+        git_pull(oop_repo_path)
+    elif not oop_repo_path:
+        logging.warning("oop_repo_path not defined in config.txt, skipping git pull.")
+    else:
+        logging.info("Git pull disabled in config.txt.")
+
+    if enable_swegl_script and swegl_script_path:
+        execute_script(swegl_script_path)
+    elif not swegl_script_path:
+        logging.warning("swegl_script_path not defined in config.txt, skipping script execution.")
+    else:
+        logging.info("SWEGL script execution disabled in config.txt.")
 
     logging.info("All tasks completed!")
 
