@@ -2,6 +2,7 @@
 .aider*
 .env
 .DS_Store
+.gitmodules
 
 # Lecture folders
 SWEGL/
