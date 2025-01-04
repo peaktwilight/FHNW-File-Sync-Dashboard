@@ -7,5 +7,4 @@ enable_git_pull = True
 enable_swegl_script = True
 log_level = INFO
 max_rsync_retries = 3
-addpreferredmimetypes = 
 
