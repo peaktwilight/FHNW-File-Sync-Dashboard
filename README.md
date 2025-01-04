@@ -1,5 +1,8 @@
 # FHNW File Sync Dashboard (Currently in BETA)
 
+## Screenshots
+![Sync Settings Interface](./screenshots/sync_settings_screenshot.png)
+
 A modern GUI application for syncing course materials from FHNW (Fachhochschule Nordwestschweiz - University of Applied Sciences and Arts Northwestern Switzerland) network drive to your local machine. This tool is specifically designed for FHNW students to efficiently manage their course materials.
 
 ## Features
@@ -131,8 +134,5 @@ The application consists of three main components:
 
 Course material folders are ignored in Git tracking - this repository only contains the application code and configuration files.
 
-## Screenshots
-
-![Sync Settings Interface](sync_settings_screenshot.png)
 
 
