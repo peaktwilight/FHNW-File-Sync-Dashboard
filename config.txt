@@ -9,3 +9,5 @@ oop_repo_path = /Users/peak/Documents/Study/FHNW/oopI2/oopI2-aufgaben_doruk.oezt
 swegl_script_path = /Users/peak/Documents/Study/FHNW/sweGL/fhnw-swegl-aufgaben-24-hs/fetch_from_origin.sh
 # The log level for the script (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 log_level = INFO
+# The maximum number of retries for rsync
+max_rsync_retries = 3

@@ -34,7 +34,7 @@ def setup_logging(log_level):
         numeric_level = logging.INFO
     logging.basicConfig(level=numeric_level, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def retry_rsync(source_path, target_dir, max_retries=3):
+def retry_rsync(source_path, target_dir, max_retries):
     """Retries rsync command if it fails with exit code 24."""
     for attempt in range(1, max_retries + 1):
         logging.info(f"Attempting to copy from {source_path} to {target_dir} (Try #{attempt})")
@@ -96,15 +96,20 @@ def main():
     source_paths = [path.strip() for path in config['DEFAULT']['source_paths'].split(',')]
     oop_repo_path = config['DEFAULT']['oop_repo_path']
     swegl_script_path = config['DEFAULT']['swegl_script_path']
+    max_rsync_retries = int(config['DEFAULT'].get('max_rsync_retries', 3))
+
 
     logging.info(f"Script started, destination: {destination}")
 
     for source_path in source_paths:
+        if not os.path.exists(source_path):
+            logging.warning(f"Source path {source_path} does not exist, skipping.")
+            continue
         folder_name = os.path.basename(source_path)
         target_dir = os.path.join(destination, folder_name)
         logging.info(f"Creating directory: {target_dir}")
         os.makedirs(target_dir, exist_ok=True)
-        if retry_rsync(source_path, target_dir):
+        if retry_rsync(source_path, target_dir, max_rsync_retries):
             logging.info(f"Successfully synced {source_path} to {target_dir}")
         else:
             logging.error(f"Failed to sync {source_path} to {target_dir}")
