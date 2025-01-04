@@ -4,11 +4,13 @@ A comprehensive solution for syncing course materials from FHNW (Fachhochschule 
 
 ## Prerequisites
 
-- Python 3.x (for Python version)
-- Bash shell (for Shell version)
+- Python 3.x
 - `rsync` installed
 - `git` installed
 - Network drive mounted at `/Volumes/data` (SMB share: `smb://fs.edu.ds.fhnw.ch/data`)
+- Python packages (for GUI version):
+  - `tkinter`
+  - `sv_ttk` (Sun Valley theme for modern UI - already integrated to this repo dw!)
 
 ## Configuration
 
@@ -39,20 +41,24 @@ It is recommended to use the `sync_fhnw.py` script as it offers more flexibility
 
 ## Features
 
-Both scripts provide:
+1. **User Interface Options**
+   - Modern GUI with Sun Valley theme
+   - Real-time sync progress monitoring
+   - Command-line interface for automation
+   - Visual status indicators
 
-1. **Robust Syncing**
+2. **Robust Syncing**
    - Uses `rsync` for efficient file transfer
    - Implements retry mechanism (up to 3 attempts)
    - Handles vanishing files gracefully
    - Preserves file attributes
 
-2. **Git Integration**
+3. **Git Integration**
    - Automatic `git pull` for specified repositories (configurable in Python version)
    - Handles repository state verification
    - Error handling for git operations
 
-3. **Error Handling**
+4. **Error Handling**
    - Comprehensive error checking
    - Detailed logging (configurable in Python version)
    - Prerequisites verification
@@ -60,9 +66,24 @@ Both scripts provide:
 
 ## Usage
 
-## Usage
+### GUI Version (Recommended)
 
-To run the Python script:
+Launch the graphical interface by running:
+
+```bash
+python gui.py
+```
+
+The GUI provides:
+- Simple one-click sync operation
+- Real-time sync progress display
+- Clear output functionality
+- Modern dark theme interface
+- Visual sync status indicator
+
+### Command Line Version
+
+To run the script without GUI:
 
 ```bash
 python sync_fhnw.py
@@ -80,6 +101,16 @@ The Python version offers:
 The shell script (`sync_fhnw.sh`) is still available for basic syncing but its configuration is embedded within the script and it lacks the flexibility of the Python version.
 
 ## Implementation Details
+
+### GUI Version (`gui.py`)
+
+Key features:
+- Modern dark theme interface using `sv_ttk`
+- Real-time sync progress display
+- Async operation handling
+- Visual spinner during sync
+- Output text display with scroll capability
+- Clear output functionality
 
 ### Python Version (`sync_fhnw.py`)
 
@@ -115,3 +146,11 @@ Both versions handle common scenarios:
 ## Note
 
 Course material folders are ignored in Git tracking - this repository only contains the sync scripts and their configuration. Choose the version (Python or Shell) that best fits your needs and system setup.
+
+## Screenshots
+
+The GUI version provides a modern interface with:
+- Dark theme support
+- Progress indicator
+- Clear, readable output display
+- Simple two-button interface
