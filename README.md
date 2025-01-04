@@ -133,4 +133,6 @@ Course material folders are ignored in Git tracking - this repository only conta
 
 ## Screenshots
 
-[Consider adding screenshots of your new GUI here]
+![Sync Settings Interface](sync_settings_screenshot.png)
+
+

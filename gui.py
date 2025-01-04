@@ -317,10 +317,31 @@ class MainWindow:
         self.spinner_thread.start()
 
         def handle_output(process, output_queue):
-            for line in iter(process.stdout.readline, ""):
-                output_queue.put(line)
-            for line in iter(process.stderr.readline, ""):
-                output_queue.put(f"Error: {line}")
+            # Handle stdout in real-time with a separate thread for each stream
+            def read_stream(stream, prefix=""):
+                for line in iter(stream.readline, ''):
+                    if line:
+                        output_queue.put(f"{prefix}{line}")
+                        
+            # Start threads for stdout and stderr
+            stdout_thread = threading.Thread(
+                target=read_stream, 
+                args=(process.stdout, "")
+            )
+            stderr_thread = threading.Thread(
+                target=read_stream, 
+                args=(process.stderr, "Error: ")
+            )
+            
+            stdout_thread.daemon = True
+            stderr_thread.daemon = True
+            
+            stdout_thread.start()
+            stderr_thread.start()
+            
+            # Wait for both streams to complete
+            stdout_thread.join()
+            stderr_thread.join()
 
         def start_process(output_queue):
             try:
@@ -329,6 +350,8 @@ class MainWindow:
                     stdout=subprocess.PIPE,
                     stderr=subprocess.PIPE,
                     text=True,
+                    bufsize=1,
+                    universal_newlines=True
                 )
                 handle_output(process, output_queue)
                 process.wait()
@@ -338,25 +361,30 @@ class MainWindow:
                 output_queue.put(None)
 
         thread = threading.Thread(target=start_process, args=(self.output_queue,))
+        thread.daemon = True
         thread.start()
         self.schedule_update()
 
     def schedule_update(self):
         try:
             while True:
-                line = self.output_queue.get(block=False)
-                if line is None:
-                    if self.spinner_thread:
-                        self.spinner_thread.stop()
-                    self.sync_button.config(state=tk.NORMAL)
-                    self.clear_button.config(state=tk.NORMAL)
+                try:
+                    line = self.output_queue.get_nowait()
+                    if line is None:  # End signal
+                        if self.spinner_thread:
+                            self.spinner_thread.stop()
+                        self.sync_button.config(state=tk.NORMAL)
+                        self.clear_button.config(state=tk.NORMAL)
+                        return
+                    self.output_text.config(state=tk.NORMAL)
+                    self.output_text.insert(tk.END, line)
+                    self.output_text.see(tk.END)
+                    self.output_text.config(state=tk.DISABLED)
+                except queue.Empty:
                     break
-                self.output_text.config(state=tk.NORMAL)
-                self.output_text.insert(tk.END, line)
-                self.output_text.see(tk.END)
-                self.output_text.config(state=tk.DISABLED)
-        except queue.Empty:
-            self.scheduled_update = self.window.after(100, self.schedule_update)
+        finally:
+            # Schedule next update more frequently
+            self.scheduled_update = self.window.after(50, self.schedule_update)
 
     def clear_output(self):
         self.output_text.config(state=tk.NORMAL)

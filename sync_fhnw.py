@@ -4,6 +4,7 @@ import time
 import logging
 import configparser
 import shutil
+import sys
 
 def check_prerequisites():
     """Checks if rsync and git are installed."""
@@ -29,29 +30,62 @@ def setup_logging(log_level):
     """Sets up logging based on the config."""
     numeric_level = getattr(logging, log_level.upper(), None)
     if not isinstance(numeric_level, int):
-        logging.error(f"Invalid log level: {log_level}. Using INFO level instead.")
         numeric_level = logging.INFO
-    logging.basicConfig(level=numeric_level, format='%(asctime)s - %(levelname)s - %(message)s')
+    
+    # Change logging to write directly to stdout without buffering
+    logging.basicConfig(
+        level=numeric_level,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        stream=sys.stdout,  # Use stdout instead of stderr
+        force=True
+    )
+    # Ensure stdout is line buffered
+    sys.stdout.reconfigure(line_buffering=True)
 
 def retry_rsync(source_path, target_dir, max_retries):
     """Retries rsync command if it fails with exit code 24."""
     for attempt in range(1, max_retries + 1):
         logging.info(f"Attempting to copy from {source_path} to {target_dir} (Try #{attempt})")
         try:
-            result = subprocess.run(
-                ['rsync', '-avh', '--progress', '--ignore-existing', '--update', f"{source_path}/", f"{target_dir}/"],
-                check=True,
-                capture_output=True
+            process = subprocess.Popen(
+                ['rsync', '-avh', '--progress', '--ignore-existing', '--update', 
+                 f"{source_path}/", f"{target_dir}/"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                bufsize=1,  # Line buffered
+                universal_newlines=True
             )
-            logging.info(f"rsync output: {result.stdout.decode()}")
-            return True
-        except subprocess.CalledProcessError as e:
-            if e.returncode == 24:
+            
+            # Real-time output processing
+            while True:
+                output = process.stdout.readline()
+                if output == '' and process.poll() is not None:
+                    break
+                if output:
+                    print(output.strip(), flush=True)  # Print directly with flush
+                    logging.info(output.strip())
+            
+            stderr = process.stderr.read()
+            if stderr:
+                print(f"Error: {stderr}", flush=True)
+                logging.error(stderr)
+
+            # Check for errors
+            if process.returncode == 0:
+                return True
+            elif process.returncode == 24:
                 logging.warning(f"Some files vanished, retrying... (Attempt {attempt}/{max_retries})")
-                time.sleep(1)  # Wait a bit before retrying
+                time.sleep(1)
             else:
-                logging.error(f"rsync failed with exit code {e.returncode}: {e.stderr.decode()}")
+                stderr = process.stderr.read()
+                logging.error(f"rsync failed with exit code {process.returncode}: {stderr}")
                 return False
+                
+        except Exception as e:
+            logging.error(f"Error during rsync: {str(e)}")
+            return False
+            
     logging.error(f"Failed to sync after {max_retries} attempts. Some files may have been skipped.")
     return False
 
