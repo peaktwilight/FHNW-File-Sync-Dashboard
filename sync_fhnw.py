@@ -6,6 +6,109 @@ import configparser
 import shutil
 import sys
 import platform
+import getpass
+import webbrowser
+import keyring
+import argparse
+
+def check_vpn_connection():
+    """Checks if VPN is connected by trying to ping the FHNW server."""
+    try:
+        result = subprocess.run(['ping', '-c', '1', '-W', '1', 'vpn.fhnw.ch'], 
+                              capture_output=True, text=True)
+        return result.returncode == 0
+    except Exception:
+        return False
+
+def connect_vpn():
+    """Connects to FHNW VPN using openconnect."""
+    if check_vpn_connection():
+        logging.info("Already connected to VPN")
+        return True
+        
+    if not shutil.which('openconnect'):
+        logging.error("openconnect is not installed. Please install it first.")
+        if platform.system() == "Darwin":
+            logging.info("You can install openconnect on macOS using: brew install openconnect")
+        return False
+    
+    try:
+        # Open browser for SSO login
+        sso_url = 'https://vpn.fhnw.ch'
+        logging.info(f"Opening browser for SSO login at {sso_url}")
+        webbrowser.open_new(sso_url)
+        
+        # Get credentials
+        username = keyring.get_password("fhnw_sync", "vpn_username")
+        if not username:
+            username = input("Enter your FHNW username: ")
+            keyring.set_password("fhnw_sync", "vpn_username", username)
+        
+        # Wait for user to complete SSO login
+        input("Press Enter after completing SSO login in your browser...")
+        
+        # Start VPN connection with interactive mode
+        logging.info("Connecting to VPN...")
+        vpn_cmd = ['sudo', 'openconnect', 
+                   '--protocol=anyconnect',
+                   '--user=' + username,
+                   '--passwd-on-stdin',
+                   'vpn.fhnw.ch']
+        
+        process = subprocess.Popen(vpn_cmd, 
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE,
+                               stdin=subprocess.PIPE,
+                               text=True)
+        
+        # Wait for connection and check status
+        for _ in range(30):  # Try for 30 seconds
+            if check_vpn_connection():
+                logging.info("Successfully connected to VPN")
+                return True
+            time.sleep(1)
+            
+        logging.error("Failed to connect to VPN after 30 seconds")
+        return False
+    except Exception as e:
+        logging.error(f"Error connecting to VPN: {str(e)}")
+        return False
+
+def mount_smb_share():
+    """Mounts the FHNW SMB share."""
+    if platform.system() == "Darwin":  # macOS
+        mount_point = "/Volumes/data"
+        if os.path.ismount(mount_point):
+            logging.info("SMB share already mounted")
+            return True
+            
+        try:
+            # Create mount point if it doesn't exist
+            os.makedirs(mount_point, exist_ok=True)
+            
+            # Mount SMB share
+            cmd = ['mount', '-t', 'smbfs', 
+                   '//fs.edu.ds.fhnw.ch/data', mount_point]
+            result = subprocess.run(cmd, capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                logging.info("Successfully mounted SMB share")
+                return True
+            else:
+                logging.error(f"Failed to mount SMB share: {result.stderr}")
+                return False
+        except Exception as e:
+            logging.error(f"Error mounting SMB share: {str(e)}")
+            return False
+    else:  # Windows
+        # Windows usually handles SMB mounts through Explorer
+        # Just check if the path exists
+        if os.path.exists(r'\\fs.edu.ds.fhnw.ch\data'):
+            logging.info("SMB share accessible")
+            return True
+        else:
+            logging.error("SMB share not accessible. Please mount it in Windows Explorer")
+            return False
 
 def check_prerequisites():
     """Checks if required tools are installed."""
@@ -16,6 +119,12 @@ def check_prerequisites():
     else:
         if not shutil.which('rsync'):
             logging.error("rsync is not installed. Please install it and try again.")
+            return False
+            
+        if not shutil.which('openconnect'):
+            logging.error("openconnect is not installed. Please install it and try again.")
+            if platform.system() == "Darwin":
+                logging.info("You can install openconnect on macOS using: brew install openconnect")
             return False
             
     if not shutil.which('git'):
@@ -169,8 +278,17 @@ def execute_script(script_path):
     else:
         logging.warning(f"Script not found or not executable at {script_path}, skipping.")
 
+def parse_args():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(description='FHNW File Sync Tool')
+    parser.add_argument('--skip-checks', action='store_true',
+                      help='Skip VPN and mount checks')
+    return parser.parse_args()
+
 def main():
     """Main function to synchronize directories, perform git pull, and execute scripts."""
+    args = parse_args()
+    
     if not check_prerequisites():
         return
 
@@ -180,6 +298,21 @@ def main():
 
     log_level = config['DEFAULT'].get('log_level', 'INFO')
     setup_logging(log_level)
+    
+    # Only perform checks if not skipped
+    if not args.skip_checks:
+        # Check and establish VPN connection
+        if not check_vpn_connection():
+            if not connect_vpn():
+                logging.error("Failed to establish VPN connection. Please connect manually and try again.")
+                return
+                
+        # Mount SMB share
+        if not mount_smb_share():
+            logging.error("Failed to mount SMB share. Please mount manually and try again.")
+            return
+    else:
+        logging.info("Skipping VPN and mount checks as requested")
 
     destination = config['DEFAULT']['destination']
     source_paths = [path.strip() for path in config['DEFAULT']['source_paths'].split(',')]

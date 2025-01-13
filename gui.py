@@ -309,17 +309,31 @@ class MainWindow:
         self.current_theme = "dark"
         sv_ttk.set_theme(self.current_theme)
         
+        # Window state
+        self.window_visible = True
+        
         # System tray icon
         self.tray_icon = None
         if platform.system() != "Linux":  # Linux has limited system tray support
             try:
                 import pystray
-                from PIL import Image
+                from PIL import Image, ImageDraw
+                
+                # Create a default icon if icon.png doesn't exist
+                try:
+                    icon = Image.open("icon.png")
+                except FileNotFoundError:
+                    # Create a simple colored square icon
+                    icon = Image.new('RGB', (64, 64), color='#4a90e2')
+                    draw = ImageDraw.Draw(icon)
+                    # Add 'FS' text in white
+                    draw.text((20, 20), 'FS', fill='white')
+                    
                 self.tray_icon = pystray.Icon(
                     "FHNW Sync",
-                    Image.open("icon.png"),
+                    icon,
                     menu=pystray.Menu(
-                        pystray.MenuItem("Show", self.show_window),
+                        pystray.MenuItem("Show/Hide", self.toggle_window),
                         pystray.MenuItem("Exit", self.on_closing)
                     )
                 )
@@ -331,11 +345,92 @@ class MainWindow:
         self.scheduled_update = None
         self.spinner_thread = None
         
+        # Add status indicators
+        self.vpn_status = False
+        self.mount_status = False
+        
         # Create GUI elements
         self.setup_gui()
         
         # Set up the window close handler
-        self.window.protocol("WM_DELETE_WINDOW", self.on_closing)
+        self.window.protocol("WM_DELETE_WINDOW", self.hide_window)
+        
+        # Start status checker
+        self.check_connection_status()
+        
+        # Start tray icon if available
+        if self.tray_icon:
+            self.tray_icon_thread = threading.Thread(target=self.tray_icon.run)
+            self.tray_icon_thread.daemon = True
+            self.tray_icon_thread.start()
+    
+    def show_window(self):
+        """Show the window and bring it to front."""
+        self.window.deiconify()
+        self.window.lift()
+        self.window.focus_force()
+        self.window_visible = True
+    
+    def hide_window(self):
+        """Hide the window to system tray if available, otherwise minimize."""
+        if self.tray_icon:
+            self.window.withdraw()
+            self.window_visible = False
+        else:
+            self.window.iconify()
+    
+    def toggle_window(self):
+        """Toggle window visibility."""
+        if self.window_visible:
+            self.hide_window()
+        else:
+            self.show_window()
+    
+    def on_closing(self):
+        """Handle application exit."""
+        if self.scheduled_update:
+            self.window.after_cancel(self.scheduled_update)
+        if self.spinner_thread and self.spinner_thread.is_alive():
+            self.spinner_thread.stop()
+        if self.tray_icon:
+            self.tray_icon.stop()
+        self.window.destroy()
+    
+    def check_connection_status(self):
+        """Periodically checks VPN and mount status"""
+        def check_status():
+            try:
+                # Check VPN
+                result = subprocess.run(['ping', '-c', '1', '-W', '1', 'vpn.fhnw.ch'], 
+                                     capture_output=True, text=True)
+                self.vpn_status = result.returncode == 0
+                
+                # Check mount
+                self.mount_status = os.path.ismount('/Volumes/data') if platform.system() == "Darwin" \
+                                  else os.path.exists(r'\\fs.edu.ds.fhnw.ch\data')
+                
+                # Update status indicators
+                self.vpn_indicator.config(
+                    text="🟢 VPN Connected" if self.vpn_status else "🔴 VPN Disconnected"
+                )
+                self.mount_indicator.config(
+                    text="🟢 Share Mounted" if self.mount_status else "🔴 Share Not Mounted"
+                )
+                
+                # Enable/disable sync button based on status
+                if self.vpn_status and self.mount_status:
+                    self.sync_button.config(state=tk.NORMAL)
+                else:
+                    self.sync_button.config(state=tk.DISABLED)
+                    
+            except Exception as e:
+                print(f"Error checking status: {str(e)}")
+            
+            # Schedule next check
+            self.window.after(5000, check_status)
+            
+        # Start first check
+        check_status()
     
     def setup_gui(self):
         # Create main container frame
@@ -347,6 +442,26 @@ class MainWindow:
             main_frame, text=WINDOW_TITLE, font=("Helvetica", 16, "bold")
         )
         self.title_label.pack(pady=(0, 10), anchor="w")
+        
+        # Status frame
+        status_frame = ttk.Frame(main_frame)
+        status_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        # VPN status indicator
+        self.vpn_indicator = ttk.Label(
+            status_frame,
+            text="🔴 VPN Disconnected",
+            font=("Helvetica", 10)
+        )
+        self.vpn_indicator.pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Mount status indicator
+        self.mount_indicator = ttk.Label(
+            status_frame,
+            text="🔴 Share Not Mounted",
+            font=("Helvetica", 10)
+        )
+        self.mount_indicator.pack(side=tk.LEFT)
 
         # Progress frame
         progress_frame = ttk.Frame(main_frame)
@@ -428,7 +543,7 @@ class MainWindow:
         self.settings_button.pack(side=tk.LEFT, padx=5, expand=True)
 
     def run_sync_script(self):
-        # Disable both buttons immediately
+        # Disable buttons immediately
         self.sync_button.config(state=tk.DISABLED)
         self.clear_button.config(state=tk.DISABLED)
         
@@ -446,6 +561,13 @@ class MainWindow:
             def read_stream(stream, prefix=""):
                 for line in iter(stream.readline, ''):
                     if line:
+                        # Check for VPN login prompt
+                        if "Press Enter after completing SSO login" in line:
+                            # Show dialog to user
+                            self.window.after(0, lambda: messagebox.showinfo(
+                                "VPN Login Required",
+                                "Please complete the SSO login in your browser and click OK to continue."
+                            ))
                         output_queue.put(f"{prefix}{line}")
                         
             # Start threads for stdout and stderr
@@ -472,14 +594,28 @@ class MainWindow:
             try:
                 # Use platform-appropriate Python interpreter
                 python_cmd = "python3" if platform.system() != "Windows" else "python"
-                process = subprocess.Popen(
-                    [python_cmd, "sync_fhnw.py"],
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.PIPE,
-                    text=True,
-                    bufsize=1,
-                    universal_newlines=True
-                )
+                
+                # Run with sudo if on macOS (needed for mount)
+                if platform.system() == "Darwin":
+                    process = subprocess.Popen(
+                        ['sudo', python_cmd, "sync_fhnw.py"],
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        stdin=subprocess.PIPE,  # Add stdin pipe for interaction
+                        text=True,
+                        bufsize=1,
+                        universal_newlines=True
+                    )
+                else:
+                    process = subprocess.Popen(
+                        [python_cmd, "sync_fhnw.py"],
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        stdin=subprocess.PIPE,  # Add stdin pipe for interaction
+                        text=True,
+                        bufsize=1,
+                        universal_newlines=True
+                    )
                 handle_output(process, output_queue)
                 process.wait()
             except Exception as e:
@@ -534,13 +670,6 @@ class MainWindow:
 
     def open_settings(self):
         ConfigDialog(self.window, self.config)
-
-    def on_closing(self):
-        if self.scheduled_update:
-            self.window.after_cancel(self.scheduled_update)
-        if self.spinner_thread and self.spinner_thread.is_alive():
-            self.spinner_thread.stop()
-        self.window.destroy()
 
     def toggle_theme(self):
         """Toggle between dark and light themes"""
