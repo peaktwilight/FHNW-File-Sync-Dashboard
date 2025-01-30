@@ -8,7 +8,6 @@ import sv_ttk
 import itertools
 import time
 from tkinter import messagebox
-import json
 import configparser
 import os
 
@@ -346,7 +345,6 @@ class MainWindow:
         self.spinner_thread = None
         
         # Add status indicators
-        self.vpn_status = False
         self.mount_status = False
         
         # Create GUI elements
@@ -397,28 +395,20 @@ class MainWindow:
         self.window.destroy()
     
     def check_connection_status(self):
-        """Periodically checks VPN and mount status"""
+        """Periodically checks mount status"""
         def check_status():
             try:
-                # Check VPN
-                result = subprocess.run(['ping', '-c', '1', '-W', '1', 'vpn.fhnw.ch'], 
-                                     capture_output=True, text=True)
-                self.vpn_status = result.returncode == 0
-                
                 # Check mount
                 self.mount_status = os.path.ismount('/Volumes/data') if platform.system() == "Darwin" \
                                   else os.path.exists(r'\\fs.edu.ds.fhnw.ch\data')
                 
                 # Update status indicators
-                self.vpn_indicator.config(
-                    text="🟢 VPN Connected" if self.vpn_status else "🔴 VPN Disconnected"
-                )
                 self.mount_indicator.config(
                     text="🟢 Share Mounted" if self.mount_status else "🔴 Share Not Mounted"
                 )
                 
                 # Enable/disable sync button based on status
-                if self.vpn_status and self.mount_status:
+                if self.mount_status:
                     self.sync_button.config(state=tk.NORMAL)
                 else:
                     self.sync_button.config(state=tk.DISABLED)
@@ -446,14 +436,6 @@ class MainWindow:
         # Status frame
         status_frame = ttk.Frame(main_frame)
         status_frame.pack(fill=tk.X, pady=(0, 10))
-        
-        # VPN status indicator
-        self.vpn_indicator = ttk.Label(
-            status_frame,
-            text="🔴 VPN Disconnected",
-            font=("Helvetica", 10)
-        )
-        self.vpn_indicator.pack(side=tk.LEFT, padx=(0, 10))
         
         # Mount status indicator
         self.mount_indicator = ttk.Label(

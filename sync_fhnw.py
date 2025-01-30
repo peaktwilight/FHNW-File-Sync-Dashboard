@@ -121,12 +121,6 @@ def check_prerequisites():
             logging.error("rsync is not installed. Please install it and try again.")
             return False
             
-        if not shutil.which('openconnect'):
-            logging.error("openconnect is not installed. Please install it and try again.")
-            if platform.system() == "Darwin":
-                logging.info("You can install openconnect on macOS using: brew install openconnect")
-            return False
-            
     if not shutil.which('git'):
         logging.error("git is not installed. Please install it and try again.")
         return False
@@ -282,7 +276,7 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description='FHNW File Sync Tool')
     parser.add_argument('--skip-checks', action='store_true',
-                      help='Skip VPN and mount checks')
+                      help='Skip mount checks')
     return parser.parse_args()
 
 def main():
@@ -299,20 +293,14 @@ def main():
     log_level = config['DEFAULT'].get('log_level', 'INFO')
     setup_logging(log_level)
     
-    # Only perform checks if not skipped
+    # Only perform mount check if not skipped
     if not args.skip_checks:
-        # Check and establish VPN connection
-        if not check_vpn_connection():
-            if not connect_vpn():
-                logging.error("Failed to establish VPN connection. Please connect manually and try again.")
-                return
-                
         # Mount SMB share
         if not mount_smb_share():
             logging.error("Failed to mount SMB share. Please mount manually and try again.")
             return
     else:
-        logging.info("Skipping VPN and mount checks as requested")
+        logging.info("Skipping mount check as requested")
 
     destination = config['DEFAULT']['destination']
     source_paths = [path.strip() for path in config['DEFAULT']['source_paths'].split(',')]
