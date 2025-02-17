@@ -5,6 +5,7 @@ import platform
 import threading
 import queue
 import sv_ttk
+import logging
 import itertools
 import time
 from tkinter import messagebox
@@ -630,7 +631,7 @@ class MainWindow:
                             if 0 <= progress <= 100:
                                 self.update_progress(progress)
                             continue
-                        except (IndexError, ValueError) as e:
+                        except (IndexError, ValueError):
                             logging.warning(f"Invalid progress update: {line}")
                             continue
                             
