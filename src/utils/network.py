@@ -215,8 +215,19 @@ class NetworkManager:
                 if progress_callback:
                     progress_callback("Mounting FHNW network drive...")
                 
-                # Create mount point if it doesn't exist
-                os.makedirs(self.MOUNT_POINT, exist_ok=True)
+                # Create mount point if it doesn't exist (requires sudo on macOS)
+                if not os.path.exists(self.MOUNT_POINT):
+                    try:
+                        os.makedirs(self.MOUNT_POINT, exist_ok=True)
+                    except PermissionError:
+                        # Try with sudo
+                        result = subprocess.run(
+                            ["sudo", "mkdir", "-p", self.MOUNT_POINT],
+                            capture_output=True,
+                            text=True
+                        )
+                        if result.returncode != 0:
+                            return False, f"Failed to create mount point: {result.stderr}"
                 
                 # Get credentials
                 if not username:
@@ -226,20 +237,17 @@ class NetworkManager:
                 
                 password = keyring.get_password("fhnw_sync", f"smb_password_{username}")
                 
+                # Build mount command with credentials
                 if password:
-                    # Mount with stored credentials
-                    cmd = [
-                        "mount_smbfs",
-                        f"//{username}:{password}@fs.edu.ds.fhnw.ch/data",
-                        self.MOUNT_POINT
-                    ]
+                    mount_url = f"//{username}:{password}@fs.edu.ds.fhnw.ch/data"
                 else:
-                    # Mount without password (will prompt)
-                    cmd = [
-                        "mount_smbfs",
-                        f"//{username}@fs.edu.ds.fhnw.ch/data",
-                        self.MOUNT_POINT
-                    ]
+                    mount_url = f"//{username}@fs.edu.ds.fhnw.ch/data"
+                
+                # Try mounting with sudo first (recommended for /Volumes on macOS)
+                cmd = ["sudo", "mount_smbfs", mount_url, self.MOUNT_POINT]
+                
+                if progress_callback:
+                    progress_callback("Authenticating and mounting drive...")
                 
                 result = subprocess.run(cmd, capture_output=True, text=True)
                 
@@ -247,16 +255,16 @@ class NetworkManager:
                     self._notify_callbacks(True, True)
                     return True, "SMB share mounted successfully"
                 else:
-                    # Try with sudo if regular mount failed
-                    cmd[0] = "sudo"
-                    cmd.insert(1, "mount_smbfs")
-                    result = subprocess.run(cmd, capture_output=True, text=True)
-                    
-                    if result.returncode == 0:
-                        self._notify_callbacks(True, True)
-                        return True, "SMB share mounted successfully"
+                    # If sudo failed, provide detailed error
+                    error_msg = result.stderr.strip()
+                    if "Authentication failed" in error_msg:
+                        return False, "Authentication failed. Please check your credentials in Network Settings."
+                    elif "mount_smbfs: server connection failed" in error_msg:
+                        return False, "Connection to server failed. Please ensure VPN is connected."
+                    elif "Operation not permitted" in error_msg:
+                        return False, "Permission denied. Please run the application with appropriate privileges."
                     else:
-                        return False, f"Failed to mount SMB share: {result.stderr}"
+                        return False, f"Failed to mount SMB share: {error_msg}"
                         
             except Exception as e:
                 self.logger.error(f"SMB mount error: {e}")

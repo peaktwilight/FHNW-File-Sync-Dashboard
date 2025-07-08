@@ -161,13 +161,20 @@ Settings are stored in `~/.fhnw_sync/`:
    - Ensure the source folder is accessible
    - Check network drive is mounted
 
-2. **"Permission denied"**
-   - Run with appropriate permissions
-   - Check file/folder permissions
+2. **"Permission denied" when mounting network drive**
+   - The application requires administrator privileges to mount drives on macOS
+   - Enter your password when prompted by the system
+   - Ensure your user account has administrator rights
 
-3. **Sync seems slow**
+3. **"Authentication failed" for network drive**
+   - Check your FHNW credentials in Tools → Network Settings
+   - Ensure VPN is connected before mounting
+   - Try refreshing your credentials
+
+4. **Sync seems slow**
    - Check bandwidth limit settings
    - Verify network connection
+   - Consider using filters to reduce the number of files
 
 ### Logs
 View detailed logs in `~/.fhnw_sync/logs/` or via View → View Logs

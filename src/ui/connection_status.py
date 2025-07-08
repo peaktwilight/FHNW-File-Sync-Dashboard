@@ -161,13 +161,31 @@ class ConnectionStatusWidget:
         """Mount SMB share"""
         def mount():
             try:
+                # Show initial status
                 self.parent.after(0, lambda: self.smb_status_var.set("Mounting..."))
-                success, message = self.network_manager.mount_smb_share()
+                
+                # Progress callback for UI updates
+                def progress_callback(message):
+                    self.parent.after(0, lambda: self.smb_status_var.set(message))
+                
+                success, message = self.network_manager.mount_smb_share(progress_callback=progress_callback)
                 
                 if success:
                     self.parent.after(0, lambda: messagebox.showinfo("Success", message, parent=self.parent))
                 else:
-                    self.parent.after(0, lambda: messagebox.showerror("Error", message, parent=self.parent))
+                    # Show informative error messages
+                    if "Please check your credentials" in message:
+                        self.parent.after(0, lambda: messagebox.showerror(
+                            "Authentication Error", 
+                            f"{message}\n\nGo to Tools → Network Settings to update your credentials.",
+                            parent=self.parent))
+                    elif "run the application with appropriate privileges" in message:
+                        self.parent.after(0, lambda: messagebox.showerror(
+                            "Permission Error", 
+                            f"{message}\n\nThe application needs administrator privileges to mount network drives on macOS.",
+                            parent=self.parent))
+                    else:
+                        self.parent.after(0, lambda: messagebox.showerror("Mount Error", message, parent=self.parent))
                 
                 self.parent.after(0, self._update_status)
             except Exception as e:
