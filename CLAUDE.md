@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 FHNW File Sync Dashboard is a Python GUI application that automates syncing course materials from FHNW network drives to local machines. It features a modern Tkinter interface with Sun Valley theme, system tray integration, and cross-platform file synchronization.
 
+Version 2.0 introduces a modular architecture with profile management, allowing users to create multiple sync configurations with advanced filtering and sync options.
+
 ## Key Commands
 
 ### Installation
@@ -14,7 +16,8 @@ pip install -r requirements.txt
 ```
 
 ### Running the Application
-- GUI mode: `python gui.py`
+- New modular GUI: `python main.py`
+- Legacy GUI mode: `python gui.py`
 - CLI mode: `python sync_fhnw.py`
 - CLI with skip checks: `python sync_fhnw.py --skip-checks`
 
@@ -25,27 +28,57 @@ pip install -r requirements.txt
 
 ## Architecture
 
-### Core Components
+### Version 2.0 - Modular Architecture
 
-1. **gui.py** - Main GUI application (692 lines)
-   - Modern Tkinter interface with Sun Valley theme
-   - System tray integration with pystray
-   - Asynchronous sync operation handling
-   - Settings dialog for configuration management
-   - Real-time progress monitoring
+The new modular structure in `src/` provides better separation of concerns:
 
-2. **sync_fhnw.py** - Sync engine (373 lines)
-   - Cross-platform sync using `rsync` (Unix) or `robocopy` (Windows)
-   - VPN connection handling via openconnect
-   - SMB share mounting capabilities
-   - Git repository synchronization
-   - Retry mechanism for failed operations
-   - Progress reporting to GUI via callback
+1. **src/core/sync_engine.py** - Core synchronization engine
+   - Platform-agnostic sync operations
+   - Support for multiple sync modes (Mirror, Update, Additive)
+   - Dry-run capability for previewing changes
+   - Progress reporting with cancellation support
+   - File filtering and bandwidth limiting
 
-3. **config.txt** - User configuration
-   - Stores destination directory, source paths, feature toggles
-   - Managed through GUI settings dialog
-   - ConfigParser format with DEFAULT section
+2. **src/models/sync_profile.py** - Data models
+   - SyncProfile: Complete sync configuration with validation
+   - SyncLocation: Source/destination abstraction
+   - SyncRule: Advanced filtering options
+   - SyncMode/SyncDirection enums
+
+3. **src/config/profile_manager.py** - Configuration management
+   - Profile CRUD operations
+   - Import/export functionality
+   - Legacy config.txt migration
+   - Persistent storage in ~/.fhnw_sync/
+
+4. **src/ui/main_window.py** - Modern GUI application
+   - Profile-based interface with sidebar navigation
+   - Real-time sync monitoring
+   - Theme switching (dark/light)
+   - Keyboard shortcuts and menus
+
+5. **src/ui/profile_editor.py** - Profile editing dialog
+   - Intuitive form-based editing
+   - Folder browsing with validation
+   - Advanced options in tabbed interface
+
+6. **src/utils/logger.py** - Logging utilities
+   - Colored console output
+   - Per-sync log files
+   - Structured sync logging with metrics
+
+### Legacy Components (v1.0)
+
+1. **gui.py** - Original GUI application (692 lines)
+   - Single-profile configuration
+   - Basic sync functionality
+   - System tray integration
+
+2. **sync_fhnw.py** - Original sync engine (373 lines)
+   - FHNW-specific features (VPN, SMB mounts)
+   - Basic rsync/robocopy wrapper
+
+3. **config.txt** - Legacy configuration format
 
 ### Key Integration Points
 
