@@ -41,7 +41,7 @@ class ConnectionStatusWidget:
         self.vpn_status_label = ttk.Label(vpn_frame, textvariable=self.vpn_status_var)
         self.vpn_status_label.grid(row=0, column=1, sticky=tk.W, padx=(10, 0))
         
-        self.vpn_help_btn = ttk.Button(vpn_frame, text="Help", 
+        self.vpn_help_btn = ttk.Button(vpn_frame, text="How to?", 
                                       command=self._show_vpn_help, width=10)
         self.vpn_help_btn.grid(row=0, column=2, padx=(10, 0))
         
@@ -54,7 +54,7 @@ class ConnectionStatusWidget:
         self.smb_status_label = ttk.Label(smb_frame, textvariable=self.smb_status_var)
         self.smb_status_label.grid(row=0, column=1, sticky=tk.W, padx=(10, 0))
         
-        self.smb_help_btn = ttk.Button(smb_frame, text="Help", 
+        self.smb_help_btn = ttk.Button(smb_frame, text="How to?", 
                                       command=self._show_smb_help, width=10)
         self.smb_help_btn.grid(row=0, column=2, padx=(10, 0))
         

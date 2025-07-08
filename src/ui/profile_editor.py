@@ -256,13 +256,80 @@ class ProfileEditorDialog:
     
     def _use_fhnw_source(self):
         """Set source to FHNW network drive"""
-        self.source_var.set("/Volumes/data")
-        messagebox.showinfo(
-            "FHNW Network Drive",
-            "Source set to FHNW network drive.\n\n"
-            "Note: This requires VPN connection and will auto-mount when syncing.",
-            parent=self.dialog
-        )
+        from ..utils.network import get_network_manager
+        
+        network_manager = get_network_manager()
+        
+        # Check if FHNW drive is mounted and get actual mount point
+        if network_manager.check_smb_mount():
+            mount_point = network_manager.get_fhnw_mount_point()
+            if mount_point:
+                self.source_var.set(mount_point)
+                messagebox.showinfo(
+                    "FHNW Network Drive",
+                    f"Source set to FHNW network drive.\n\n"
+                    f"Mount point: {mount_point}\n\n"
+                    f"The network drive is currently connected.",
+                    parent=self.dialog
+                )
+            else:
+                # Fallback to default
+                self.source_var.set("/Volumes/data")
+                messagebox.showinfo(
+                    "FHNW Network Drive",
+                    "Source set to FHNW network drive.\n\n"
+                    "Mount point: /Volumes/data (default)\n\n"
+                    "Note: Connect to VPN and mount the drive first.",
+                    parent=self.dialog
+                )
+        else:
+            # Not mounted, use default and show help
+            self.source_var.set("/Volumes/data")
+            result = messagebox.askyesno(
+                "FHNW Network Drive Not Connected",
+                "The FHNW network drive is not currently mounted.\n\n"
+                "Source has been set to the default location: /Volumes/data\n\n"
+                "Would you like to see connection instructions?",
+                parent=self.dialog
+            )
+            
+            if result:
+                self._show_connection_help()
+    
+    def _show_connection_help(self):
+        """Show connection help for FHNW network"""
+        from ..utils.network import get_network_manager
+        
+        network_manager = get_network_manager()
+        
+        # Create help dialog
+        help_dialog = tk.Toplevel(self.dialog)
+        help_dialog.title("FHNW Connection Help")
+        help_dialog.geometry("600x400")
+        help_dialog.transient(self.dialog)
+        
+        main_frame = ttk.Frame(help_dialog, padding="20")
+        main_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # VPN Section
+        ttk.Label(main_frame, text="Step 1: Connect to VPN", 
+                 font=('', 12, 'bold')).pack(anchor=tk.W, pady=(0, 5))
+        
+        vpn_text = tk.Text(main_frame, height=6, wrap=tk.WORD)
+        vpn_text.pack(fill=tk.X, pady=(0, 10))
+        vpn_text.insert(1.0, network_manager.get_vpn_help_instructions())
+        vpn_text.configure(state='disabled')
+        
+        # SMB Section
+        ttk.Label(main_frame, text="Step 2: Connect to Network Drive", 
+                 font=('', 12, 'bold')).pack(anchor=tk.W, pady=(10, 5))
+        
+        smb_text = tk.Text(main_frame, height=8, wrap=tk.WORD)
+        smb_text.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+        smb_text.insert(1.0, network_manager.get_smb_help_instructions())
+        smb_text.configure(state='disabled')
+        
+        ttk.Button(main_frame, text="Close", command=help_dialog.destroy).pack()
     
     def _toggle_git_options(self):
         """Enable/disable git options based on checkbox"""
@@ -315,7 +382,9 @@ class ProfileEditorDialog:
         source_path = self.source_var.get()
         
         # Check if this is FHNW network drive
-        if source_path in ["/Volumes/data", "\\\\fs.edu.ds.fhnw.ch\\data"] or "fs.edu.ds.fhnw.ch" in source_path:
+        if (source_path.startswith("/Volumes/data") or 
+            "fs.edu.ds.fhnw.ch" in source_path or
+            source_path.startswith("\\\\fs.edu.ds.fhnw.ch")):
             profile.source = SyncLocation.create_fhnw_location(source_path)
         else:
             profile.source = SyncLocation(

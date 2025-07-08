@@ -73,7 +73,12 @@ class NetworkManager:
     def check_smb_mount(self) -> bool:
         """Check if FHNW SMB share is mounted"""
         if self.platform == "Darwin":  # macOS
-            return os.path.ismount(self.MOUNT_POINT) and os.path.exists(self.MOUNT_POINT)
+            try:
+                # Check mount command output for FHNW mounts
+                result = subprocess.run(["mount"], capture_output=True, text=True)
+                return "fs.edu.ds.fhnw.ch" in result.stdout
+            except:
+                return False
         elif self.platform == "Windows":
             # On Windows, check if network drive is mapped
             try:
@@ -93,6 +98,34 @@ class NetworkManager:
                 return "fs.edu.ds.fhnw.ch" in mounts
             except:
                 return False
+    
+    def get_fhnw_mount_point(self) -> Optional[str]:
+        """Get the actual mount point of FHNW network drive if mounted"""
+        if self.platform == "Darwin":  # macOS
+            try:
+                result = subprocess.run(["mount"], capture_output=True, text=True)
+                for line in result.stdout.split('\n'):
+                    if "fs.edu.ds.fhnw.ch" in line and " on " in line:
+                        # Parse: //user@fs.edu.ds.fhnw.ch/data on /Volumes/data-1 (smbfs, ...)
+                        parts = line.split(" on ")
+                        if len(parts) >= 2:
+                            mount_point = parts[1].split(" ")[0]
+                            return mount_point
+            except Exception as e:
+                self.logger.debug(f"Error getting mount point: {e}")
+        
+        elif self.platform == "Windows":
+            try:
+                result = subprocess.run(["net", "use"], capture_output=True, text=True)
+                for line in result.stdout.split('\n'):
+                    if "fs.edu.ds.fhnw.ch" in line:
+                        parts = line.split()
+                        if len(parts) >= 2:
+                            return parts[1]  # Drive letter like Z:
+            except Exception as e:
+                self.logger.debug(f"Error getting Windows mount point: {e}")
+        
+        return None
     
     def get_vpn_help_instructions(self) -> str:
         """Get platform-specific VPN connection instructions"""
