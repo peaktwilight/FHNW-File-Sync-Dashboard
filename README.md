@@ -1,136 +1,211 @@
-# FHNW File Sync Dashboard (Currently in BETA)
+# FHNW File Sync Dashboard v2.0
 
-## Screenshots
-![Sync Settings Interface](./screenshots/sync_settings_screenshot_v0.5.png)
+A modern, modular file synchronization tool with profile management, designed for FHNW students and general use.
 
-A GUI application for automating the annoying task of syncing course materials from FHNW (Fachhochschule Nordwestschweiz - University of Applied Sciences and Arts Northwestern Switzerland) network drive to your local machine. This tool is specifically designed for FHNW students to efficiently manage their course materials.
+## New Features in v2.0
 
-## Features
+### 🎯 Profile Management
+- **Multiple Sync Profiles**: Create and manage unlimited sync configurations
+- **Import/Export Profiles**: Share configurations with others
+- **Default Profile**: Set a default profile for quick access
 
-1. **Modern User Interface**
-   - Clean, intuitive dashboard design
-   - Dark theme with Sun Valley styling
-   - Real-time sync progress monitoring
-   - Visual status indicators and spinner
-   - Settings management interface
+### 📁 Enhanced Sync Options
+- **Flexible Source/Destination**: Pick any folders with browse dialog
+- **Sync Modes**:
+  - **Update**: Only sync newer files
+  - **Mirror**: Make destination exactly match source
+  - **Additive**: Only add new files, never delete
+- **Sync Directions**:
+  - Remote → Local
+  - Local → Remote
+  - Bidirectional
 
-2. **Sync Capabilities**
-   - One-click sync operation
-   - Uses `rsync` (macOS/Linux) or `robocopy` (Windows) for efficient file transfer
-   - Implements retry mechanism
-   - Handles vanishing files gracefully
-   - Preserves file attributes
-   - Cross-platform support with automatic tool selection
+### 🎨 Modern User Interface
+- **Clean, Intuitive Design**: Easy-to-use interface with profile sidebar
+- **Dark/Light Theme**: Toggle between themes
+- **Real-time Progress**: Visual progress bars and detailed logs
+- **Sync Preview**: See what will be synced before starting
 
-3. **Git Integration**
-   - Automatic `git pull` for specified repositories
-   - Configurable through settings
-   - Error handling for git operations
+### ⚙️ Advanced Features
+- **File Filters**: Include/exclude patterns, file size limits, extensions
+- **Bandwidth Limiting**: Control sync speed
+- **Git Integration**: Auto pull/commit for repositories
+- **Dry Run Mode**: Test sync without making changes
+- **Sync History**: Track all sync operations with detailed logs
 
-4. **SWEGL Integration**
-   - Optional SWEGL script execution
-   - Configurable through settings
+### 🌐 FHNW Network Integration
+- **VPN Status Monitoring**: Real-time FHNW VPN connection status
+- **Automatic SMB Mounting**: Auto-mount FHNW network drives
+- **Connection Management**: Connect/disconnect VPN and mounts from UI
+- **Credential Storage**: Secure keychain storage for login credentials
+- **Auto-Connect**: Automatically connect when syncing if enabled
 
-## Prerequisites
-
-- Python 3.x
-- `rsync` installed (should be on your mac by default)
-- `git` installed
-- Network drive mounted at `/Volumes/data` (SMB share: `smb://fs.edu.ds.fhnw.ch/data` once you're connected to cisco vpn at vpn.fhnw.ch)
-- Python packages:
-  - `tkinter` (usually comes with Python)
-  - `sv_ttk` (Sun Valley theme - included in repo)
+### 🔧 Technical Improvements
+- **Modular Architecture**: Clean separation of concerns
+- **Cross-platform**: Works on Windows, macOS, and Linux
+- **Robust Error Handling**: Retry mechanisms and clear error messages
+- **Extensible Design**: Easy to add new features
 
 ## Installation
 
-1. Clone this repository
-2. Ensure all prerequisites are installed
-3. Create a `config.txt` file (see Configuration section)
-4. Run `python gui.py`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/peaktwilight/FHNW-File-Sync-Dashboard.git
+   cd FHNW-File-Sync-Dashboard
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the application**:
+   ```bash
+   python main.py
+   ```
+
+## Quick Start
+
+1. **Create a Profile**:
+   - Click "New" in the profiles sidebar
+   - Enter a name and description
+   - Select source and destination folders
+   - Choose sync mode and options
+
+2. **Configure Network** (for FHNW users):
+   - Go to Tools → Network Settings
+   - Enter your FHNW credentials
+   - Test VPN and SMB connections
+
+3. **Configure Sync**:
+   - Set sync direction (Remote→Local, Local→Remote, or Bidirectional)
+   - Add file filters if needed
+   - Configure advanced options (permissions, bandwidth, etc.)
+   - Use "FHNW Drive" button for easy network drive selection
+
+4. **Run Sync**:
+   - Select your profile
+   - Check connection status in the sidebar
+   - Enable "Auto-connect" for automatic VPN/SMB setup
+   - Click "Preview" to see what will be synced
+   - Click "Sync Now" to start
+
+## Profile System
+
+### Creating Profiles
+Each profile contains:
+- **Name & Description**: Identify your sync configurations
+- **Source & Destination**: Any accessible folders
+- **Sync Settings**: Mode, direction, and filters
+- **Advanced Options**: Permissions, bandwidth, retry settings
+
+### Managing Profiles
+- **Edit**: Modify existing profiles
+- **Duplicate**: Create copies with different settings
+- **Import/Export**: Share profiles as JSON files
+- **Delete**: Remove unused profiles
+
+## Sync Modes Explained
+
+### Update Mode
+- Only copies files that are newer in the source
+- Preserves existing files in destination
+- Best for: Regular backups
+
+### Mirror Mode
+- Makes destination exactly match source
+- Deletes files not in source
+- Best for: Exact replicas
+
+### Additive Mode
+- Only adds new files to destination
+- Never deletes anything
+- Best for: Archiving
+
+## Advanced Features
+
+### File Filtering
+- **Include Patterns**: Only sync matching files (e.g., `*.pdf`, `project_*`)
+- **Exclude Patterns**: Skip matching files (e.g., `*.tmp`, `.DS_Store`)
+- **Hidden Files**: Option to exclude hidden files
+- **Size Limits**: Set minimum/maximum file sizes
+
+### Git Integration
+- Automatically pull before sync
+- Option to commit after sync
+- Useful for code repositories
+
+### Bandwidth Control
+- Limit sync speed in KB/s
+- Useful for slow connections
+- Leave empty for unlimited speed
+
+## Keyboard Shortcuts
+- `Ctrl+N`: New profile
+- `Ctrl+E`: Edit profile
+- `Delete`: Delete profile
+- `Ctrl+Q`: Quit application
 
 ## Configuration
 
-The dashboard uses a `config.txt` file for settings:
+Settings are stored in `~/.fhnw_sync/`:
+- `config.json`: General application settings
+- `profiles/`: Individual profile configurations
+- `logs/`: Sync operation logs
 
-```ini
-[DEFAULT]
-destination = /Users/your/local/path
-source_paths = /path/to/source1,
-              /path/to/source2
-oop_repo_path = /path/to/oopI2/repo
-swegl_script_path = /path/to/swegl/script
-enable_git_pull = True
-enable_swegl_script = True
-log_level = INFO
-max_rsync_retries = 3
-```
+## Troubleshooting
 
-All settings can be managed through the GUI's Settings dialog:
+### Common Issues
 
-- **Destination Directory**: Where files will be synced to
-- **Source Paths**: List of paths to sync (one per line in settings)
-- **OOP Repository Path**: Path to OOP Git repository
-- **SWEGL Script Path**: Path to SWEGL script
-- **Enable Git Pull**: Toggle automatic git pull
-- **Enable SWEGL Script**: Toggle SWEGL script execution
-- **Log Level**: Set logging verbosity
-- **Max Retries**: Number of sync retry attempts
+1. **"Source path does not exist"**
+   - Ensure the source folder is accessible
+   - Check network drive is mounted
 
-## Usage
+2. **"Permission denied"**
+   - Run with appropriate permissions
+   - Check file/folder permissions
 
-### GUI Dashboard (Recommended)
+3. **Sync seems slow**
+   - Check bandwidth limit settings
+   - Verify network connection
 
-1. Launch the dashboard:
-```bash
-python gui.py
-```
-
-2. Use the interface:
-   - Click "Sync Now" to start synchronization
-   - Use "Clear Output" to reset the log display
-   - Access "Settings" to configure the application
-   - Monitor progress through the status indicator and output log
-
-### Command Line (Alternative)
-
-For automation or server environments:
-```bash
-python sync_fhnw.py
-```
-
-## Error Handling
-
-The dashboard handles various scenarios:
-- Missing prerequisites
-- Network drive not mounted
-- File permission issues
-- Git repository errors
-- Vanishing files during sync
-- Script execution failures
-
-All errors are displayed in the output log with appropriate status indicators.
+### Logs
+View detailed logs in `~/.fhnw_sync/logs/` or via View → View Logs
 
 ## Development
 
-The application consists of three main components:
+### Project Structure
+```
+FHNW_SYNC_TOOL/
+├── src/
+│   ├── core/           # Sync engine
+│   ├── models/         # Data models
+│   ├── config/         # Configuration management
+│   ├── ui/             # User interface
+│   └── utils/          # Utilities
+├── main.py             # Entry point
+└── requirements.txt    # Dependencies
+```
 
-1. **GUI Dashboard** (`gui.py`)
-   - Modern interface using `tkinter` and Sun Valley theme
-   - Real-time sync progress display
-   - Settings management
-   - Async operation handling
+### Adding Features
+The modular design makes it easy to extend:
+1. Add new sync modes in `sync_engine.py`
+2. Create new UI dialogs in `ui/`
+3. Extend profiles in `models/sync_profile.py`
 
-2. **Sync Engine** (`sync_fhnw.py`)
-   - Core synchronization logic
-   - File system operations
-   - Git integration
-   - Error handling
+## License
+MIT License - See LICENSE file for details
 
-3. **Configuration** (`config.txt`)
-   - External settings storage
-   - User-configurable options
-   - Persistent preferences
+## Changelog
 
-## Note
+### v2.0 (2024)
+- Complete rewrite with modular architecture
+- Profile management system
+- Enhanced UI with themes
+- Advanced filtering options
+- Cross-platform improvements
 
-Course material folders are ignored in Git tracking - this repository only contains the application code and configuration files.
+### v1.0 (2023)
+- Initial release
+- Basic sync functionality
+- Simple configuration file

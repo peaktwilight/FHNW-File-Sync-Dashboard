@@ -4,9 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-FHNW File Sync Dashboard is a Python GUI application that automates syncing course materials from FHNW network drives to local machines. It features a modern Tkinter interface with Sun Valley theme, system tray integration, and cross-platform file synchronization.
+FHNW File Sync Dashboard v2.0 is a modern Python GUI application with modular architecture that automates file synchronization. It features profile management, FHNW network integration, and a clean Tkinter interface with Sun Valley theme.
 
-Version 2.0 introduces a modular architecture with profile management, allowing users to create multiple sync configurations with advanced filtering and sync options.
+Key improvements in v2.0:
+- Complete modular rewrite with separation of concerns
+- Multiple sync profile management
+- FHNW VPN and SMB network integration
+- Advanced filtering and sync options
+- Modern UI with dark/light themes
 
 ## Key Commands
 
@@ -16,10 +21,7 @@ pip install -r requirements.txt
 ```
 
 ### Running the Application
-- New modular GUI: `python main.py`
-- Legacy GUI mode: `python gui.py`
-- CLI mode: `python sync_fhnw.py`
-- CLI with skip checks: `python sync_fhnw.py --skip-checks`
+- Main application: `python main.py`
 
 ### Development Commands
 - No linting configuration exists - consider using `ruff` or `flake8`
@@ -67,33 +69,26 @@ The new modular structure in `src/` provides better separation of concerns:
    - Per-sync log files
    - Structured sync logging with metrics
 
-### Legacy Components (v1.0)
+### Legacy Support
 
-1. **gui.py** - Original GUI application (692 lines)
-   - Single-profile configuration
-   - Basic sync functionality
-   - System tray integration
-
-2. **sync_fhnw.py** - Original sync engine (373 lines)
-   - FHNW-specific features (VPN, SMB mounts)
-   - Basic rsync/robocopy wrapper
-
-3. **config.txt** - Legacy configuration format
+The legacy v1.0 components (gui.py, sync_fhnw.py, config.txt) have been removed in favor of the new modular architecture. The profile manager includes automatic migration from old config.txt files to the new profile system.
 
 ### Key Integration Points
 
-- **GUI-Sync Communication**: The GUI calls sync functions with a progress callback that updates the UI in real-time
-- **Credential Storage**: Uses `keyring` library for secure credential management
-- **Platform Detection**: Automatic selection of sync tool based on OS (rsync vs robocopy)
+- **Profile-Based Architecture**: All sync operations are based on configurable profiles
+- **Network Integration**: Automatic VPN and SMB connection management for FHNW
+- **GUI-Sync Communication**: Threaded sync operations with real-time progress callbacks
+- **Credential Storage**: Secure keychain storage using `keyring` library
 - **Theme System**: Sun Valley theme bundled in `sv_ttk/` directory
 
 ### Important Implementation Details
 
-- The sync process runs in a separate thread to keep the GUI responsive
-- Progress updates use a queue to communicate between threads safely
-- VPN/mount operations require sudo on macOS and use browser-based SSO
-- Git operations are optional and controlled by config settings
-- The application supports retry logic for handling transient network issues
+- **Thread Safety**: Sync operations run in separate threads with queue-based communication
+- **Network Management**: Automatic detection and connection to FHNW VPN/SMB resources
+- **Profile Storage**: JSON-based profile storage in `~/.fhnw_sync/profiles/`
+- **Migration Support**: Automatic migration from legacy config.txt format
+- **Cross-Platform**: Platform-specific sync tools (rsync/robocopy) selected automatically
+- **Error Handling**: Comprehensive retry logic and user-friendly error messages
 
 ## Platform-Specific Notes
 
