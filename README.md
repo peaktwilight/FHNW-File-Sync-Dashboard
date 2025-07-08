@@ -14,7 +14,6 @@ A modern, modular file synchronization tool with profile management, designed fo
 - **Sync Modes**:
   - **Update**: Only sync newer files
   - **Mirror**: Make destination exactly match source
-  - **Additive**: Only add new files, never delete
 - **Sync Directions**:
   - Remote → Local
   - Local → Remote
@@ -116,11 +115,6 @@ Each profile contains:
 - Makes destination exactly match source
 - Deletes files not in source
 - Best for: Exact replicas
-
-### Additive Mode
-- Only adds new files to destination
-- Never deletes anything
-- Best for: Archiving
 
 ## Advanced Features
 

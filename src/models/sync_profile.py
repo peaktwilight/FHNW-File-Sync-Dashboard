@@ -15,7 +15,6 @@ class SyncDirection(Enum):
 class SyncMode(Enum):
     MIRROR = "mirror"  # Exact copy, delete extra files
     UPDATE = "update"  # Only update newer files
-    ADDITIVE = "additive"  # Only add new files, never delete
 
 
 @dataclass
