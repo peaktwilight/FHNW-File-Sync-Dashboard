@@ -9,6 +9,7 @@ import time
 
 from ..models.sync_profile import SyncProfile, SyncMode, SyncDirection
 from ..utils.logger import get_logger
+from ..utils.network import get_network_manager
 
 
 class SyncEngine:
@@ -19,6 +20,7 @@ class SyncEngine:
         self.platform = platform.system()
         self._cancel_flag = threading.Event()
         self._current_process = None
+        self.network_manager = get_network_manager()
     
     def sync(self, profile: SyncProfile, progress_callback: Optional[Callable] = None, 
              dry_run: bool = False) -> Tuple[bool, str]:
@@ -40,6 +42,21 @@ class SyncEngine:
         errors = profile.validate()
         if errors:
             return False, f"Profile validation failed: {'; '.join(errors)}"
+        
+        # Check network connections for source
+        if hasattr(profile.source, 'requires_vpn') and profile.source.requires_vpn:
+            if progress_callback:
+                progress_callback("Checking VPN connection...", 0)
+            
+            if not self.network_manager.check_vpn_connection():
+                return False, "FHNW VPN connection required but not connected. Please connect to VPN first."
+        
+        if hasattr(profile.source, 'requires_smb') and profile.source.requires_smb:
+            if progress_callback:
+                progress_callback("Checking SMB mount...", 0)
+            
+            if not self.network_manager.check_smb_mount():
+                return False, "FHNW network drive not mounted. Please mount the network drive first."
         
         # Check if source exists
         if not self._check_path_exists(profile.source.path, profile.source.is_remote):
@@ -63,6 +80,45 @@ class SyncEngine:
                 self._current_process.terminate()
             except:
                 pass
+    
+    def ensure_connections(self, profile: SyncProfile, 
+                          progress_callback: Optional[Callable] = None,
+                          auto_connect: bool = False) -> Tuple[bool, str]:
+        """Ensure required network connections are available"""
+        # Check source requirements
+        requires_vpn = getattr(profile.source, 'requires_vpn', False)
+        requires_smb = getattr(profile.source, 'requires_smb', False)
+        
+        if not requires_vpn and not requires_smb:
+            return True, "No network connections required"
+        
+        if progress_callback:
+            progress_callback("Checking network connections...", 0)
+        
+        vpn_connected = self.network_manager.check_vpn_connection()
+        smb_mounted = self.network_manager.check_smb_mount()
+        
+        if requires_vpn and not vpn_connected:
+            if auto_connect:
+                if progress_callback:
+                    progress_callback("Connecting to FHNW VPN...", 10)
+                success, msg = self.network_manager.connect_vpn(progress_callback=progress_callback)
+                if not success:
+                    return False, f"Failed to connect to VPN: {msg}"
+            else:
+                return False, "FHNW VPN required but not connected"
+        
+        if requires_smb and not smb_mounted:
+            if auto_connect:
+                if progress_callback:
+                    progress_callback("Mounting FHNW network drive...", 20)
+                success, msg = self.network_manager.mount_smb_share(progress_callback=progress_callback)
+                if not success:
+                    return False, f"Failed to mount network drive: {msg}"
+            else:
+                return False, "FHNW network drive required but not mounted"
+        
+        return True, "All required connections available"
     
     def _check_path_exists(self, path: str, is_remote: bool) -> bool:
         """Check if a path exists"""

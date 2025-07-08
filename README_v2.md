@@ -33,6 +33,13 @@ A modern, modular file synchronization tool with profile management, designed fo
 - **Dry Run Mode**: Test sync without making changes
 - **Sync History**: Track all sync operations with detailed logs
 
+### 🌐 FHNW Network Integration
+- **VPN Status Monitoring**: Real-time FHNW VPN connection status
+- **Automatic SMB Mounting**: Auto-mount FHNW network drives
+- **Connection Management**: Connect/disconnect VPN and mounts from UI
+- **Credential Storage**: Secure keychain storage for login credentials
+- **Auto-Connect**: Automatically connect when syncing if enabled
+
 ### 🔧 Technical Improvements
 - **Modular Architecture**: Clean separation of concerns
 - **Cross-platform**: Works on Windows, macOS, and Linux
@@ -65,13 +72,21 @@ A modern, modular file synchronization tool with profile management, designed fo
    - Select source and destination folders
    - Choose sync mode and options
 
-2. **Configure Sync**:
+2. **Configure Network** (for FHNW users):
+   - Go to Tools → Network Settings
+   - Enter your FHNW credentials
+   - Test VPN and SMB connections
+
+3. **Configure Sync**:
    - Set sync direction (Remote→Local, Local→Remote, or Bidirectional)
    - Add file filters if needed
    - Configure advanced options (permissions, bandwidth, etc.)
+   - Use "FHNW Drive" button for easy network drive selection
 
-3. **Run Sync**:
+4. **Run Sync**:
    - Select your profile
+   - Check connection status in the sidebar
+   - Enable "Auto-connect" for automatic VPN/SMB setup
    - Click "Preview" to see what will be synced
    - Click "Sync Now" to start
 

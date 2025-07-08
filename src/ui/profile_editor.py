@@ -103,8 +103,9 @@ class ProfileEditorDialog:
         source_frame = ttk.Frame(main_frame)
         source_frame.grid(row=row, column=1, columnspan=2, sticky=(tk.W, tk.E), pady=2)
         
-        ttk.Entry(source_frame, textvariable=self.source_var, width=35).pack(side=tk.LEFT, fill=tk.X, expand=True)
+        ttk.Entry(source_frame, textvariable=self.source_var, width=30).pack(side=tk.LEFT, fill=tk.X, expand=True)
         ttk.Button(source_frame, text="Browse", command=self._browse_source).pack(side=tk.LEFT, padx=(5, 0))
+        ttk.Button(source_frame, text="FHNW Drive", command=self._use_fhnw_source).pack(side=tk.LEFT, padx=(5, 0))
         row += 1
         
         # Destination
@@ -253,6 +254,16 @@ class ProfileEditorDialog:
         if path:
             self.dest_var.set(path)
     
+    def _use_fhnw_source(self):
+        """Set source to FHNW network drive"""
+        self.source_var.set("/Volumes/data")
+        messagebox.showinfo(
+            "FHNW Network Drive",
+            "Source set to FHNW network drive.\n\n"
+            "Note: This requires VPN connection and will auto-mount when syncing.",
+            parent=self.dialog
+        )
+    
     def _toggle_git_options(self):
         """Enable/disable git options based on checkbox"""
         if self.is_git_var.get():
@@ -301,11 +312,17 @@ class ProfileEditorDialog:
         profile.description = self.description_var.get()
         
         # Update locations
-        profile.source = SyncLocation(
-            path=self.source_var.get(),
-            name="Source",
-            is_remote=not os.path.exists(self.source_var.get())
-        )
+        source_path = self.source_var.get()
+        
+        # Check if this is FHNW network drive
+        if source_path in ["/Volumes/data", "\\\\fs.edu.ds.fhnw.ch\\data"] or "fs.edu.ds.fhnw.ch" in source_path:
+            profile.source = SyncLocation.create_fhnw_location(source_path)
+        else:
+            profile.source = SyncLocation(
+                path=source_path,
+                name="Source",
+                is_remote=not os.path.exists(source_path)
+            )
         
         profile.destination = SyncLocation(
             path=self.dest_var.get(),

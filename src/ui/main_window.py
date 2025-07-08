@@ -14,6 +14,8 @@ from ..models.sync_profile import SyncProfile
 from ..utils.logger import setup_logging, SyncLogger
 from .profile_editor import ProfileEditorDialog
 from .sync_preview import SyncPreviewDialog
+from .connection_status import ConnectionStatusWidget
+from .network_settings import NetworkSettingsDialog
 
 
 class MainWindow:
@@ -82,6 +84,8 @@ class MainWindow:
         menubar.add_cascade(label="Tools", menu=tools_menu)
         tools_menu.add_command(label="Sync Preview", command=self._preview_sync)
         tools_menu.add_command(label="Dry Run", command=lambda: self._start_sync(dry_run=True))
+        tools_menu.add_separator()
+        tools_menu.add_command(label="Network Settings", command=self._open_network_settings)
         
         # Help menu
         help_menu = tk.Menu(menubar, tearoff=0)
@@ -141,6 +145,10 @@ class MainWindow:
         ttk.Button(button_frame, text="New", command=self._new_profile).pack(side=tk.LEFT, padx=(0, 5))
         ttk.Button(button_frame, text="Edit", command=self._edit_profile).pack(side=tk.LEFT, padx=(0, 5))
         ttk.Button(button_frame, text="Delete", command=self._delete_profile).pack(side=tk.LEFT)
+        
+        # Connection status widget
+        self.connection_widget = ConnectionStatusWidget(sidebar, self._on_connection_change)
+        self.connection_widget.grid(row=3, column=0, sticky=(tk.W, tk.E), pady=(20, 0))
         
         # Right side - main content
         content_frame = ttk.Frame(main_frame)
@@ -257,6 +265,10 @@ class MainWindow:
             self.current_profile = self.profile_manager.load_profile(profile_id)
             self._update_profile_display()
     
+    def _on_connection_change(self, vpn_connected: bool, smb_mounted: bool):
+        """Handle connection status changes"""
+        self._update_profile_display()
+    
     def _update_profile_display(self):
         """Update the profile details display"""
         if not self.current_profile:
@@ -279,10 +291,24 @@ class MainWindow:
             last_sync = "Never"
         self.info_labels['last_sync'].config(text=last_sync)
         
-        self.info_labels['status'].config(text="Enabled" if self.current_profile.enabled else "Disabled")
+        # Check connection requirements for sync availability
+        can_sync = self.current_profile.enabled
+        if can_sync and hasattr(self.current_profile.source, 'requires_vpn'):
+            if self.current_profile.source.requires_vpn and not self.sync_engine.network_manager.check_vpn_connection():
+                can_sync = False
+        if can_sync and hasattr(self.current_profile.source, 'requires_smb'):
+            if self.current_profile.source.requires_smb and not self.sync_engine.network_manager.check_smb_mount():
+                # Allow sync if auto-connect is enabled
+                can_sync = self.connection_widget.get_auto_connect()
+        
+        status_text = "Enabled" if self.current_profile.enabled else "Disabled"
+        if self.current_profile.enabled and not can_sync:
+            status_text += " (Network Required)"
+        
+        self.info_labels['status'].config(text=status_text)
         
         # Enable buttons
-        self.sync_button.config(state='normal' if self.current_profile.enabled else 'disabled')
+        self.sync_button.config(state='normal' if can_sync else 'disabled')
         self.preview_button.config(state='normal')
     
     def _new_profile(self):
@@ -388,6 +414,11 @@ class MainWindow:
         if os.path.exists(log_dir):
             webbrowser.open(f"file://{log_dir}")
     
+    def _open_network_settings(self):
+        """Open network settings dialog"""
+        dialog = NetworkSettingsDialog(self.root)
+        dialog.show()
+    
     def _preview_sync(self):
         """Show sync preview dialog"""
         if not self.current_profile:
@@ -433,8 +464,18 @@ class MainWindow:
                 self.progress_queue.put(('progress', message, percent))
                 sync_logger.log_progress(message, percent)
             
+            # Check and ensure connections if auto-connect is enabled
+            auto_connect = self.connection_widget.get_auto_connect()
+            if auto_connect:
+                self.progress_queue.put(('status', 'Ensuring connections...', 0))
+                success, message = self.sync_engine.ensure_connections(profile, progress_callback, auto_connect)
+                if not success:
+                    sync_logger.log_error(message)
+                    self.progress_queue.put(('error', message, 0))
+                    return
+            
             # Perform sync
-            self.progress_queue.put(('status', 'Syncing...', 0))
+            self.progress_queue.put(('status', 'Syncing...', 25 if auto_connect else 0))
             success, message = self.sync_engine.sync(profile, progress_callback, dry_run)
             
             # Update profile last sync time

@@ -51,6 +51,9 @@ class SyncLocation:
     is_remote: bool = False
     requires_auth: bool = False
     mount_point: Optional[str] = None  # For network drives
+    requires_vpn: bool = False  # FHNW VPN required
+    requires_smb: bool = False  # SMB mount required
+    smb_share: Optional[str] = None  # SMB share path
     
     def to_dict(self) -> Dict:
         return {
@@ -58,12 +61,29 @@ class SyncLocation:
             'name': self.name,
             'is_remote': self.is_remote,
             'requires_auth': self.requires_auth,
-            'mount_point': self.mount_point
+            'mount_point': self.mount_point,
+            'requires_vpn': self.requires_vpn,
+            'requires_smb': self.requires_smb,
+            'smb_share': self.smb_share
         }
     
     @classmethod
     def from_dict(cls, data: Dict) -> 'SyncLocation':
         return cls(**data)
+    
+    @classmethod
+    def create_fhnw_location(cls, path: str = "/Volumes/data") -> 'SyncLocation':
+        """Create a SyncLocation configured for FHNW network drive"""
+        return cls(
+            path=path,
+            name="FHNW Network Drive",
+            is_remote=True,
+            requires_auth=True,
+            mount_point="/Volumes/data",
+            requires_vpn=True,
+            requires_smb=True,
+            smb_share="smb://fs.edu.ds.fhnw.ch/data"
+        )
 
 
 @dataclass
