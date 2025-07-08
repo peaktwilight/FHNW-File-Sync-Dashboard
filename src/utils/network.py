@@ -99,10 +99,9 @@ class NetworkManager:
         if self.platform == "Darwin":  # macOS
             return """To connect to FHNW VPN on macOS:
 
-1. Download and install Cisco AnyConnect from:
-   https://vpn.fhnw.ch
+1. Download and install AnyConnect (Cisco) from the App Store
 
-2. Open Cisco AnyConnect Secure Mobility Client
+2. Open AnyConnect (Cisco)
 
 3. Enter server address: vpn.fhnw.ch
 
@@ -119,10 +118,9 @@ class NetworkManager:
         elif self.platform == "Windows":
             return """To connect to FHNW VPN on Windows:
 
-1. Download and install Cisco AnyConnect from:
-   https://vpn.fhnw.ch
+1. Download and install Cisco AnyConnect as described on the FHNW VPN website.
 
-2. Open Cisco AnyConnect Secure Mobility Client
+2. Open Cisco AnyConnect Secure Client
 
 3. Enter server address: vpn.fhnw.ch
 
