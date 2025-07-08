@@ -148,8 +148,7 @@ class ProfileEditorDialog:
         
         for value, text, tooltip in [
             (SyncMode.UPDATE.value, "Update", "Only copy newer files"),
-            (SyncMode.MIRROR.value, "Mirror", "Make destination exactly match source"),
-            (SyncMode.ADDITIVE.value, "Additive", "Only add new files, never delete")
+            (SyncMode.MIRROR.value, "Mirror", "Make destination exactly match source")
         ]:
             btn = ttk.Radiobutton(mode_frame, text=text, variable=self.mode_var, value=value)
             btn.pack(side=tk.LEFT, padx=(0, 10))

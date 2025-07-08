@@ -36,7 +36,7 @@ The new modular structure in `src/` provides better separation of concerns:
 
 1. **src/core/sync_engine.py** - Core synchronization engine
    - Platform-agnostic sync operations
-   - Support for multiple sync modes (Mirror, Update, Additive)
+   - Support for multiple sync modes (Mirror, Update)
    - Dry-run capability for previewing changes
    - Progress reporting with cancellation support
    - File filtering and bandwidth limiting
