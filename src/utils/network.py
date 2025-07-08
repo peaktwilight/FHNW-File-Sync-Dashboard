@@ -110,7 +110,10 @@ class NetworkManager:
             if not username:
                 username = keyring.get_password("fhnw_sync", "vpn_username")
                 if not username:
-                    return False, "No VPN username found. Please configure in settings."
+                    # Try to find system credentials
+                    username = self._find_system_credentials()
+                    if not username:
+                        return False, "No VPN username found. Please configure in Tools → Network Settings."
             
             # Use openconnect with browser authentication
             cmd = [
@@ -229,13 +232,19 @@ class NetworkManager:
                         if result.returncode != 0:
                             return False, f"Failed to create mount point: {result.stderr}"
                 
-                # Get credentials
+                # Get credentials - check app-specific first, then system keychain
                 if not username:
                     username = keyring.get_password("fhnw_sync", "smb_username")
                     if not username:
-                        return False, "No SMB username found. Please configure in settings."
+                        # Try to find existing system credentials for fs.edu.ds.fhnw.ch
+                        username = self._find_system_credentials()
+                        if not username:
+                            return False, "No SMB username found. Please configure in Tools → Network Settings or connect to the network drive manually first."
                 
+                # Get password - try app-specific first, then system keychain
                 password = keyring.get_password("fhnw_sync", f"smb_password_{username}")
+                if not password:
+                    password = self._get_system_password(username)
                 
                 # Build mount command with credentials
                 if password:
@@ -390,6 +399,58 @@ class NetworkManager:
         
         thread = threading.Thread(target=monitor, daemon=True)
         thread.start()
+    
+    def _find_system_credentials(self) -> Optional[str]:
+        """Find existing system credentials for fs.edu.ds.fhnw.ch"""
+        if self.platform != "Darwin":
+            return None
+        
+        try:
+            # Use security command to find existing keychain entries
+            result = subprocess.run([
+                "security", "find-internet-password",
+                "-s", "fs.edu.ds.fhnw.ch",
+                "-g"
+            ], capture_output=True, text=True, stderr=subprocess.STDOUT)
+            
+            if result.returncode == 0:
+                # Parse the output to find the account name
+                for line in result.stdout.split('\n'):
+                    if 'acct' in line and '"' in line:
+                        # Extract account name from: "acct"<blob>="username"
+                        start = line.find('"', line.find('acct')) + 1
+                        end = line.find('"', start + 1)
+                        if start > 0 and end > start:
+                            username = line[start:end]
+                            self.logger.info(f"Found system credentials for user: {username}")
+                            return username
+        except Exception as e:
+            self.logger.debug(f"Could not find system credentials: {e}")
+        
+        return None
+    
+    def _get_system_password(self, username: str) -> Optional[str]:
+        """Get password from system keychain for fs.edu.ds.fhnw.ch"""
+        if self.platform != "Darwin":
+            return None
+        
+        try:
+            # Use security command to get password
+            result = subprocess.run([
+                "security", "find-internet-password",
+                "-s", "fs.edu.ds.fhnw.ch",
+                "-a", username,
+                "-w"  # Print password only
+            ], capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                password = result.stdout.strip()
+                self.logger.info(f"Retrieved system password for user: {username}")
+                return password
+        except Exception as e:
+            self.logger.debug(f"Could not get system password: {e}")
+        
+        return None
 
 
 # Singleton instance

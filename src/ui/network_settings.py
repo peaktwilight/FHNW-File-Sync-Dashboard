@@ -128,6 +128,9 @@ Your credentials will be stored securely in the system keychain."""
         button_frame = ttk.Frame(main_frame)
         button_frame.grid(row=row, column=0, columnspan=2, sticky=(tk.W, tk.E))
         
+        ttk.Button(button_frame, text="Import System Credentials", 
+                  command=self._detect_system_credentials).pack(side=tk.LEFT)
+        
         ttk.Button(button_frame, text="Cancel", command=self._cancel).pack(side=tk.RIGHT, padx=(5, 0))
         ttk.Button(button_frame, text="Save", command=self._save, 
                   style="Accent.TButton").pack(side=tk.RIGHT)
@@ -135,6 +138,7 @@ Your credentials will be stored securely in the system keychain."""
     def _load_existing_credentials(self):
         """Load existing credentials from keychain"""
         try:
+            # Load app-specific credentials
             vpn_username = keyring.get_password("fhnw_sync", "vpn_username")
             if vpn_username:
                 self.vpn_username_var.set(vpn_username)
@@ -142,8 +146,53 @@ Your credentials will be stored securely in the system keychain."""
             smb_username = keyring.get_password("fhnw_sync", "smb_username")
             if smb_username:
                 self.smb_username_var.set(smb_username)
+            
+            # If no app credentials, try to find system credentials
+            if not vpn_username and not smb_username:
+                self._detect_system_credentials()
+                
         except Exception as e:
             print(f"Error loading credentials: {e}")
+    
+    def _detect_system_credentials(self):
+        """Detect and offer to import system credentials"""
+        from ..utils.network import get_network_manager
+        import tkinter.messagebox as msgbox
+        
+        network_manager = get_network_manager()
+        system_username = network_manager._find_system_credentials()
+        
+        if system_username:
+            # Show detected credentials and offer to import
+            result = msgbox.askyesno(
+                "System Credentials Detected",
+                f"Found existing FHNW credentials in system keychain:\n\n"
+                f"Username: {system_username}\n\n"
+                f"Would you like to import these credentials?",
+                parent=self.dialog
+            )
+            
+            if result:
+                self.vpn_username_var.set(system_username)
+                self.smb_username_var.set(system_username)
+                
+                msgbox.showinfo(
+                    "Credentials Imported",
+                    "System credentials have been imported. You can now save them "
+                    "for use with the sync application.",
+                    parent=self.dialog
+                )
+        else:
+            msgbox.showinfo(
+                "No System Credentials Found",
+                "No FHNW credentials found in the system keychain.\n\n"
+                "To create them:\n"
+                "1. Connect to fs.edu.ds.fhnw.ch manually in Finder\n"
+                "2. Enter your FHNW credentials when prompted\n"
+                "3. Choose to save them in keychain\n"
+                "4. Then try importing again",
+                parent=self.dialog
+            )
     
     def _save(self):
         """Save credentials to keychain"""
