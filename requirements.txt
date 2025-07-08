@@ -1,0 +1,4 @@
+keyring>=24.3.0
+sv-ttk>=2.5.5
+pillow>=10.2.0  # for system tray icon
+pystray>=0.19.5  # for system tray support 
