@@ -298,8 +298,7 @@ class MainWindow:
                 can_sync = False
         if can_sync and hasattr(self.current_profile.source, 'requires_smb'):
             if self.current_profile.source.requires_smb and not self.sync_engine.network_manager.check_smb_mount():
-                # Allow sync if auto-connect is enabled
-                can_sync = self.connection_widget.get_auto_connect()
+                can_sync = False
         
         status_text = "Enabled" if self.current_profile.enabled else "Disabled"
         if self.current_profile.enabled and not can_sync:
@@ -464,18 +463,8 @@ class MainWindow:
                 self.progress_queue.put(('progress', message, percent))
                 sync_logger.log_progress(message, percent)
             
-            # Check and ensure connections if auto-connect is enabled
-            auto_connect = self.connection_widget.get_auto_connect()
-            if auto_connect:
-                self.progress_queue.put(('status', 'Ensuring connections...', 0))
-                success, message = self.sync_engine.ensure_connections(profile, progress_callback, auto_connect)
-                if not success:
-                    sync_logger.log_error(message)
-                    self.progress_queue.put(('error', message, 0))
-                    return
-            
             # Perform sync
-            self.progress_queue.put(('status', 'Syncing...', 25 if auto_connect else 0))
+            self.progress_queue.put(('status', 'Syncing...', 0))
             success, message = self.sync_engine.sync(profile, progress_callback, dry_run)
             
             # Update profile last sync time

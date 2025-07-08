@@ -81,44 +81,6 @@ class SyncEngine:
             except:
                 pass
     
-    def ensure_connections(self, profile: SyncProfile, 
-                          progress_callback: Optional[Callable] = None,
-                          auto_connect: bool = False) -> Tuple[bool, str]:
-        """Ensure required network connections are available"""
-        # Check source requirements
-        requires_vpn = getattr(profile.source, 'requires_vpn', False)
-        requires_smb = getattr(profile.source, 'requires_smb', False)
-        
-        if not requires_vpn and not requires_smb:
-            return True, "No network connections required"
-        
-        if progress_callback:
-            progress_callback("Checking network connections...", 0)
-        
-        vpn_connected = self.network_manager.check_vpn_connection()
-        smb_mounted = self.network_manager.check_smb_mount()
-        
-        if requires_vpn and not vpn_connected:
-            if auto_connect:
-                if progress_callback:
-                    progress_callback("Connecting to FHNW VPN...", 10)
-                success, msg = self.network_manager.connect_vpn(progress_callback=progress_callback)
-                if not success:
-                    return False, f"Failed to connect to VPN: {msg}"
-            else:
-                return False, "FHNW VPN required but not connected"
-        
-        if requires_smb and not smb_mounted:
-            if auto_connect:
-                if progress_callback:
-                    progress_callback("Mounting FHNW network drive...", 20)
-                success, msg = self.network_manager.mount_smb_share(progress_callback=progress_callback)
-                if not success:
-                    return False, f"Failed to mount network drive: {msg}"
-            else:
-                return False, "FHNW network drive required but not mounted"
-        
-        return True, "All required connections available"
     
     def _check_path_exists(self, path: str, is_remote: bool) -> bool:
         """Check if a path exists"""
