@@ -148,6 +148,8 @@ class SyncEngine:
         if not src.endswith('/'):
             src += '/'
         
+        # Prevent profile-controlled paths from being interpreted as rsync options.
+        cmd.append("--")
         cmd.extend([src, dst])
         
         return cmd
